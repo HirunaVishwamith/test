@@ -22,6 +22,12 @@ module iCache(
   output        debug_probe_cacheMissed,
   output        debug_probe_rready_signal,
   output        debug_probe_cacheFill_valid,
+  output        debug_probe_requests_next_valid,
+  output        debug_probe_requests_buffered_valid,
+  output        debug_probe_requests_servicing_valid,
+  output        debug_probe_results_next_valid,
+  output        debug_probe_results_buffred_valid,
+  output        debug_probe_results_servicing_valid,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -90,54 +96,54 @@ module iCache(
   wire  _arvalid_T_4 = lowLevelMem_ARVALID & lowLevelMem_ARREADY; // @[ICache.scala 112:49]
   wire  _rready_T_2 = lowLevelMem_RLAST & lowLevelMem_RREADY & lowLevelMem_RVALID; // @[ICache.scala 116:68]
   wire  _GEN_3 = _arvalid_T_2 & _rready_T_2; // @[ICache.scala 118:{26,44} 119:32]
-  wire  _cacheStalled_T = ~fromFetch_resp_ready; // @[ICache.scala 140:62]
-  wire  cacheStalled = cacheMissed | fromFetch_resp_valid & ~fromFetch_resp_ready; // @[ICache.scala 140:34]
-  wire  _T_4 = ~cacheMissed; // @[ICache.scala 141:9]
-  wire [19:0] _GEN_7 = results_1_valid ? results_1_tag : cache_tag; // @[ICache.scala 142:{35,51} 147:25]
-  wire  _T_9 = cacheMissed & cacheFill_valid; // @[ICache.scala 150:26]
-  wire [31:0] _GEN_10 = 4'h1 == results_0_address[5:2] ? cacheFill_block[63:32] : cacheFill_block[31:0]; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_11 = 4'h2 == results_0_address[5:2] ? cacheFill_block[95:64] : _GEN_10; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_12 = 4'h3 == results_0_address[5:2] ? cacheFill_block[127:96] : _GEN_11; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_13 = 4'h4 == results_0_address[5:2] ? cacheFill_block[159:128] : _GEN_12; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_14 = 4'h5 == results_0_address[5:2] ? cacheFill_block[191:160] : _GEN_13; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_15 = 4'h6 == results_0_address[5:2] ? cacheFill_block[223:192] : _GEN_14; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_16 = 4'h7 == results_0_address[5:2] ? cacheFill_block[255:224] : _GEN_15; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_17 = 4'h8 == results_0_address[5:2] ? cacheFill_block[287:256] : _GEN_16; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_18 = 4'h9 == results_0_address[5:2] ? cacheFill_block[319:288] : _GEN_17; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_19 = 4'ha == results_0_address[5:2] ? cacheFill_block[351:320] : _GEN_18; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_20 = 4'hb == results_0_address[5:2] ? cacheFill_block[383:352] : _GEN_19; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_21 = 4'hc == results_0_address[5:2] ? cacheFill_block[415:384] : _GEN_20; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_22 = 4'hd == results_0_address[5:2] ? cacheFill_block[447:416] : _GEN_21; // @[ICache.scala 151:{31,31}]
-  wire [31:0] _GEN_23 = 4'he == results_0_address[5:2] ? cacheFill_block[479:448] : _GEN_22; // @[ICache.scala 151:{31,31}]
-  wire [20:0] _GEN_26 = cacheMissed & cacheFill_valid ? results_0_address[32:12] : {{1'd0}, results_0_tag}; // @[ICache.scala 150:46 152:23 85:24]
-  wire  _GEN_27 = cacheMissed & cacheFill_valid | results_0_tagValid; // @[ICache.scala 150:46 153:28 85:24]
+  wire  _cacheStalled_T = ~fromFetch_resp_ready; // @[ICache.scala 146:62]
+  wire  cacheStalled = cacheMissed | fromFetch_resp_valid & ~fromFetch_resp_ready; // @[ICache.scala 146:34]
+  wire  _T_4 = ~cacheMissed; // @[ICache.scala 147:9]
+  wire [19:0] _GEN_7 = results_1_valid ? results_1_tag : cache_tag; // @[ICache.scala 148:{35,51} 153:25]
+  wire  _T_9 = cacheMissed & cacheFill_valid; // @[ICache.scala 156:26]
+  wire [31:0] _GEN_10 = 4'h1 == results_0_address[5:2] ? cacheFill_block[63:32] : cacheFill_block[31:0]; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_11 = 4'h2 == results_0_address[5:2] ? cacheFill_block[95:64] : _GEN_10; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_12 = 4'h3 == results_0_address[5:2] ? cacheFill_block[127:96] : _GEN_11; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_13 = 4'h4 == results_0_address[5:2] ? cacheFill_block[159:128] : _GEN_12; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_14 = 4'h5 == results_0_address[5:2] ? cacheFill_block[191:160] : _GEN_13; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_15 = 4'h6 == results_0_address[5:2] ? cacheFill_block[223:192] : _GEN_14; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_16 = 4'h7 == results_0_address[5:2] ? cacheFill_block[255:224] : _GEN_15; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_17 = 4'h8 == results_0_address[5:2] ? cacheFill_block[287:256] : _GEN_16; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_18 = 4'h9 == results_0_address[5:2] ? cacheFill_block[319:288] : _GEN_17; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_19 = 4'ha == results_0_address[5:2] ? cacheFill_block[351:320] : _GEN_18; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_20 = 4'hb == results_0_address[5:2] ? cacheFill_block[383:352] : _GEN_19; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_21 = 4'hc == results_0_address[5:2] ? cacheFill_block[415:384] : _GEN_20; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_22 = 4'hd == results_0_address[5:2] ? cacheFill_block[447:416] : _GEN_21; // @[ICache.scala 157:{31,31}]
+  wire [31:0] _GEN_23 = 4'he == results_0_address[5:2] ? cacheFill_block[479:448] : _GEN_22; // @[ICache.scala 157:{31,31}]
+  wire [20:0] _GEN_26 = cacheMissed & cacheFill_valid ? results_0_address[32:12] : {{1'd0}, results_0_tag}; // @[ICache.scala 156:46 158:23 85:24]
+  wire  _GEN_27 = cacheMissed & cacheFill_valid | results_0_tagValid; // @[ICache.scala 156:46 159:28 85:24]
   wire [20:0] _GEN_31 = ~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid ? {{1'd0}, _GEN_7} :
-    _GEN_26; // @[ICache.scala 141:89]
-  wire  _T_10 = ~results_1_valid; // @[ICache.scala 156:8]
-  wire [31:0] _GEN_34 = 4'h1 == results_1_address[5:2] ? cacheFill_block[63:32] : cacheFill_block[31:0]; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_35 = 4'h2 == results_1_address[5:2] ? cacheFill_block[95:64] : _GEN_34; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_36 = 4'h3 == results_1_address[5:2] ? cacheFill_block[127:96] : _GEN_35; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_37 = 4'h4 == results_1_address[5:2] ? cacheFill_block[159:128] : _GEN_36; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_38 = 4'h5 == results_1_address[5:2] ? cacheFill_block[191:160] : _GEN_37; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_39 = 4'h6 == results_1_address[5:2] ? cacheFill_block[223:192] : _GEN_38; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_40 = 4'h7 == results_1_address[5:2] ? cacheFill_block[255:224] : _GEN_39; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_41 = 4'h8 == results_1_address[5:2] ? cacheFill_block[287:256] : _GEN_40; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_42 = 4'h9 == results_1_address[5:2] ? cacheFill_block[319:288] : _GEN_41; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_43 = 4'ha == results_1_address[5:2] ? cacheFill_block[351:320] : _GEN_42; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_44 = 4'hb == results_1_address[5:2] ? cacheFill_block[383:352] : _GEN_43; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_45 = 4'hc == results_1_address[5:2] ? cacheFill_block[415:384] : _GEN_44; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_46 = 4'hd == results_1_address[5:2] ? cacheFill_block[447:416] : _GEN_45; // @[ICache.scala 163:{35,35}]
-  wire [31:0] _GEN_47 = 4'he == results_1_address[5:2] ? cacheFill_block[479:448] : _GEN_46; // @[ICache.scala 163:{35,35}]
-  wire  _T_16 = ~cacheStalled; // @[ICache.scala 166:14]
+    _GEN_26; // @[ICache.scala 147:89]
+  wire  _T_10 = ~results_1_valid; // @[ICache.scala 162:8]
+  wire [31:0] _GEN_34 = 4'h1 == results_1_address[5:2] ? cacheFill_block[63:32] : cacheFill_block[31:0]; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_35 = 4'h2 == results_1_address[5:2] ? cacheFill_block[95:64] : _GEN_34; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_36 = 4'h3 == results_1_address[5:2] ? cacheFill_block[127:96] : _GEN_35; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_37 = 4'h4 == results_1_address[5:2] ? cacheFill_block[159:128] : _GEN_36; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_38 = 4'h5 == results_1_address[5:2] ? cacheFill_block[191:160] : _GEN_37; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_39 = 4'h6 == results_1_address[5:2] ? cacheFill_block[223:192] : _GEN_38; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_40 = 4'h7 == results_1_address[5:2] ? cacheFill_block[255:224] : _GEN_39; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_41 = 4'h8 == results_1_address[5:2] ? cacheFill_block[287:256] : _GEN_40; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_42 = 4'h9 == results_1_address[5:2] ? cacheFill_block[319:288] : _GEN_41; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_43 = 4'ha == results_1_address[5:2] ? cacheFill_block[351:320] : _GEN_42; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_44 = 4'hb == results_1_address[5:2] ? cacheFill_block[383:352] : _GEN_43; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_45 = 4'hc == results_1_address[5:2] ? cacheFill_block[415:384] : _GEN_44; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_46 = 4'hd == results_1_address[5:2] ? cacheFill_block[447:416] : _GEN_45; // @[ICache.scala 169:{35,35}]
+  wire [31:0] _GEN_47 = 4'he == results_1_address[5:2] ? cacheFill_block[479:448] : _GEN_46; // @[ICache.scala 169:{35,35}]
+  wire  _T_16 = ~cacheStalled; // @[ICache.scala 172:14]
   wire [20:0] _GEN_51 = _T_9 & results_0_address[31:6] == results_1_address[31:6] ? results_0_address[32:12] : {{1'd0},
-    results_1_tag}; // @[ICache.scala 162:157 164:27 85:24]
-  wire  _GEN_52 = _T_9 & results_0_address[31:6] == results_1_address[31:6] | results_1_tagValid; // @[ICache.scala 162:157 165:32 85:24]
-  wire [20:0] _GEN_57 = ~results_1_valid ? {{1'd0}, cache_tag} : _GEN_51; // @[ICache.scala 156:34 160:27]
-  wire  _GEN_59 = _T_10 & (_T_16 & requests_0_valid); // @[ICache.scala 170:34 172:31 174:31]
-  wire  _requests_0_valid_T = fromFetch_req_ready & fromFetch_req_valid; // @[ICache.scala 180:52]
-  wire  _T_23 = ~requests_1_valid; // @[ICache.scala 185:8]
-  wire  _fromFetch_req_ready_T_1 = ~commitFence; // @[ICache.scala 194:55]
-  wire  _commitFence_T_3 = requests_0_valid | requests_1_valid | requests_2_valid | results_0_valid | results_1_valid; // @[ICache.scala 200:74]
+    results_1_tag}; // @[ICache.scala 168:157 170:27 85:24]
+  wire  _GEN_52 = _T_9 & results_0_address[31:6] == results_1_address[31:6] | results_1_tagValid; // @[ICache.scala 168:157 171:32 85:24]
+  wire [20:0] _GEN_57 = ~results_1_valid ? {{1'd0}, cache_tag} : _GEN_51; // @[ICache.scala 162:34 166:27]
+  wire  _GEN_59 = _T_10 & (_T_16 & requests_0_valid); // @[ICache.scala 176:34 178:31 180:31]
+  wire  _requests_0_valid_T = fromFetch_req_ready & fromFetch_req_valid; // @[ICache.scala 186:52]
+  wire  _T_23 = ~requests_1_valid; // @[ICache.scala 191:8]
+  wire  _fromFetch_req_ready_T_1 = ~commitFence; // @[ICache.scala 200:55]
+  wire  _commitFence_T_3 = requests_0_valid | requests_1_valid | requests_2_valid | results_0_valid | results_1_valid; // @[ICache.scala 206:74]
   wire [20:0] _GEN_69 = reset ? 21'h0 : _GEN_31; // @[ICache.scala 85:{24,24}]
   wire [20:0] _GEN_70 = reset ? 21'h0 : _GEN_57; // @[ICache.scala 85:{24,24}]
   iCacheRegisters #(.offset_width (4), .line_width(6)) cache ( // @[ICache.scala 83:21]
@@ -153,68 +159,74 @@ module iCache(
     .clock(cache_clock),
     .reset(cache_reset)
   );
-  assign fromFetch_req_ready = _T_23 & ~commitFence; // @[ICache.scala 194:52]
-  assign fromFetch_resp_valid = _T_4 & results_0_valid; // @[ICache.scala 192:40]
-  assign fromFetch_resp_bits = results_0_instruction; // @[ICache.scala 193:23]
-  assign updateAllCachelines_ready = ~commitFence; // @[ICache.scala 202:32]
-  assign cachelinesUpdatesResp_ready = ~_commitFence_T_3 & commitFence; // @[ICache.scala 203:96]
+  assign fromFetch_req_ready = _T_23 & ~commitFence; // @[ICache.scala 200:52]
+  assign fromFetch_resp_valid = _T_4 & results_0_valid; // @[ICache.scala 198:40]
+  assign fromFetch_resp_bits = results_0_instruction; // @[ICache.scala 199:23]
+  assign updateAllCachelines_ready = ~commitFence; // @[ICache.scala 208:32]
+  assign cachelinesUpdatesResp_ready = ~_commitFence_T_3 & commitFence; // @[ICache.scala 209:96]
   assign lowLevelMem_ARADDR = {results_0_address[31:6],6'h0}; // @[Cat.scala 33:92]
-  assign lowLevelMem_ARVALID = arvalid; // @[ICache.scala 216:23]
-  assign lowLevelMem_RREADY = rready; // @[ICache.scala 221:22]
+  assign lowLevelMem_ARVALID = arvalid; // @[ICache.scala 222:23]
+  assign lowLevelMem_RREADY = rready; // @[ICache.scala 227:22]
   assign debug_probe_arvalid_internal = arvalid; // @[ICache.scala 123:32]
   assign debug_probe_cacheMissed = ~(results_0_tagValid & results_0_address[63:12] == _GEN_68) & results_0_valid; // @[ICache.scala 106:119]
   assign debug_probe_rready_signal = rready; // @[ICache.scala 125:32]
   assign debug_probe_cacheFill_valid = cacheFill_valid; // @[ICache.scala 126:32]
-  assign debug_probe_axi_arvalid = lowLevelMem_ARVALID; // @[ICache.scala 127:32]
-  assign debug_probe_axi_arready = lowLevelMem_ARREADY; // @[ICache.scala 128:32]
-  assign debug_probe_req_valid = fromFetch_req_valid; // @[ICache.scala 129:32]
-  assign debug_probe_req_pc = fromFetch_req_bits; // @[ICache.scala 130:32]
-  assign cache_address = requests_0_address[31:0]; // @[ICache.scala 196:20]
-  assign cache_write_line_index = results_0_address[11:6]; // @[ICache.scala 135:29]
-  assign cache_write_block = cacheFill_block; // @[ICache.scala 133:24]
-  assign cache_write_tag = results_0_address[31:12]; // @[ICache.scala 136:22]
-  assign cache_write_in = cacheFill_valid; // @[ICache.scala 134:21]
-  assign cache_invalidate_all = cachelinesUpdatesResp_fired; // @[ICache.scala 204:27]
-  assign cache_clock = clock; // @[ICache.scala 137:18]
-  assign cache_reset = reset; // @[ICache.scala 138:18]
+  assign debug_probe_requests_next_valid = requests_0_valid; // @[ICache.scala 127:37]
+  assign debug_probe_requests_buffered_valid = requests_1_valid; // @[ICache.scala 128:41]
+  assign debug_probe_requests_servicing_valid = requests_2_valid; // @[ICache.scala 129:42]
+  assign debug_probe_results_next_valid = results_0_valid; // @[ICache.scala 130:37]
+  assign debug_probe_results_buffred_valid = results_1_valid; // @[ICache.scala 131:40]
+  assign debug_probe_results_servicing_valid = results_0_valid; // @[ICache.scala 132:42]
+  assign debug_probe_axi_arvalid = lowLevelMem_ARVALID; // @[ICache.scala 133:32]
+  assign debug_probe_axi_arready = lowLevelMem_ARREADY; // @[ICache.scala 134:32]
+  assign debug_probe_req_valid = fromFetch_req_valid; // @[ICache.scala 135:32]
+  assign debug_probe_req_pc = fromFetch_req_bits; // @[ICache.scala 136:32]
+  assign cache_address = requests_0_address[31:0]; // @[ICache.scala 202:20]
+  assign cache_write_line_index = results_0_address[11:6]; // @[ICache.scala 141:29]
+  assign cache_write_block = cacheFill_block; // @[ICache.scala 139:24]
+  assign cache_write_tag = results_0_address[31:12]; // @[ICache.scala 142:22]
+  assign cache_write_in = cacheFill_valid; // @[ICache.scala 140:21]
+  assign cache_invalidate_all = cachelinesUpdatesResp_fired; // @[ICache.scala 210:27]
+  assign cache_clock = clock; // @[ICache.scala 143:18]
+  assign cache_reset = reset; // @[ICache.scala 144:18]
   always @(posedge clock) begin
     if (reset) begin // @[ICache.scala 68:28]
       commitFence <= 1'h0; // @[ICache.scala 68:28]
-    end else if (_fromFetch_req_ready_T_1) begin // @[ICache.scala 197:22]
-      commitFence <= updateAllCachelines_fired; // @[ICache.scala 198:17]
+    end else if (_fromFetch_req_ready_T_1) begin // @[ICache.scala 203:22]
+      commitFence <= updateAllCachelines_fired; // @[ICache.scala 204:17]
     end else begin
       commitFence <= requests_0_valid | requests_1_valid | requests_2_valid | results_0_valid | results_1_valid | ~
-        cachelinesUpdatesResp_fired; // @[ICache.scala 200:17]
+        cachelinesUpdatesResp_fired; // @[ICache.scala 206:17]
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_0_valid <= 1'h0; // @[ICache.scala 75:25]
-    end else if (_T_16 & _T_10 | ~requests_0_valid) begin // @[ICache.scala 177:78]
-      if (requests_1_valid) begin // @[ICache.scala 178:36]
-        requests_0_valid <= requests_1_valid; // @[ICache.scala 178:53]
+    end else if (_T_16 & _T_10 | ~requests_0_valid) begin // @[ICache.scala 183:78]
+      if (requests_1_valid) begin // @[ICache.scala 184:36]
+        requests_0_valid <= requests_1_valid; // @[ICache.scala 184:53]
       end else begin
-        requests_0_valid <= fromFetch_req_ready & fromFetch_req_valid; // @[ICache.scala 180:28]
+        requests_0_valid <= fromFetch_req_ready & fromFetch_req_valid; // @[ICache.scala 186:28]
       end
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_0_address <= 64'h0; // @[ICache.scala 75:25]
-    end else if (_T_16 & _T_10 | ~requests_0_valid) begin // @[ICache.scala 177:78]
-      if (requests_1_valid) begin // @[ICache.scala 178:36]
-        requests_0_address <= requests_1_address; // @[ICache.scala 178:53]
+    end else if (_T_16 & _T_10 | ~requests_0_valid) begin // @[ICache.scala 183:78]
+      if (requests_1_valid) begin // @[ICache.scala 184:36]
+        requests_0_address <= requests_1_address; // @[ICache.scala 184:53]
       end else begin
-        requests_0_address <= fromFetch_req_bits; // @[ICache.scala 181:30]
+        requests_0_address <= fromFetch_req_bits; // @[ICache.scala 187:30]
       end
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_1_valid <= 1'h0; // @[ICache.scala 75:25]
-    end else if (~requests_1_valid) begin // @[ICache.scala 185:35]
-      requests_1_valid <= (cacheStalled | results_1_valid) & _requests_0_valid_T & requests_0_valid; // @[ICache.scala 186:30]
+    end else if (~requests_1_valid) begin // @[ICache.scala 191:35]
+      requests_1_valid <= (cacheStalled | results_1_valid) & _requests_0_valid_T & requests_0_valid; // @[ICache.scala 192:30]
     end else begin
-      requests_1_valid <= cacheStalled | results_1_valid; // @[ICache.scala 189:30]
+      requests_1_valid <= cacheStalled | results_1_valid; // @[ICache.scala 195:30]
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_1_address <= 64'h0; // @[ICache.scala 75:25]
-    end else if (~requests_1_valid) begin // @[ICache.scala 185:35]
-      requests_1_address <= fromFetch_req_bits; // @[ICache.scala 187:32]
+    end else if (~requests_1_valid) begin // @[ICache.scala 191:35]
+      requests_1_address <= fromFetch_req_bits; // @[ICache.scala 193:32]
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_2_valid <= 1'h0; // @[ICache.scala 75:25]
@@ -223,38 +235,38 @@ module iCache(
     end
     if (reset) begin // @[ICache.scala 75:25]
       requests_2_address <= 64'h0; // @[ICache.scala 75:25]
-    end else if (_T_10) begin // @[ICache.scala 170:34]
-      requests_2_address <= requests_0_address; // @[ICache.scala 171:25]
+    end else if (_T_10) begin // @[ICache.scala 176:34]
+      requests_2_address <= requests_0_address; // @[ICache.scala 177:25]
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_0_valid <= 1'h0; // @[ICache.scala 85:24]
-    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 141:89]
-      if (results_1_valid) begin // @[ICache.scala 142:35]
-        results_0_valid <= results_1_valid; // @[ICache.scala 142:51]
+    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 147:89]
+      if (results_1_valid) begin // @[ICache.scala 148:35]
+        results_0_valid <= results_1_valid; // @[ICache.scala 148:51]
       end else begin
-        results_0_valid <= requests_2_valid; // @[ICache.scala 144:27]
+        results_0_valid <= requests_2_valid; // @[ICache.scala 150:27]
       end
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_0_address <= 64'h0; // @[ICache.scala 85:24]
-    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 141:89]
-      if (results_1_valid) begin // @[ICache.scala 142:35]
-        results_0_address <= results_1_address; // @[ICache.scala 142:51]
+    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 147:89]
+      if (results_1_valid) begin // @[ICache.scala 148:35]
+        results_0_address <= results_1_address; // @[ICache.scala 148:51]
       end else begin
-        results_0_address <= requests_2_address; // @[ICache.scala 145:29]
+        results_0_address <= requests_2_address; // @[ICache.scala 151:29]
       end
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_0_instruction <= 32'h0; // @[ICache.scala 85:24]
-    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 141:89]
-      if (results_1_valid) begin // @[ICache.scala 142:35]
-        results_0_instruction <= results_1_instruction; // @[ICache.scala 142:51]
+    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 147:89]
+      if (results_1_valid) begin // @[ICache.scala 148:35]
+        results_0_instruction <= results_1_instruction; // @[ICache.scala 148:51]
       end else begin
-        results_0_instruction <= cache_instruction; // @[ICache.scala 146:33]
+        results_0_instruction <= cache_instruction; // @[ICache.scala 152:33]
       end
-    end else if (cacheMissed & cacheFill_valid) begin // @[ICache.scala 150:46]
-      if (4'hf == results_0_address[5:2]) begin // @[ICache.scala 151:31]
-        results_0_instruction <= cacheFill_block[511:480]; // @[ICache.scala 151:31]
+    end else if (cacheMissed & cacheFill_valid) begin // @[ICache.scala 156:46]
+      if (4'hf == results_0_address[5:2]) begin // @[ICache.scala 157:31]
+        results_0_instruction <= cacheFill_block[511:480]; // @[ICache.scala 157:31]
       end else begin
         results_0_instruction <= _GEN_23;
       end
@@ -262,36 +274,36 @@ module iCache(
     results_0_tag <= _GEN_69[19:0]; // @[ICache.scala 85:{24,24}]
     if (reset) begin // @[ICache.scala 85:24]
       results_0_tagValid <= 1'h0; // @[ICache.scala 85:24]
-    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 141:89]
-      if (results_1_valid) begin // @[ICache.scala 142:35]
-        results_0_tagValid <= results_1_tagValid; // @[ICache.scala 142:51]
+    end else if (~cacheMissed & (fromFetch_resp_ready | commitFence) | ~results_0_valid) begin // @[ICache.scala 147:89]
+      if (results_1_valid) begin // @[ICache.scala 148:35]
+        results_0_tagValid <= results_1_tagValid; // @[ICache.scala 148:51]
       end else begin
-        results_0_tagValid <= cache_tag_valid; // @[ICache.scala 148:30]
+        results_0_tagValid <= cache_tag_valid; // @[ICache.scala 154:30]
       end
     end else begin
       results_0_tagValid <= _GEN_27;
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_1_valid <= 1'h0; // @[ICache.scala 85:24]
-    end else if (~results_1_valid) begin // @[ICache.scala 156:34]
-      results_1_valid <= requests_2_valid & results_0_valid & (cacheMissed | _cacheStalled_T); // @[ICache.scala 157:29]
-    end else if (!(_T_9 & results_0_address[31:6] == results_1_address[31:6])) begin // @[ICache.scala 162:157]
-      if (~cacheStalled) begin // @[ICache.scala 166:29]
-        results_1_valid <= 1'h0; // @[ICache.scala 167:29]
+    end else if (~results_1_valid) begin // @[ICache.scala 162:34]
+      results_1_valid <= requests_2_valid & results_0_valid & (cacheMissed | _cacheStalled_T); // @[ICache.scala 163:29]
+    end else if (!(_T_9 & results_0_address[31:6] == results_1_address[31:6])) begin // @[ICache.scala 168:157]
+      if (~cacheStalled) begin // @[ICache.scala 172:29]
+        results_1_valid <= 1'h0; // @[ICache.scala 173:29]
       end
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_1_address <= 64'h0; // @[ICache.scala 85:24]
-    end else if (~results_1_valid) begin // @[ICache.scala 156:34]
-      results_1_address <= requests_2_address; // @[ICache.scala 158:31]
+    end else if (~results_1_valid) begin // @[ICache.scala 162:34]
+      results_1_address <= requests_2_address; // @[ICache.scala 164:31]
     end
     if (reset) begin // @[ICache.scala 85:24]
       results_1_instruction <= 32'h0; // @[ICache.scala 85:24]
-    end else if (~results_1_valid) begin // @[ICache.scala 156:34]
-      results_1_instruction <= cache_instruction; // @[ICache.scala 159:35]
-    end else if (_T_9 & results_0_address[31:6] == results_1_address[31:6]) begin // @[ICache.scala 162:157]
-      if (4'hf == results_1_address[5:2]) begin // @[ICache.scala 163:35]
-        results_1_instruction <= cacheFill_block[511:480]; // @[ICache.scala 163:35]
+    end else if (~results_1_valid) begin // @[ICache.scala 162:34]
+      results_1_instruction <= cache_instruction; // @[ICache.scala 165:35]
+    end else if (_T_9 & results_0_address[31:6] == results_1_address[31:6]) begin // @[ICache.scala 168:157]
+      if (4'hf == results_1_address[5:2]) begin // @[ICache.scala 169:35]
+        results_1_instruction <= cacheFill_block[511:480]; // @[ICache.scala 169:35]
       end else begin
         results_1_instruction <= _GEN_47;
       end
@@ -299,8 +311,8 @@ module iCache(
     results_1_tag <= _GEN_70[19:0]; // @[ICache.scala 85:{24,24}]
     if (reset) begin // @[ICache.scala 85:24]
       results_1_tagValid <= 1'h0; // @[ICache.scala 85:24]
-    end else if (~results_1_valid) begin // @[ICache.scala 156:34]
-      results_1_tagValid <= cache_tag_valid; // @[ICache.scala 161:32]
+    end else if (~results_1_valid) begin // @[ICache.scala 162:34]
+      results_1_tagValid <= cache_tag_valid; // @[ICache.scala 167:32]
     end else begin
       results_1_tagValid <= _GEN_52;
     end
@@ -51213,6 +51225,12 @@ module soc1_Anon(
   output        debug_probe_cacheMissed,
   output        debug_probe_rready_signal,
   output        debug_probe_cacheFill_valid,
+  output        debug_probe_requests_next_valid,
+  output        debug_probe_requests_buffered_valid,
+  output        debug_probe_requests_servicing_valid,
+  output        debug_probe_results_next_valid,
+  output        debug_probe_results_buffred_valid,
+  output        debug_probe_results_servicing_valid,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -51436,6 +51454,12 @@ module soc1_Anon(
   wire  icache_debug_probe_cacheMissed; // @[core.scala 28:22]
   wire  icache_debug_probe_rready_signal; // @[core.scala 28:22]
   wire  icache_debug_probe_cacheFill_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_requests_next_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_requests_buffered_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_requests_servicing_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_results_next_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_results_buffred_valid; // @[core.scala 28:22]
+  wire  icache_debug_probe_results_servicing_valid; // @[core.scala 28:22]
   wire  icache_debug_probe_axi_arvalid; // @[core.scala 28:22]
   wire  icache_debug_probe_axi_arready; // @[core.scala 28:22]
   wire  icache_debug_probe_req_valid; // @[core.scala 28:22]
@@ -52273,6 +52297,12 @@ module soc1_Anon(
     .debug_probe_cacheMissed(icache_debug_probe_cacheMissed),
     .debug_probe_rready_signal(icache_debug_probe_rready_signal),
     .debug_probe_cacheFill_valid(icache_debug_probe_cacheFill_valid),
+    .debug_probe_requests_next_valid(icache_debug_probe_requests_next_valid),
+    .debug_probe_requests_buffered_valid(icache_debug_probe_requests_buffered_valid),
+    .debug_probe_requests_servicing_valid(icache_debug_probe_requests_servicing_valid),
+    .debug_probe_results_next_valid(icache_debug_probe_results_next_valid),
+    .debug_probe_results_buffred_valid(icache_debug_probe_results_buffred_valid),
+    .debug_probe_results_servicing_valid(icache_debug_probe_results_servicing_valid),
     .debug_probe_axi_arvalid(icache_debug_probe_axi_arvalid),
     .debug_probe_axi_arready(icache_debug_probe_axi_arready),
     .debug_probe_req_valid(icache_debug_probe_req_valid),
@@ -52575,6 +52605,12 @@ module soc1_Anon(
   assign debug_probe_cacheMissed = icache_debug_probe_cacheMissed; // @[core.scala 35:9]
   assign debug_probe_rready_signal = icache_debug_probe_rready_signal; // @[core.scala 35:9]
   assign debug_probe_cacheFill_valid = icache_debug_probe_cacheFill_valid; // @[core.scala 35:9]
+  assign debug_probe_requests_next_valid = icache_debug_probe_requests_next_valid; // @[core.scala 35:9]
+  assign debug_probe_requests_buffered_valid = icache_debug_probe_requests_buffered_valid; // @[core.scala 35:9]
+  assign debug_probe_requests_servicing_valid = icache_debug_probe_requests_servicing_valid; // @[core.scala 35:9]
+  assign debug_probe_results_next_valid = icache_debug_probe_results_next_valid; // @[core.scala 35:9]
+  assign debug_probe_results_buffred_valid = icache_debug_probe_results_buffred_valid; // @[core.scala 35:9]
+  assign debug_probe_results_servicing_valid = icache_debug_probe_results_servicing_valid; // @[core.scala 35:9]
   assign debug_probe_axi_arvalid = icache_debug_probe_axi_arvalid; // @[core.scala 35:9]
   assign debug_probe_axi_arready = icache_debug_probe_axi_arready; // @[core.scala 35:9]
   assign debug_probe_req_valid = icache_debug_probe_req_valid; // @[core.scala 35:9]
@@ -55053,7 +55089,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc1(
+module soc3(
   input         clock,
   input         reset,
   output        L2_AWVALID,
@@ -55137,6 +55173,12 @@ module soc1(
   output        debug_probe_cacheMissed,
   output        debug_probe_rready_signal,
   output        debug_probe_cacheFill_valid,
+  output        debug_probe_requests_next_valid,
+  output        debug_probe_requests_buffered_valid,
+  output        debug_probe_requests_servicing_valid,
+  output        debug_probe_results_next_valid,
+  output        debug_probe_results_buffred_valid,
+  output        debug_probe_results_servicing_valid,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -55159,6 +55201,12 @@ module soc1(
   wire  core0_debug_probe_cacheMissed; // @[soc.scala 89:21]
   wire  core0_debug_probe_rready_signal; // @[soc.scala 89:21]
   wire  core0_debug_probe_cacheFill_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_requests_next_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_requests_buffered_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_requests_servicing_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_results_next_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_results_buffred_valid; // @[soc.scala 89:21]
+  wire  core0_debug_probe_results_servicing_valid; // @[soc.scala 89:21]
   wire  core0_debug_probe_axi_arvalid; // @[soc.scala 89:21]
   wire  core0_debug_probe_axi_arready; // @[soc.scala 89:21]
   wire  core0_debug_probe_req_valid; // @[soc.scala 89:21]
@@ -55305,6 +55353,12 @@ module soc1(
     .debug_probe_cacheMissed(core0_debug_probe_cacheMissed),
     .debug_probe_rready_signal(core0_debug_probe_rready_signal),
     .debug_probe_cacheFill_valid(core0_debug_probe_cacheFill_valid),
+    .debug_probe_requests_next_valid(core0_debug_probe_requests_next_valid),
+    .debug_probe_requests_buffered_valid(core0_debug_probe_requests_buffered_valid),
+    .debug_probe_requests_servicing_valid(core0_debug_probe_requests_servicing_valid),
+    .debug_probe_results_next_valid(core0_debug_probe_results_next_valid),
+    .debug_probe_results_buffred_valid(core0_debug_probe_results_buffred_valid),
+    .debug_probe_results_servicing_valid(core0_debug_probe_results_servicing_valid),
     .debug_probe_axi_arvalid(core0_debug_probe_axi_arvalid),
     .debug_probe_axi_arready(core0_debug_probe_axi_arready),
     .debug_probe_req_valid(core0_debug_probe_req_valid),
@@ -55498,6 +55552,12 @@ module soc1(
   assign debug_probe_cacheMissed = core0_debug_probe_cacheMissed; // @[soc.scala 124:9]
   assign debug_probe_rready_signal = core0_debug_probe_rready_signal; // @[soc.scala 124:9]
   assign debug_probe_cacheFill_valid = core0_debug_probe_cacheFill_valid; // @[soc.scala 124:9]
+  assign debug_probe_requests_next_valid = core0_debug_probe_requests_next_valid; // @[soc.scala 124:9]
+  assign debug_probe_requests_buffered_valid = core0_debug_probe_requests_buffered_valid; // @[soc.scala 124:9]
+  assign debug_probe_requests_servicing_valid = core0_debug_probe_requests_servicing_valid; // @[soc.scala 124:9]
+  assign debug_probe_results_next_valid = core0_debug_probe_results_next_valid; // @[soc.scala 124:9]
+  assign debug_probe_results_buffred_valid = core0_debug_probe_results_buffred_valid; // @[soc.scala 124:9]
+  assign debug_probe_results_servicing_valid = core0_debug_probe_results_servicing_valid; // @[soc.scala 124:9]
   assign debug_probe_axi_arvalid = core0_debug_probe_axi_arvalid; // @[soc.scala 124:9]
   assign debug_probe_axi_arready = core0_debug_probe_axi_arready; // @[soc.scala 124:9]
   assign debug_probe_req_valid = core0_debug_probe_req_valid; // @[soc.scala 124:9]
