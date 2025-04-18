@@ -1,5 +1,5 @@
 $date
-        2025-Apr-11 07:31:59
+        2025-Apr-18 17:06:29
 $end
 $version
         Vivado v2024.2 (64-bit)
@@ -8,56 +8,56 @@ $timescale
         1ps
 $end
 $scope module dut $end
-$var reg 1 " design_1_i/soc_0_peripheral_WREADY $end
-$var reg 32 # design_1_i/soc_0_peripheral_AWADDR [31:0] $end
-$var reg 2 C design_1_i/soc_0_peripheral_BRESP [1:0] $end
-$var reg 1 E design_1_i/soc_0_peripheral_BVALID $end
-$var reg 1 F design_1_i/soc_0_peripheral_BREADY $end
-$var reg 32 G design_1_i/soc_0_peripheral_ARADDR [31:0] $end
-$var reg 1 g design_1_i/soc_0_peripheral_RREADY $end
-$var reg 1 h design_1_i/soc_0_peripheral_WVALID $end
-$var reg 1 i design_1_i/soc_0_peripheral_ARVALID $end
-$var reg 1 j design_1_i/soc_0_peripheral_ARREADY $end
-$var reg 32 k design_1_i/soc_0_peripheral_RDATA [31:0] $end
-$var reg 1 -" design_1_i/soc_0_peripheral_AWVALID $end
-$var reg 1 ." design_1_i/soc_0_peripheral_AWREADY $end
-$var reg 2 /" design_1_i/soc_0_peripheral_RRESP [1:0] $end
-$var reg 32 1" design_1_i/soc_0_peripheral_WDATA [31:0] $end
-$var reg 4 Q" design_1_i/soc_0_peripheral_WSTRB [3:0] $end
-$var reg 1 U" design_1_i/soc_0_peripheral_RVALID $end
-$var reg 3 V" design_1_i/soc_0_peripheral_ARPROT [2:0] $end
-$var reg 3 Y" design_1_i/soc_0_peripheral_AWPROT [2:0] $end
-$var reg 1 \" design_1_i/soc_0_peripheral_AWID $end
-$var reg 1 ]" design_1_i/soc_0_peripheral_BID $end
-$var reg 8 ^" design_1_i/soc_0_peripheral_AWLEN [7:0] $end
-$var reg 1 f" design_1_i/<const0>_1 $end
-$var reg 3 g" design_1_i/soc_0_peripheral_AWSIZE [2:0] $end
-$var reg 2 j" design_1_i/soc_0_peripheral_AWBURST [1:0] $end
-$var reg 1 l" design_1_i/soc_0_peripheral_ARID $end
-$var reg 1 m" design_1_i/soc_0_peripheral_AWLOCK $end
-$var reg 8 n" design_1_i/soc_0_peripheral_ARLEN [7:0] $end
-$var reg 3 v" design_1_i/soc_0_peripheral_ARSIZE [2:0] $end
-$var reg 2 y" design_1_i/soc_0_peripheral_ARBURST [1:0] $end
-$var reg 1 {" design_1_i/soc_0_peripheral_ARLOCK $end
-$var reg 4 |" design_1_i/soc_0_peripheral_ARCACHE [3:0] $end
-$var reg 4 "# design_1_i/soc_0_peripheral_AWCACHE [3:0] $end
-$var reg 1 &# design_1_i/<const0>_2 $end
-$var reg 1 '# design_1_i/<const0>_3 $end
-$var reg 1 (# design_1_i/<const0>_4 $end
-$var reg 1 )# design_1_i/<const0>_5 $end
-$var reg 4 *# design_1_i/soc_0_peripheral_ARQOS [3:0] $end
-$var reg 1 .# design_1_i/<const0>_6 $end
-$var reg 1 /# design_1_i/<const0>_7 $end
-$var reg 1 0# design_1_i/<const0>_8 $end
-$var reg 1 1# design_1_i/<const0>_9 $end
-$var reg 1 2# design_1_i/<const0>_10 $end
-$var reg 4 3# design_1_i/soc_0_peripheral_AWQOS [3:0] $end
-$var reg 1 7# design_1_i/soc_0_peripheral_RID $end
-$var reg 1 8# design_1_i/<const0>_11 $end
-$var reg 1 9# design_1_i/soc_0_peripheral_RLAST $end
-$var reg 1 :# design_1_i/<const0>_12 $end
-$var reg 1 ;# design_1_i/soc_0_peripheral_WLAST $end
-$var reg 1 <# design_1_i/<const0>_13 $end
+$var reg 1 " design_1_i/axi_smc_M02_AXI_WREADY $end
+$var reg 32 # design_1_i/axi_smc_M02_AXI_AWADDR [31:0] $end
+$var reg 2 C design_1_i/axi_smc_M02_AXI_BRESP [1:0] $end
+$var reg 1 E design_1_i/axi_smc_M02_AXI_BVALID $end
+$var reg 1 F design_1_i/axi_smc_M02_AXI_BREADY $end
+$var reg 32 G design_1_i/axi_smc_M02_AXI_ARADDR [31:0] $end
+$var reg 1 g design_1_i/axi_smc_M02_AXI_RREADY $end
+$var reg 1 h design_1_i/axi_smc_M02_AXI_WVALID $end
+$var reg 1 i design_1_i/axi_smc_M02_AXI_ARVALID $end
+$var reg 1 j design_1_i/axi_smc_M02_AXI_ARREADY $end
+$var reg 32 k design_1_i/axi_smc_M02_AXI_RDATA [31:0] $end
+$var reg 1 -" design_1_i/axi_smc_M02_AXI_AWVALID $end
+$var reg 1 ." design_1_i/axi_smc_M02_AXI_AWREADY $end
+$var reg 2 /" design_1_i/axi_smc_M02_AXI_RRESP [1:0] $end
+$var reg 32 1" design_1_i/axi_smc_M02_AXI_WDATA [31:0] $end
+$var reg 4 Q" design_1_i/axi_smc_M02_AXI_WSTRB [3:0] $end
+$var reg 1 U" design_1_i/axi_smc_M02_AXI_RVALID $end
+$var reg 3 V" design_1_i/axi_smc_M02_AXI_ARPROT [2:0] $end
+$var reg 3 Y" design_1_i/axi_smc_M02_AXI_AWPROT [2:0] $end
+$var reg 1 \" design_1_i/<const0>_1 $end
+$var reg 1 ]" design_1_i/axi_smc_M02_AXI_BID $end
+$var reg 8 ^" design_1_i/axi_smc_M02_AXI_AWLEN [7:0] $end
+$var reg 1 f" design_1_i/<const0>_2 $end
+$var reg 3 g" design_1_i/axi_smc_M02_AXI_AWSIZE [2:0] $end
+$var reg 2 j" design_1_i/axi_smc_M02_AXI_AWBURST [1:0] $end
+$var reg 1 l" design_1_i/<const0>_3 $end
+$var reg 1 m" design_1_i/axi_smc_M02_AXI_AWLOCK $end
+$var reg 8 n" design_1_i/axi_smc_M02_AXI_ARLEN [7:0] $end
+$var reg 3 v" design_1_i/axi_smc_M02_AXI_ARSIZE [2:0] $end
+$var reg 2 y" design_1_i/axi_smc_M02_AXI_ARBURST [1:0] $end
+$var reg 1 {" design_1_i/axi_smc_M02_AXI_ARLOCK $end
+$var reg 4 |" design_1_i/axi_smc_M02_AXI_ARCACHE [3:0] $end
+$var reg 4 "# design_1_i/axi_smc_M02_AXI_AWCACHE [3:0] $end
+$var reg 1 &# design_1_i/<const0>_4 $end
+$var reg 1 '# design_1_i/<const0>_5 $end
+$var reg 1 (# design_1_i/<const0>_6 $end
+$var reg 1 )# design_1_i/<const0>_7 $end
+$var reg 4 *# design_1_i/axi_smc_M02_AXI_ARQOS [3:0] $end
+$var reg 1 .# design_1_i/<const0>_8 $end
+$var reg 1 /# design_1_i/<const0>_9 $end
+$var reg 1 0# design_1_i/<const0>_10 $end
+$var reg 1 1# design_1_i/<const0>_11 $end
+$var reg 1 2# design_1_i/<const0>_12 $end
+$var reg 4 3# design_1_i/axi_smc_M02_AXI_AWQOS [3:0] $end
+$var reg 1 7# design_1_i/axi_smc_M02_AXI_RID $end
+$var reg 1 8# design_1_i/<const0>_13 $end
+$var reg 1 9# design_1_i/axi_smc_M02_AXI_RLAST $end
+$var reg 1 :# design_1_i/<const0>_14 $end
+$var reg 1 ;# design_1_i/axi_smc_M02_AXI_WLAST $end
+$var reg 1 <# design_1_i/<const0>_15 $end
 $var reg 1 =# _TRIGGER $end
 $var reg 1 ># _WINDOW $end
 $var reg 1 ?# _GAP $end
