@@ -36515,7 +36515,6 @@ module arbiter(
   wire  _GEN_224 = branchOps_passed ? replayRequest_request_branch_valid : _GEN_222; // @[utils.scala 104:26 96:30]
   wire [4:0] _GEN_225 = branchOps_valid ? _GEN_223 : replayRequest_request_branch_mask; // @[utils.scala 117:23 95:27]
   wire  _GEN_226 = branchOps_valid ? _GEN_224 : replayRequest_request_branch_valid; // @[utils.scala 118:24 95:27]
-  wire  _T_44 = speculativeBuffer_valid & _T_23; // @[arbiter.scala 200:40]
   wire [4:0] _GEN_234 = _T_9 ? _speculativeBuffer_branch_mask_T : speculativeBuffer_branch_mask; // @[utils.scala 102:27 98:56 99:27]
   wire [4:0] _GEN_235 = _T_9 ? 5'h0 : speculativeBuffer_branch_mask; // @[utils.scala 107:56 108:27 112:27]
   wire  _GEN_236 = _T_9 ? 1'h0 : speculativeBuffer_branch_valid; // @[utils.scala 107:56 109:28 113:28]
@@ -36523,16 +36522,15 @@ module arbiter(
   wire  _GEN_238 = branchOps_passed ? speculativeBuffer_branch_valid : _GEN_236; // @[utils.scala 104:26 96:30]
   wire [4:0] _GEN_239 = branchOps_valid ? _GEN_237 : speculativeBuffer_branch_mask; // @[utils.scala 117:23 95:27]
   wire  _GEN_240 = branchOps_valid ? _GEN_238 : speculativeBuffer_branch_valid; // @[utils.scala 118:24 95:27]
-  wire  _GEN_241 = speculativeBuffer_valid & _T_23 ? 1'h0 : _GEN_24; // @[arbiter.scala 200:103 201:31]
-  wire  _GEN_242 = speculativeBuffer_valid & _T_23 & speculativeBuffer_valid; // @[arbiter.scala 200:103 203:29 208:35]
-  wire [31:0] _GEN_243 = speculativeBuffer_valid & _T_23 ? speculativeBuffer_address : 32'h0; // @[arbiter.scala 200:103 203:29 utils.scala 55:41]
-  wire [31:0] _GEN_244 = speculativeBuffer_valid & _T_23 ? speculativeBuffer_core_instruction : 32'h0; // @[arbiter.scala 200:103 203:29 utils.scala 55:41]
-  wire [3:0] _GEN_245 = speculativeBuffer_valid & _T_23 ? speculativeBuffer_core_robAddr : 4'h0; // @[arbiter.scala 200:103 203:29 utils.scala 55:41]
-  wire [5:0] _GEN_246 = speculativeBuffer_valid & _T_23 ? speculativeBuffer_core_prfDest : 6'h0; // @[arbiter.scala 200:103 203:29 utils.scala 55:41]
-  wire  _GEN_247 = speculativeBuffer_valid & _T_23 & _GEN_240; // @[arbiter.scala 200:103 utils.scala 54:41]
-  wire [4:0] _GEN_248 = speculativeBuffer_valid & _T_23 ? _GEN_239 : 5'h0; // @[arbiter.scala 200:103 utils.scala 55:41]
+  wire  _GEN_241 = speculativeBuffer_valid ? 1'h0 : _GEN_24; // @[arbiter.scala 200:42 201:31]
+  wire [31:0] _GEN_243 = speculativeBuffer_valid ? speculativeBuffer_address : 32'h0; // @[arbiter.scala 200:42 203:29 utils.scala 55:41]
+  wire [31:0] _GEN_244 = speculativeBuffer_valid ? speculativeBuffer_core_instruction : 32'h0; // @[arbiter.scala 200:42 203:29 utils.scala 55:41]
+  wire [3:0] _GEN_245 = speculativeBuffer_valid ? speculativeBuffer_core_robAddr : 4'h0; // @[arbiter.scala 200:42 203:29 utils.scala 55:41]
+  wire [5:0] _GEN_246 = speculativeBuffer_valid ? speculativeBuffer_core_prfDest : 6'h0; // @[arbiter.scala 200:42 203:29 utils.scala 55:41]
+  wire  _GEN_247 = speculativeBuffer_valid & _GEN_240; // @[arbiter.scala 200:42 utils.scala 54:41]
+  wire [4:0] _GEN_248 = speculativeBuffer_valid ? _GEN_239 : 5'h0; // @[arbiter.scala 200:42 utils.scala 55:41]
   wire  _GEN_255 = inorderBuffer_valid & _T_20 & _T_23 ? 1'h0 : _GEN_150; // @[arbiter.scala 191:130 192:27]
-  wire  _GEN_256 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_valid : _GEN_242; // @[arbiter.scala 191:130 194:29]
+  wire  _GEN_256 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_valid : speculativeBuffer_valid; // @[arbiter.scala 191:130 194:29]
   wire [31:0] _GEN_257 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_address : _GEN_243; // @[arbiter.scala 191:130 194:29]
   wire [31:0] _GEN_258 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_core_instruction : _GEN_244; // @[arbiter.scala 191:130 194:29]
   wire [3:0] _GEN_259 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_core_robAddr : _GEN_245; // @[arbiter.scala 191:130 194:29]
@@ -36541,7 +36539,7 @@ module arbiter(
   wire [4:0] _GEN_262 = inorderBuffer_valid & _T_20 & _T_23 ? _GEN_203 : _GEN_248; // @[arbiter.scala 191:130]
   wire  _GEN_263 = inorderBuffer_valid & _T_20 & _T_23 & inorderBuffer_writeData_valid; // @[arbiter.scala 191:130 194:29]
   wire [63:0] _GEN_264 = inorderBuffer_valid & _T_20 & _T_23 ? inorderBuffer_writeData_data : 64'h0; // @[arbiter.scala 191:130 194:29]
-  wire  _GEN_268 = inorderBuffer_valid & _T_20 & _T_23 | _T_44; // @[arbiter.scala 191:130 195:23]
+  wire  _GEN_268 = inorderBuffer_valid & _T_20 & _T_23 | speculativeBuffer_valid; // @[arbiter.scala 191:130 195:23]
   wire  _GEN_269 = inorderBuffer_valid & _T_20 & _T_23 ? operationWires_rAtomics & ~inorderBuffer_writeData_valid :
     atomicBusyState; // @[arbiter.scala 191:130 198:23 165:32]
   wire  _GEN_270 = inorderBuffer_valid & _T_20 & _T_23 ? _GEN_24 : _GEN_241; // @[arbiter.scala 191:130]
@@ -54999,7 +54997,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc1(
+module soc3(
   input         clock,
   input         reset,
   output        L2_AWVALID,
