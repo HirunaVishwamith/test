@@ -31,6 +31,7 @@ module iCache(
   output        debug_probe_tag_valid,
   output [63:0] debug_probe_address,
   output [19:0] debug_probe_tag,
+  output [63:0] debug_probe_valid_bit_set,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -63,6 +64,7 @@ module iCache(
   wire [31:0] cache_instruction; // @[ICache.scala 84:21]
   wire [19:0] cache_tag; // @[ICache.scala 84:21]
   wire  cache_tag_valid; // @[ICache.scala 84:21]
+  wire [63:0] cache_validBitSet; // @[ICache.scala 84:21]
   wire [5:0] cache_write_line_index; // @[ICache.scala 84:21]
   wire [511:0] cache_write_block; // @[ICache.scala 84:21]
   wire [19:0] cache_write_tag; // @[ICache.scala 84:21]
@@ -154,6 +156,7 @@ module iCache(
     .instruction(cache_instruction),
     .tag(cache_tag),
     .tag_valid(cache_tag_valid),
+    .validBitSet(cache_validBitSet),
     .write_line_index(cache_write_line_index),
     .write_block(cache_write_block),
     .write_tag(cache_write_tag),
@@ -183,6 +186,7 @@ module iCache(
   assign debug_probe_tag_valid = results_0_tagValid; // @[ICache.scala 134:25]
   assign debug_probe_address = results_0_address; // @[ICache.scala 135:23]
   assign debug_probe_tag = results_0_tag; // @[ICache.scala 136:19]
+  assign debug_probe_valid_bit_set = cache_validBitSet; // @[ICache.scala 137:32]
   assign debug_probe_axi_arvalid = lowLevelMem_ARVALID; // @[ICache.scala 138:32]
   assign debug_probe_axi_arready = lowLevelMem_ARREADY; // @[ICache.scala 139:32]
   assign debug_probe_req_valid = fromFetch_req_valid; // @[ICache.scala 140:32]
@@ -51240,6 +51244,7 @@ module soc1_Anon(
   output        debug_probe_tag_valid,
   output [63:0] debug_probe_address,
   output [19:0] debug_probe_tag,
+  output [63:0] debug_probe_valid_bit_set,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -51472,6 +51477,7 @@ module soc1_Anon(
   wire  icache_debug_probe_tag_valid; // @[core.scala 28:22]
   wire [63:0] icache_debug_probe_address; // @[core.scala 28:22]
   wire [19:0] icache_debug_probe_tag; // @[core.scala 28:22]
+  wire [63:0] icache_debug_probe_valid_bit_set; // @[core.scala 28:22]
   wire  icache_debug_probe_axi_arvalid; // @[core.scala 28:22]
   wire  icache_debug_probe_axi_arready; // @[core.scala 28:22]
   wire  icache_debug_probe_req_valid; // @[core.scala 28:22]
@@ -52318,6 +52324,7 @@ module soc1_Anon(
     .debug_probe_tag_valid(icache_debug_probe_tag_valid),
     .debug_probe_address(icache_debug_probe_address),
     .debug_probe_tag(icache_debug_probe_tag),
+    .debug_probe_valid_bit_set(icache_debug_probe_valid_bit_set),
     .debug_probe_axi_arvalid(icache_debug_probe_axi_arvalid),
     .debug_probe_axi_arready(icache_debug_probe_axi_arready),
     .debug_probe_req_valid(icache_debug_probe_req_valid),
@@ -52629,6 +52636,7 @@ module soc1_Anon(
   assign debug_probe_tag_valid = icache_debug_probe_tag_valid; // @[core.scala 35:9]
   assign debug_probe_address = icache_debug_probe_address; // @[core.scala 35:9]
   assign debug_probe_tag = icache_debug_probe_tag; // @[core.scala 35:9]
+  assign debug_probe_valid_bit_set = icache_debug_probe_valid_bit_set; // @[core.scala 35:9]
   assign debug_probe_axi_arvalid = icache_debug_probe_axi_arvalid; // @[core.scala 35:9]
   assign debug_probe_axi_arready = icache_debug_probe_axi_arready; // @[core.scala 35:9]
   assign debug_probe_req_valid = icache_debug_probe_req_valid; // @[core.scala 35:9]
@@ -55107,7 +55115,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc6(
+module soc7(
   input         clock,
   input         reset,
   output        L2_AWVALID,
@@ -55200,6 +55208,7 @@ module soc6(
   output        debug_probe_tag_valid,
   output [63:0] debug_probe_address,
   output [19:0] debug_probe_tag,
+  output [63:0] debug_probe_valid_bit_set,
   output        debug_probe_axi_arvalid,
   output        debug_probe_axi_arready,
   output        debug_probe_req_valid,
@@ -55231,6 +55240,7 @@ module soc6(
   wire  core0_debug_probe_tag_valid; // @[soc.scala 89:21]
   wire [63:0] core0_debug_probe_address; // @[soc.scala 89:21]
   wire [19:0] core0_debug_probe_tag; // @[soc.scala 89:21]
+  wire [63:0] core0_debug_probe_valid_bit_set; // @[soc.scala 89:21]
   wire  core0_debug_probe_axi_arvalid; // @[soc.scala 89:21]
   wire  core0_debug_probe_axi_arready; // @[soc.scala 89:21]
   wire  core0_debug_probe_req_valid; // @[soc.scala 89:21]
@@ -55386,6 +55396,7 @@ module soc6(
     .debug_probe_tag_valid(core0_debug_probe_tag_valid),
     .debug_probe_address(core0_debug_probe_address),
     .debug_probe_tag(core0_debug_probe_tag),
+    .debug_probe_valid_bit_set(core0_debug_probe_valid_bit_set),
     .debug_probe_axi_arvalid(core0_debug_probe_axi_arvalid),
     .debug_probe_axi_arready(core0_debug_probe_axi_arready),
     .debug_probe_req_valid(core0_debug_probe_req_valid),
@@ -55588,6 +55599,7 @@ module soc6(
   assign debug_probe_tag_valid = core0_debug_probe_tag_valid; // @[soc.scala 124:9]
   assign debug_probe_address = core0_debug_probe_address; // @[soc.scala 124:9]
   assign debug_probe_tag = core0_debug_probe_tag; // @[soc.scala 124:9]
+  assign debug_probe_valid_bit_set = core0_debug_probe_valid_bit_set; // @[soc.scala 124:9]
   assign debug_probe_axi_arvalid = core0_debug_probe_axi_arvalid; // @[soc.scala 124:9]
   assign debug_probe_axi_arready = core0_debug_probe_axi_arready; // @[soc.scala 124:9]
   assign debug_probe_req_valid = core0_debug_probe_req_valid; // @[soc.scala 124:9]
