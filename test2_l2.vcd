@@ -1,0 +1,123 @@
+$date
+        2025-Apr-21 18:50:18
+$end
+$version
+        Vivado v2024.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " design_1_i/soc_0_L2_WREADY $end
+$var reg 64 # design_1_i/soc_0_L2_AWADDR [63:0] $end
+$var reg 2 c design_1_i/soc_0_L2_BRESP [1:0] $end
+$var reg 1 e design_1_i/soc_0_L2_BVALID $end
+$var reg 1 f design_1_i/soc_0_L2_BREADY $end
+$var reg 64 g design_1_i/soc_0_L2_ARADDR [63:0] $end
+$var reg 1 I" design_1_i/soc_0_L2_RREADY $end
+$var reg 1 J" design_1_i/soc_0_L2_WVALID $end
+$var reg 1 K" design_1_i/soc_0_L2_ARVALID $end
+$var reg 1 L" design_1_i/soc_0_L2_ARREADY $end
+$var reg 64 M" design_1_i/soc_0_L2_RDATA [63:0] $end
+$var reg 1 /# design_1_i/soc_0_L2_AWVALID $end
+$var reg 1 0# design_1_i/soc_0_L2_AWREADY $end
+$var reg 2 1# design_1_i/soc_0_L2_RRESP [1:0] $end
+$var reg 64 3# design_1_i/soc_0_L2_WDATA [63:0] $end
+$var reg 8 s# design_1_i/soc_0_L2_WSTRB [7:0] $end
+$var reg 1 {# design_1_i/soc_0_L2_RVALID $end
+$var reg 3 |# design_1_i/soc_0_L2_ARPROT [2:0] $end
+$var reg 3 !$ design_1_i/soc_0_L2_AWPROT [2:0] $end
+$var reg 2 $$ design_1_i/soc_0_L2_AWID [1:0] $end
+$var reg 2 &$ design_1_i/soc_0_L2_BID [1:0] $end
+$var reg 8 ($ design_1_i/soc_0_L2_AWLEN [7:0] $end
+$var reg 1 0$ design_1_i/<const0>_1 $end
+$var reg 3 1$ design_1_i/soc_0_L2_AWSIZE [2:0] $end
+$var reg 2 4$ design_1_i/soc_0_L2_AWBURST [1:0] $end
+$var reg 2 6$ design_1_i/soc_0_L2_ARID [1:0] $end
+$var reg 1 8$ design_1_i/soc_0_L2_AWLOCK $end
+$var reg 8 9$ design_1_i/soc_0_L2_ARLEN [7:0] $end
+$var reg 3 A$ design_1_i/soc_0_L2_ARSIZE [2:0] $end
+$var reg 2 D$ design_1_i/soc_0_L2_ARBURST [1:0] $end
+$var reg 1 F$ design_1_i/soc_0_L2_ARLOCK $end
+$var reg 4 G$ design_1_i/soc_0_L2_ARCACHE [3:0] $end
+$var reg 4 K$ design_1_i/soc_0_L2_AWCACHE [3:0] $end
+$var reg 1 O$ design_1_i/<const0>_2 $end
+$var reg 1 P$ design_1_i/<const0>_3 $end
+$var reg 1 Q$ design_1_i/<const0>_4 $end
+$var reg 1 R$ design_1_i/<const0>_5 $end
+$var reg 4 S$ design_1_i/soc_0_L2_ARQOS [3:0] $end
+$var reg 1 W$ design_1_i/<const0>_6 $end
+$var reg 1 X$ design_1_i/<const0>_7 $end
+$var reg 1 Y$ design_1_i/<const0>_8 $end
+$var reg 1 Z$ design_1_i/<const0>_9 $end
+$var reg 1 [$ design_1_i/<const0>_10 $end
+$var reg 4 \$ design_1_i/soc_0_L2_AWQOS [3:0] $end
+$var reg 2 `$ design_1_i/soc_0_L2_RID [1:0] $end
+$var reg 1 b$ design_1_i/<const0>_11 $end
+$var reg 1 c$ design_1_i/soc_0_L2_RLAST $end
+$var reg 1 d$ design_1_i/<const0>_12 $end
+$var reg 1 e$ design_1_i/soc_0_L2_WLAST $end
+$var reg 1 f$ design_1_i/<const0>_13 $end
+$var reg 1 g$ _TRIGGER $end
+$var reg 1 h$ _WINDOW $end
+$var reg 1 i$ _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+b10000000000000000011011100000000 #
+b0 c
+0e
+0f
+b10000000000000000011011100000000 g
+0I"
+0J"
+0K"
+1L"
+b1011100101000000000110001111111111111101010000010100011011 M"
+0/#
+10#
+b0 1#
+b10000000000000000011011100000000 3#
+b11111111 s#
+0{#
+b0 |#
+b0 !$
+b0 $$
+b0 &$
+b111 ($
+00$
+b11 1$
+b1 4$
+b0 6$
+08$
+b111 9$
+b11 A$
+b1 D$
+0F$
+b10 G$
+b10 K$
+0O$
+0P$
+0Q$
+0R$
+b0 S$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+b0 \$
+b0 `$
+0b$
+0c$
+0d$
+1e$
+0f$
+0g$
+1h$
+0i$
+$end
+#512
+1g$
