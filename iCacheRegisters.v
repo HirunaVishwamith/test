@@ -9,20 +9,15 @@ module iCacheRegisters #(
   output reg [31:0] instruction,
   output reg [tag_width-1: 0] tag,
   output reg tag_valid,
-  output wire [cache_depth-1:0] validBitSet,
   input [line_width-1:0] write_line_index,
   input [32*block_size - 1:0] write_block,
   input [tag_width-1: 0] write_tag,
   input reset, write_in, clock, invalidate_all
 );
 
-
-
   reg [31:0] cache [cache_depth-1:0][block_size-1:0];
   reg [tag_width-1:0] tags [cache_depth-1:0];
   reg validBits [cache_depth-1:0];
-
-  // assign validBitSet = validBits;
 
   always@(posedge clock) begin
     instruction <= cache[address[line_width+offset_width+2-1:offset_width+2]][address[offset_width+2-1:2]];
@@ -48,12 +43,5 @@ module iCacheRegisters #(
       tags[write_line_index] <= write_tag;
     end
   end
-
-  genvar k;
-generate
-  for (k = 0; k < cache_depth; k = k + 1) begin : VALID_PROBE_GEN
-    assign validBitSet[k] = validBits[k];
-  end
-endgenerate
 
 endmodule
