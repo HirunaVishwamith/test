@@ -4129,8 +4129,41 @@ module core_Anon(
   input         branchEvalIn_passFail,
   input  [4:0]  branchEvalIn_branchMask,
   input  [63:0] branchEvalIn_targetPC,
+  output [5:0]  retiredRenamedTable_table_0,
+  output [5:0]  retiredRenamedTable_table_1,
+  output [5:0]  retiredRenamedTable_table_2,
+  output [5:0]  retiredRenamedTable_table_3,
+  output [5:0]  retiredRenamedTable_table_4,
+  output [5:0]  retiredRenamedTable_table_5,
+  output [5:0]  retiredRenamedTable_table_6,
+  output [5:0]  retiredRenamedTable_table_7,
+  output [5:0]  retiredRenamedTable_table_8,
+  output [5:0]  retiredRenamedTable_table_9,
+  output [5:0]  retiredRenamedTable_table_10,
+  output [5:0]  retiredRenamedTable_table_11,
+  output [5:0]  retiredRenamedTable_table_12,
+  output [5:0]  retiredRenamedTable_table_13,
+  output [5:0]  retiredRenamedTable_table_14,
+  output [5:0]  retiredRenamedTable_table_15,
+  output [5:0]  retiredRenamedTable_table_16,
+  output [5:0]  retiredRenamedTable_table_17,
+  output [5:0]  retiredRenamedTable_table_18,
+  output [5:0]  retiredRenamedTable_table_19,
+  output [5:0]  retiredRenamedTable_table_20,
+  output [5:0]  retiredRenamedTable_table_21,
+  output [5:0]  retiredRenamedTable_table_22,
+  output [5:0]  retiredRenamedTable_table_23,
+  output [5:0]  retiredRenamedTable_table_24,
+  output [5:0]  retiredRenamedTable_table_25,
+  output [5:0]  retiredRenamedTable_table_26,
+  output [5:0]  retiredRenamedTable_table_27,
+  output [5:0]  retiredRenamedTable_table_28,
+  output [5:0]  retiredRenamedTable_table_29,
+  output [5:0]  retiredRenamedTable_table_30,
+  output [5:0]  retiredRenamedTable_table_31,
   input  [63:0] interruptedPC,
-  output        canTakeInterrupt
+  output        canTakeInterrupt,
+  output [63:0] registersOut_0
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [63:0] _RAND_0;
@@ -16003,7 +16036,40 @@ module core_Anon(
   assign branchPCs_predictedPCReady = branchBuffer_predictedPCReady; // @[decode.scala 280:30]
   assign branchPCs_predictedPC = branchBuffer_predictedPC; // @[decode.scala 282:30]
   assign branchPCs_branchMask = branchPCMask; // @[decode.scala 283:30]
+  assign retiredRenamedTable_table_0 = architecturalRegMap_0; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_1 = architecturalRegMap_1; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_2 = architecturalRegMap_2; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_3 = architecturalRegMap_3; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_4 = architecturalRegMap_4; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_5 = architecturalRegMap_5; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_6 = architecturalRegMap_6; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_7 = architecturalRegMap_7; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_8 = architecturalRegMap_8; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_9 = architecturalRegMap_9; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_10 = architecturalRegMap_10; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_11 = architecturalRegMap_11; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_12 = architecturalRegMap_12; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_13 = architecturalRegMap_13; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_14 = architecturalRegMap_14; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_15 = architecturalRegMap_15; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_16 = architecturalRegMap_16; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_17 = architecturalRegMap_17; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_18 = architecturalRegMap_18; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_19 = architecturalRegMap_19; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_20 = architecturalRegMap_20; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_21 = architecturalRegMap_21; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_22 = architecturalRegMap_22; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_23 = architecturalRegMap_23; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_24 = architecturalRegMap_24; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_25 = architecturalRegMap_25; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_26 = architecturalRegMap_26; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_27 = architecturalRegMap_27; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_28 = architecturalRegMap_28; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_29 = architecturalRegMap_29; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_30 = architecturalRegMap_30; // @[decode.scala 314:34]
+  assign retiredRenamedTable_table_31 = architecturalRegMap_31; // @[decode.scala 314:34]
   assign canTakeInterrupt = stallReg ? 1'h0 : _GEN_14135; // @[decode.scala 899:18 902:22]
+  assign registersOut_0 = mstatus; // @[core.scala 51:23]
   always @(posedge clock) begin
     if (reset) begin // @[decode.scala 111:28]
       inputBuffer_pc <= 64'hffffffc; // @[decode.scala 111:28]
@@ -51090,7 +51156,71 @@ module PRF(
   output [63:0] toStore_rs2Data,
   input         branchCheck_pass,
   input  [4:0]  branchCheck_branchmask,
-  input         branchCheck_valid
+  input         branchCheck_valid,
+  output [63:0] registerFileOutput_0,
+  output [63:0] registerFileOutput_1,
+  output [63:0] registerFileOutput_2,
+  output [63:0] registerFileOutput_3,
+  output [63:0] registerFileOutput_4,
+  output [63:0] registerFileOutput_5,
+  output [63:0] registerFileOutput_6,
+  output [63:0] registerFileOutput_7,
+  output [63:0] registerFileOutput_8,
+  output [63:0] registerFileOutput_9,
+  output [63:0] registerFileOutput_10,
+  output [63:0] registerFileOutput_11,
+  output [63:0] registerFileOutput_12,
+  output [63:0] registerFileOutput_13,
+  output [63:0] registerFileOutput_14,
+  output [63:0] registerFileOutput_15,
+  output [63:0] registerFileOutput_16,
+  output [63:0] registerFileOutput_17,
+  output [63:0] registerFileOutput_18,
+  output [63:0] registerFileOutput_19,
+  output [63:0] registerFileOutput_20,
+  output [63:0] registerFileOutput_21,
+  output [63:0] registerFileOutput_22,
+  output [63:0] registerFileOutput_23,
+  output [63:0] registerFileOutput_24,
+  output [63:0] registerFileOutput_25,
+  output [63:0] registerFileOutput_26,
+  output [63:0] registerFileOutput_27,
+  output [63:0] registerFileOutput_28,
+  output [63:0] registerFileOutput_29,
+  output [63:0] registerFileOutput_30,
+  output [63:0] registerFileOutput_31,
+  output [63:0] registerFileOutput_32,
+  output [63:0] registerFileOutput_33,
+  output [63:0] registerFileOutput_34,
+  output [63:0] registerFileOutput_35,
+  output [63:0] registerFileOutput_36,
+  output [63:0] registerFileOutput_37,
+  output [63:0] registerFileOutput_38,
+  output [63:0] registerFileOutput_39,
+  output [63:0] registerFileOutput_40,
+  output [63:0] registerFileOutput_41,
+  output [63:0] registerFileOutput_42,
+  output [63:0] registerFileOutput_43,
+  output [63:0] registerFileOutput_44,
+  output [63:0] registerFileOutput_45,
+  output [63:0] registerFileOutput_46,
+  output [63:0] registerFileOutput_47,
+  output [63:0] registerFileOutput_48,
+  output [63:0] registerFileOutput_49,
+  output [63:0] registerFileOutput_50,
+  output [63:0] registerFileOutput_51,
+  output [63:0] registerFileOutput_52,
+  output [63:0] registerFileOutput_53,
+  output [63:0] registerFileOutput_54,
+  output [63:0] registerFileOutput_55,
+  output [63:0] registerFileOutput_56,
+  output [63:0] registerFileOutput_57,
+  output [63:0] registerFileOutput_58,
+  output [63:0] registerFileOutput_59,
+  output [63:0] registerFileOutput_60,
+  output [63:0] registerFileOutput_61,
+  output [63:0] registerFileOutput_62,
+  output [63:0] registerFileOutput_63
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -51101,6 +51231,70 @@ module PRF(
   reg [31:0] _RAND_5;
   reg [31:0] _RAND_6;
   reg [31:0] _RAND_7;
+  reg [63:0] _RAND_8;
+  reg [63:0] _RAND_9;
+  reg [63:0] _RAND_10;
+  reg [63:0] _RAND_11;
+  reg [63:0] _RAND_12;
+  reg [63:0] _RAND_13;
+  reg [63:0] _RAND_14;
+  reg [63:0] _RAND_15;
+  reg [63:0] _RAND_16;
+  reg [63:0] _RAND_17;
+  reg [63:0] _RAND_18;
+  reg [63:0] _RAND_19;
+  reg [63:0] _RAND_20;
+  reg [63:0] _RAND_21;
+  reg [63:0] _RAND_22;
+  reg [63:0] _RAND_23;
+  reg [63:0] _RAND_24;
+  reg [63:0] _RAND_25;
+  reg [63:0] _RAND_26;
+  reg [63:0] _RAND_27;
+  reg [63:0] _RAND_28;
+  reg [63:0] _RAND_29;
+  reg [63:0] _RAND_30;
+  reg [63:0] _RAND_31;
+  reg [63:0] _RAND_32;
+  reg [63:0] _RAND_33;
+  reg [63:0] _RAND_34;
+  reg [63:0] _RAND_35;
+  reg [63:0] _RAND_36;
+  reg [63:0] _RAND_37;
+  reg [63:0] _RAND_38;
+  reg [63:0] _RAND_39;
+  reg [63:0] _RAND_40;
+  reg [63:0] _RAND_41;
+  reg [63:0] _RAND_42;
+  reg [63:0] _RAND_43;
+  reg [63:0] _RAND_44;
+  reg [63:0] _RAND_45;
+  reg [63:0] _RAND_46;
+  reg [63:0] _RAND_47;
+  reg [63:0] _RAND_48;
+  reg [63:0] _RAND_49;
+  reg [63:0] _RAND_50;
+  reg [63:0] _RAND_51;
+  reg [63:0] _RAND_52;
+  reg [63:0] _RAND_53;
+  reg [63:0] _RAND_54;
+  reg [63:0] _RAND_55;
+  reg [63:0] _RAND_56;
+  reg [63:0] _RAND_57;
+  reg [63:0] _RAND_58;
+  reg [63:0] _RAND_59;
+  reg [63:0] _RAND_60;
+  reg [63:0] _RAND_61;
+  reg [63:0] _RAND_62;
+  reg [63:0] _RAND_63;
+  reg [63:0] _RAND_64;
+  reg [63:0] _RAND_65;
+  reg [63:0] _RAND_66;
+  reg [63:0] _RAND_67;
+  reg [63:0] _RAND_68;
+  reg [63:0] _RAND_69;
+  reg [63:0] _RAND_70;
+  reg [63:0] _RAND_71;
 `endif // RANDOMIZE_REG_INIT
   wire  prf_clock; // @[PRF.scala 73:19]
   wire  prf_reset; // @[PRF.scala 73:19]
@@ -51135,6 +51329,454 @@ module PRF(
   wire [4:0] _T = branchCheck_branchmask & execRead_branchmask; // @[PRF.scala 115:36]
   wire [4:0] _toExec_mask_T = branchCheck_branchmask ^ execRead_branchmask; // @[PRF.scala 116:47]
   reg  toStore_valid_REG_1; // @[PRF.scala 140:27]
+  reg [63:0] physicalRegisterFile_0; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_1; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_2; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_3; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_4; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_5; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_6; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_7; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_8; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_9; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_10; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_11; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_12; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_13; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_14; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_15; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_16; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_17; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_18; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_19; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_20; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_21; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_22; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_23; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_24; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_25; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_26; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_27; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_28; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_29; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_30; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_31; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_32; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_33; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_34; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_35; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_36; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_37; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_38; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_39; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_40; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_41; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_42; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_43; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_44; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_45; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_46; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_47; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_48; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_49; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_50; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_51; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_52; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_53; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_54; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_55; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_56; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_57; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_58; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_59; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_60; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_61; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_62; // @[PRF.scala 143:33]
+  reg [63:0] physicalRegisterFile_63; // @[PRF.scala 143:33]
+  wire [63:0] _GEN_9 = 6'h0 == w1_addr ? w1_data : physicalRegisterFile_0; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_10 = 6'h1 == w1_addr ? w1_data : physicalRegisterFile_1; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_11 = 6'h2 == w1_addr ? w1_data : physicalRegisterFile_2; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_12 = 6'h3 == w1_addr ? w1_data : physicalRegisterFile_3; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_13 = 6'h4 == w1_addr ? w1_data : physicalRegisterFile_4; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_14 = 6'h5 == w1_addr ? w1_data : physicalRegisterFile_5; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_15 = 6'h6 == w1_addr ? w1_data : physicalRegisterFile_6; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_16 = 6'h7 == w1_addr ? w1_data : physicalRegisterFile_7; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_17 = 6'h8 == w1_addr ? w1_data : physicalRegisterFile_8; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_18 = 6'h9 == w1_addr ? w1_data : physicalRegisterFile_9; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_19 = 6'ha == w1_addr ? w1_data : physicalRegisterFile_10; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_20 = 6'hb == w1_addr ? w1_data : physicalRegisterFile_11; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_21 = 6'hc == w1_addr ? w1_data : physicalRegisterFile_12; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_22 = 6'hd == w1_addr ? w1_data : physicalRegisterFile_13; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_23 = 6'he == w1_addr ? w1_data : physicalRegisterFile_14; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_24 = 6'hf == w1_addr ? w1_data : physicalRegisterFile_15; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_25 = 6'h10 == w1_addr ? w1_data : physicalRegisterFile_16; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_26 = 6'h11 == w1_addr ? w1_data : physicalRegisterFile_17; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_27 = 6'h12 == w1_addr ? w1_data : physicalRegisterFile_18; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_28 = 6'h13 == w1_addr ? w1_data : physicalRegisterFile_19; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_29 = 6'h14 == w1_addr ? w1_data : physicalRegisterFile_20; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_30 = 6'h15 == w1_addr ? w1_data : physicalRegisterFile_21; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_31 = 6'h16 == w1_addr ? w1_data : physicalRegisterFile_22; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_32 = 6'h17 == w1_addr ? w1_data : physicalRegisterFile_23; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_33 = 6'h18 == w1_addr ? w1_data : physicalRegisterFile_24; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_34 = 6'h19 == w1_addr ? w1_data : physicalRegisterFile_25; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_35 = 6'h1a == w1_addr ? w1_data : physicalRegisterFile_26; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_36 = 6'h1b == w1_addr ? w1_data : physicalRegisterFile_27; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_37 = 6'h1c == w1_addr ? w1_data : physicalRegisterFile_28; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_38 = 6'h1d == w1_addr ? w1_data : physicalRegisterFile_29; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_39 = 6'h1e == w1_addr ? w1_data : physicalRegisterFile_30; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_40 = 6'h1f == w1_addr ? w1_data : physicalRegisterFile_31; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_41 = 6'h20 == w1_addr ? w1_data : physicalRegisterFile_32; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_42 = 6'h21 == w1_addr ? w1_data : physicalRegisterFile_33; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_43 = 6'h22 == w1_addr ? w1_data : physicalRegisterFile_34; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_44 = 6'h23 == w1_addr ? w1_data : physicalRegisterFile_35; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_45 = 6'h24 == w1_addr ? w1_data : physicalRegisterFile_36; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_46 = 6'h25 == w1_addr ? w1_data : physicalRegisterFile_37; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_47 = 6'h26 == w1_addr ? w1_data : physicalRegisterFile_38; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_48 = 6'h27 == w1_addr ? w1_data : physicalRegisterFile_39; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_49 = 6'h28 == w1_addr ? w1_data : physicalRegisterFile_40; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_50 = 6'h29 == w1_addr ? w1_data : physicalRegisterFile_41; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_51 = 6'h2a == w1_addr ? w1_data : physicalRegisterFile_42; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_52 = 6'h2b == w1_addr ? w1_data : physicalRegisterFile_43; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_53 = 6'h2c == w1_addr ? w1_data : physicalRegisterFile_44; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_54 = 6'h2d == w1_addr ? w1_data : physicalRegisterFile_45; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_55 = 6'h2e == w1_addr ? w1_data : physicalRegisterFile_46; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_56 = 6'h2f == w1_addr ? w1_data : physicalRegisterFile_47; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_57 = 6'h30 == w1_addr ? w1_data : physicalRegisterFile_48; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_58 = 6'h31 == w1_addr ? w1_data : physicalRegisterFile_49; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_59 = 6'h32 == w1_addr ? w1_data : physicalRegisterFile_50; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_60 = 6'h33 == w1_addr ? w1_data : physicalRegisterFile_51; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_61 = 6'h34 == w1_addr ? w1_data : physicalRegisterFile_52; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_62 = 6'h35 == w1_addr ? w1_data : physicalRegisterFile_53; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_63 = 6'h36 == w1_addr ? w1_data : physicalRegisterFile_54; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_64 = 6'h37 == w1_addr ? w1_data : physicalRegisterFile_55; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_65 = 6'h38 == w1_addr ? w1_data : physicalRegisterFile_56; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_66 = 6'h39 == w1_addr ? w1_data : physicalRegisterFile_57; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_67 = 6'h3a == w1_addr ? w1_data : physicalRegisterFile_58; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_68 = 6'h3b == w1_addr ? w1_data : physicalRegisterFile_59; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_69 = 6'h3c == w1_addr ? w1_data : physicalRegisterFile_60; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_70 = 6'h3d == w1_addr ? w1_data : physicalRegisterFile_61; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_71 = 6'h3e == w1_addr ? w1_data : physicalRegisterFile_62; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_72 = 6'h3f == w1_addr ? w1_data : physicalRegisterFile_63; // @[PRF.scala 143:33 145:{88,88}]
+  wire [63:0] _GEN_73 = w1_en ? _GEN_9 : physicalRegisterFile_0; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_74 = w1_en ? _GEN_10 : physicalRegisterFile_1; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_75 = w1_en ? _GEN_11 : physicalRegisterFile_2; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_76 = w1_en ? _GEN_12 : physicalRegisterFile_3; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_77 = w1_en ? _GEN_13 : physicalRegisterFile_4; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_78 = w1_en ? _GEN_14 : physicalRegisterFile_5; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_79 = w1_en ? _GEN_15 : physicalRegisterFile_6; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_80 = w1_en ? _GEN_16 : physicalRegisterFile_7; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_81 = w1_en ? _GEN_17 : physicalRegisterFile_8; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_82 = w1_en ? _GEN_18 : physicalRegisterFile_9; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_83 = w1_en ? _GEN_19 : physicalRegisterFile_10; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_84 = w1_en ? _GEN_20 : physicalRegisterFile_11; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_85 = w1_en ? _GEN_21 : physicalRegisterFile_12; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_86 = w1_en ? _GEN_22 : physicalRegisterFile_13; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_87 = w1_en ? _GEN_23 : physicalRegisterFile_14; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_88 = w1_en ? _GEN_24 : physicalRegisterFile_15; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_89 = w1_en ? _GEN_25 : physicalRegisterFile_16; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_90 = w1_en ? _GEN_26 : physicalRegisterFile_17; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_91 = w1_en ? _GEN_27 : physicalRegisterFile_18; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_92 = w1_en ? _GEN_28 : physicalRegisterFile_19; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_93 = w1_en ? _GEN_29 : physicalRegisterFile_20; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_94 = w1_en ? _GEN_30 : physicalRegisterFile_21; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_95 = w1_en ? _GEN_31 : physicalRegisterFile_22; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_96 = w1_en ? _GEN_32 : physicalRegisterFile_23; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_97 = w1_en ? _GEN_33 : physicalRegisterFile_24; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_98 = w1_en ? _GEN_34 : physicalRegisterFile_25; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_99 = w1_en ? _GEN_35 : physicalRegisterFile_26; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_100 = w1_en ? _GEN_36 : physicalRegisterFile_27; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_101 = w1_en ? _GEN_37 : physicalRegisterFile_28; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_102 = w1_en ? _GEN_38 : physicalRegisterFile_29; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_103 = w1_en ? _GEN_39 : physicalRegisterFile_30; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_104 = w1_en ? _GEN_40 : physicalRegisterFile_31; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_105 = w1_en ? _GEN_41 : physicalRegisterFile_32; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_106 = w1_en ? _GEN_42 : physicalRegisterFile_33; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_107 = w1_en ? _GEN_43 : physicalRegisterFile_34; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_108 = w1_en ? _GEN_44 : physicalRegisterFile_35; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_109 = w1_en ? _GEN_45 : physicalRegisterFile_36; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_110 = w1_en ? _GEN_46 : physicalRegisterFile_37; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_111 = w1_en ? _GEN_47 : physicalRegisterFile_38; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_112 = w1_en ? _GEN_48 : physicalRegisterFile_39; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_113 = w1_en ? _GEN_49 : physicalRegisterFile_40; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_114 = w1_en ? _GEN_50 : physicalRegisterFile_41; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_115 = w1_en ? _GEN_51 : physicalRegisterFile_42; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_116 = w1_en ? _GEN_52 : physicalRegisterFile_43; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_117 = w1_en ? _GEN_53 : physicalRegisterFile_44; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_118 = w1_en ? _GEN_54 : physicalRegisterFile_45; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_119 = w1_en ? _GEN_55 : physicalRegisterFile_46; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_120 = w1_en ? _GEN_56 : physicalRegisterFile_47; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_121 = w1_en ? _GEN_57 : physicalRegisterFile_48; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_122 = w1_en ? _GEN_58 : physicalRegisterFile_49; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_123 = w1_en ? _GEN_59 : physicalRegisterFile_50; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_124 = w1_en ? _GEN_60 : physicalRegisterFile_51; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_125 = w1_en ? _GEN_61 : physicalRegisterFile_52; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_126 = w1_en ? _GEN_62 : physicalRegisterFile_53; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_127 = w1_en ? _GEN_63 : physicalRegisterFile_54; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_128 = w1_en ? _GEN_64 : physicalRegisterFile_55; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_129 = w1_en ? _GEN_65 : physicalRegisterFile_56; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_130 = w1_en ? _GEN_66 : physicalRegisterFile_57; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_131 = w1_en ? _GEN_67 : physicalRegisterFile_58; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_132 = w1_en ? _GEN_68 : physicalRegisterFile_59; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_133 = w1_en ? _GEN_69 : physicalRegisterFile_60; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_134 = w1_en ? _GEN_70 : physicalRegisterFile_61; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_135 = w1_en ? _GEN_71 : physicalRegisterFile_62; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_136 = w1_en ? _GEN_72 : physicalRegisterFile_63; // @[PRF.scala 143:33 145:54]
+  wire [63:0] _GEN_137 = 6'h0 == w2_addr ? w2_data : _GEN_73; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_138 = 6'h1 == w2_addr ? w2_data : _GEN_74; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_139 = 6'h2 == w2_addr ? w2_data : _GEN_75; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_140 = 6'h3 == w2_addr ? w2_data : _GEN_76; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_141 = 6'h4 == w2_addr ? w2_data : _GEN_77; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_142 = 6'h5 == w2_addr ? w2_data : _GEN_78; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_143 = 6'h6 == w2_addr ? w2_data : _GEN_79; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_144 = 6'h7 == w2_addr ? w2_data : _GEN_80; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_145 = 6'h8 == w2_addr ? w2_data : _GEN_81; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_146 = 6'h9 == w2_addr ? w2_data : _GEN_82; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_147 = 6'ha == w2_addr ? w2_data : _GEN_83; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_148 = 6'hb == w2_addr ? w2_data : _GEN_84; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_149 = 6'hc == w2_addr ? w2_data : _GEN_85; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_150 = 6'hd == w2_addr ? w2_data : _GEN_86; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_151 = 6'he == w2_addr ? w2_data : _GEN_87; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_152 = 6'hf == w2_addr ? w2_data : _GEN_88; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_153 = 6'h10 == w2_addr ? w2_data : _GEN_89; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_154 = 6'h11 == w2_addr ? w2_data : _GEN_90; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_155 = 6'h12 == w2_addr ? w2_data : _GEN_91; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_156 = 6'h13 == w2_addr ? w2_data : _GEN_92; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_157 = 6'h14 == w2_addr ? w2_data : _GEN_93; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_158 = 6'h15 == w2_addr ? w2_data : _GEN_94; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_159 = 6'h16 == w2_addr ? w2_data : _GEN_95; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_160 = 6'h17 == w2_addr ? w2_data : _GEN_96; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_161 = 6'h18 == w2_addr ? w2_data : _GEN_97; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_162 = 6'h19 == w2_addr ? w2_data : _GEN_98; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_163 = 6'h1a == w2_addr ? w2_data : _GEN_99; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_164 = 6'h1b == w2_addr ? w2_data : _GEN_100; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_165 = 6'h1c == w2_addr ? w2_data : _GEN_101; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_166 = 6'h1d == w2_addr ? w2_data : _GEN_102; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_167 = 6'h1e == w2_addr ? w2_data : _GEN_103; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_168 = 6'h1f == w2_addr ? w2_data : _GEN_104; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_169 = 6'h20 == w2_addr ? w2_data : _GEN_105; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_170 = 6'h21 == w2_addr ? w2_data : _GEN_106; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_171 = 6'h22 == w2_addr ? w2_data : _GEN_107; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_172 = 6'h23 == w2_addr ? w2_data : _GEN_108; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_173 = 6'h24 == w2_addr ? w2_data : _GEN_109; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_174 = 6'h25 == w2_addr ? w2_data : _GEN_110; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_175 = 6'h26 == w2_addr ? w2_data : _GEN_111; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_176 = 6'h27 == w2_addr ? w2_data : _GEN_112; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_177 = 6'h28 == w2_addr ? w2_data : _GEN_113; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_178 = 6'h29 == w2_addr ? w2_data : _GEN_114; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_179 = 6'h2a == w2_addr ? w2_data : _GEN_115; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_180 = 6'h2b == w2_addr ? w2_data : _GEN_116; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_181 = 6'h2c == w2_addr ? w2_data : _GEN_117; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_182 = 6'h2d == w2_addr ? w2_data : _GEN_118; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_183 = 6'h2e == w2_addr ? w2_data : _GEN_119; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_184 = 6'h2f == w2_addr ? w2_data : _GEN_120; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_185 = 6'h30 == w2_addr ? w2_data : _GEN_121; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_186 = 6'h31 == w2_addr ? w2_data : _GEN_122; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_187 = 6'h32 == w2_addr ? w2_data : _GEN_123; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_188 = 6'h33 == w2_addr ? w2_data : _GEN_124; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_189 = 6'h34 == w2_addr ? w2_data : _GEN_125; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_190 = 6'h35 == w2_addr ? w2_data : _GEN_126; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_191 = 6'h36 == w2_addr ? w2_data : _GEN_127; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_192 = 6'h37 == w2_addr ? w2_data : _GEN_128; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_193 = 6'h38 == w2_addr ? w2_data : _GEN_129; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_194 = 6'h39 == w2_addr ? w2_data : _GEN_130; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_195 = 6'h3a == w2_addr ? w2_data : _GEN_131; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_196 = 6'h3b == w2_addr ? w2_data : _GEN_132; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_197 = 6'h3c == w2_addr ? w2_data : _GEN_133; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_198 = 6'h3d == w2_addr ? w2_data : _GEN_134; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_199 = 6'h3e == w2_addr ? w2_data : _GEN_135; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_200 = 6'h3f == w2_addr ? w2_data : _GEN_136; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_201 = w2_en ? _GEN_137 : _GEN_73; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_202 = w2_en ? _GEN_138 : _GEN_74; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_203 = w2_en ? _GEN_139 : _GEN_75; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_204 = w2_en ? _GEN_140 : _GEN_76; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_205 = w2_en ? _GEN_141 : _GEN_77; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_206 = w2_en ? _GEN_142 : _GEN_78; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_207 = w2_en ? _GEN_143 : _GEN_79; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_208 = w2_en ? _GEN_144 : _GEN_80; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_209 = w2_en ? _GEN_145 : _GEN_81; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_210 = w2_en ? _GEN_146 : _GEN_82; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_211 = w2_en ? _GEN_147 : _GEN_83; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_212 = w2_en ? _GEN_148 : _GEN_84; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_213 = w2_en ? _GEN_149 : _GEN_85; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_214 = w2_en ? _GEN_150 : _GEN_86; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_215 = w2_en ? _GEN_151 : _GEN_87; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_216 = w2_en ? _GEN_152 : _GEN_88; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_217 = w2_en ? _GEN_153 : _GEN_89; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_218 = w2_en ? _GEN_154 : _GEN_90; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_219 = w2_en ? _GEN_155 : _GEN_91; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_220 = w2_en ? _GEN_156 : _GEN_92; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_221 = w2_en ? _GEN_157 : _GEN_93; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_222 = w2_en ? _GEN_158 : _GEN_94; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_223 = w2_en ? _GEN_159 : _GEN_95; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_224 = w2_en ? _GEN_160 : _GEN_96; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_225 = w2_en ? _GEN_161 : _GEN_97; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_226 = w2_en ? _GEN_162 : _GEN_98; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_227 = w2_en ? _GEN_163 : _GEN_99; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_228 = w2_en ? _GEN_164 : _GEN_100; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_229 = w2_en ? _GEN_165 : _GEN_101; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_230 = w2_en ? _GEN_166 : _GEN_102; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_231 = w2_en ? _GEN_167 : _GEN_103; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_232 = w2_en ? _GEN_168 : _GEN_104; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_233 = w2_en ? _GEN_169 : _GEN_105; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_234 = w2_en ? _GEN_170 : _GEN_106; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_235 = w2_en ? _GEN_171 : _GEN_107; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_236 = w2_en ? _GEN_172 : _GEN_108; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_237 = w2_en ? _GEN_173 : _GEN_109; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_238 = w2_en ? _GEN_174 : _GEN_110; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_239 = w2_en ? _GEN_175 : _GEN_111; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_240 = w2_en ? _GEN_176 : _GEN_112; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_241 = w2_en ? _GEN_177 : _GEN_113; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_242 = w2_en ? _GEN_178 : _GEN_114; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_243 = w2_en ? _GEN_179 : _GEN_115; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_244 = w2_en ? _GEN_180 : _GEN_116; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_245 = w2_en ? _GEN_181 : _GEN_117; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_246 = w2_en ? _GEN_182 : _GEN_118; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_247 = w2_en ? _GEN_183 : _GEN_119; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_248 = w2_en ? _GEN_184 : _GEN_120; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_249 = w2_en ? _GEN_185 : _GEN_121; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_250 = w2_en ? _GEN_186 : _GEN_122; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_251 = w2_en ? _GEN_187 : _GEN_123; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_252 = w2_en ? _GEN_188 : _GEN_124; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_253 = w2_en ? _GEN_189 : _GEN_125; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_254 = w2_en ? _GEN_190 : _GEN_126; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_255 = w2_en ? _GEN_191 : _GEN_127; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_256 = w2_en ? _GEN_192 : _GEN_128; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_257 = w2_en ? _GEN_193 : _GEN_129; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_258 = w2_en ? _GEN_194 : _GEN_130; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_259 = w2_en ? _GEN_195 : _GEN_131; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_260 = w2_en ? _GEN_196 : _GEN_132; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_261 = w2_en ? _GEN_197 : _GEN_133; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_262 = w2_en ? _GEN_198 : _GEN_134; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_263 = w2_en ? _GEN_199 : _GEN_135; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_264 = w2_en ? _GEN_200 : _GEN_136; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_265 = 6'h0 == w3_addr ? w3_data : _GEN_201; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_266 = 6'h1 == w3_addr ? w3_data : _GEN_202; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_267 = 6'h2 == w3_addr ? w3_data : _GEN_203; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_268 = 6'h3 == w3_addr ? w3_data : _GEN_204; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_269 = 6'h4 == w3_addr ? w3_data : _GEN_205; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_270 = 6'h5 == w3_addr ? w3_data : _GEN_206; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_271 = 6'h6 == w3_addr ? w3_data : _GEN_207; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_272 = 6'h7 == w3_addr ? w3_data : _GEN_208; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_273 = 6'h8 == w3_addr ? w3_data : _GEN_209; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_274 = 6'h9 == w3_addr ? w3_data : _GEN_210; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_275 = 6'ha == w3_addr ? w3_data : _GEN_211; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_276 = 6'hb == w3_addr ? w3_data : _GEN_212; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_277 = 6'hc == w3_addr ? w3_data : _GEN_213; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_278 = 6'hd == w3_addr ? w3_data : _GEN_214; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_279 = 6'he == w3_addr ? w3_data : _GEN_215; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_280 = 6'hf == w3_addr ? w3_data : _GEN_216; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_281 = 6'h10 == w3_addr ? w3_data : _GEN_217; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_282 = 6'h11 == w3_addr ? w3_data : _GEN_218; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_283 = 6'h12 == w3_addr ? w3_data : _GEN_219; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_284 = 6'h13 == w3_addr ? w3_data : _GEN_220; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_285 = 6'h14 == w3_addr ? w3_data : _GEN_221; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_286 = 6'h15 == w3_addr ? w3_data : _GEN_222; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_287 = 6'h16 == w3_addr ? w3_data : _GEN_223; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_288 = 6'h17 == w3_addr ? w3_data : _GEN_224; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_289 = 6'h18 == w3_addr ? w3_data : _GEN_225; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_290 = 6'h19 == w3_addr ? w3_data : _GEN_226; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_291 = 6'h1a == w3_addr ? w3_data : _GEN_227; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_292 = 6'h1b == w3_addr ? w3_data : _GEN_228; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_293 = 6'h1c == w3_addr ? w3_data : _GEN_229; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_294 = 6'h1d == w3_addr ? w3_data : _GEN_230; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_295 = 6'h1e == w3_addr ? w3_data : _GEN_231; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_296 = 6'h1f == w3_addr ? w3_data : _GEN_232; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_297 = 6'h20 == w3_addr ? w3_data : _GEN_233; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_298 = 6'h21 == w3_addr ? w3_data : _GEN_234; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_299 = 6'h22 == w3_addr ? w3_data : _GEN_235; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_300 = 6'h23 == w3_addr ? w3_data : _GEN_236; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_301 = 6'h24 == w3_addr ? w3_data : _GEN_237; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_302 = 6'h25 == w3_addr ? w3_data : _GEN_238; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_303 = 6'h26 == w3_addr ? w3_data : _GEN_239; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_304 = 6'h27 == w3_addr ? w3_data : _GEN_240; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_305 = 6'h28 == w3_addr ? w3_data : _GEN_241; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_306 = 6'h29 == w3_addr ? w3_data : _GEN_242; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_307 = 6'h2a == w3_addr ? w3_data : _GEN_243; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_308 = 6'h2b == w3_addr ? w3_data : _GEN_244; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_309 = 6'h2c == w3_addr ? w3_data : _GEN_245; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_310 = 6'h2d == w3_addr ? w3_data : _GEN_246; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_311 = 6'h2e == w3_addr ? w3_data : _GEN_247; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_312 = 6'h2f == w3_addr ? w3_data : _GEN_248; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_313 = 6'h30 == w3_addr ? w3_data : _GEN_249; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_314 = 6'h31 == w3_addr ? w3_data : _GEN_250; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_315 = 6'h32 == w3_addr ? w3_data : _GEN_251; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_316 = 6'h33 == w3_addr ? w3_data : _GEN_252; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_317 = 6'h34 == w3_addr ? w3_data : _GEN_253; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_318 = 6'h35 == w3_addr ? w3_data : _GEN_254; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_319 = 6'h36 == w3_addr ? w3_data : _GEN_255; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_320 = 6'h37 == w3_addr ? w3_data : _GEN_256; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_321 = 6'h38 == w3_addr ? w3_data : _GEN_257; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_322 = 6'h39 == w3_addr ? w3_data : _GEN_258; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_323 = 6'h3a == w3_addr ? w3_data : _GEN_259; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_324 = 6'h3b == w3_addr ? w3_data : _GEN_260; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_325 = 6'h3c == w3_addr ? w3_data : _GEN_261; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_326 = 6'h3d == w3_addr ? w3_data : _GEN_262; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_327 = 6'h3e == w3_addr ? w3_data : _GEN_263; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_328 = 6'h3f == w3_addr ? w3_data : _GEN_264; // @[PRF.scala 145:{88,88}]
+  wire [63:0] _GEN_329 = w3_en ? _GEN_265 : _GEN_201; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_330 = w3_en ? _GEN_266 : _GEN_202; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_331 = w3_en ? _GEN_267 : _GEN_203; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_332 = w3_en ? _GEN_268 : _GEN_204; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_333 = w3_en ? _GEN_269 : _GEN_205; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_334 = w3_en ? _GEN_270 : _GEN_206; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_335 = w3_en ? _GEN_271 : _GEN_207; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_336 = w3_en ? _GEN_272 : _GEN_208; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_337 = w3_en ? _GEN_273 : _GEN_209; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_338 = w3_en ? _GEN_274 : _GEN_210; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_339 = w3_en ? _GEN_275 : _GEN_211; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_340 = w3_en ? _GEN_276 : _GEN_212; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_341 = w3_en ? _GEN_277 : _GEN_213; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_342 = w3_en ? _GEN_278 : _GEN_214; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_343 = w3_en ? _GEN_279 : _GEN_215; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_344 = w3_en ? _GEN_280 : _GEN_216; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_345 = w3_en ? _GEN_281 : _GEN_217; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_346 = w3_en ? _GEN_282 : _GEN_218; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_347 = w3_en ? _GEN_283 : _GEN_219; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_348 = w3_en ? _GEN_284 : _GEN_220; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_349 = w3_en ? _GEN_285 : _GEN_221; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_350 = w3_en ? _GEN_286 : _GEN_222; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_351 = w3_en ? _GEN_287 : _GEN_223; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_352 = w3_en ? _GEN_288 : _GEN_224; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_353 = w3_en ? _GEN_289 : _GEN_225; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_354 = w3_en ? _GEN_290 : _GEN_226; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_355 = w3_en ? _GEN_291 : _GEN_227; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_356 = w3_en ? _GEN_292 : _GEN_228; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_357 = w3_en ? _GEN_293 : _GEN_229; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_358 = w3_en ? _GEN_294 : _GEN_230; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_359 = w3_en ? _GEN_295 : _GEN_231; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_360 = w3_en ? _GEN_296 : _GEN_232; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_361 = w3_en ? _GEN_297 : _GEN_233; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_362 = w3_en ? _GEN_298 : _GEN_234; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_363 = w3_en ? _GEN_299 : _GEN_235; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_364 = w3_en ? _GEN_300 : _GEN_236; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_365 = w3_en ? _GEN_301 : _GEN_237; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_366 = w3_en ? _GEN_302 : _GEN_238; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_367 = w3_en ? _GEN_303 : _GEN_239; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_368 = w3_en ? _GEN_304 : _GEN_240; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_369 = w3_en ? _GEN_305 : _GEN_241; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_370 = w3_en ? _GEN_306 : _GEN_242; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_371 = w3_en ? _GEN_307 : _GEN_243; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_372 = w3_en ? _GEN_308 : _GEN_244; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_373 = w3_en ? _GEN_309 : _GEN_245; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_374 = w3_en ? _GEN_310 : _GEN_246; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_375 = w3_en ? _GEN_311 : _GEN_247; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_376 = w3_en ? _GEN_312 : _GEN_248; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_377 = w3_en ? _GEN_313 : _GEN_249; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_378 = w3_en ? _GEN_314 : _GEN_250; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_379 = w3_en ? _GEN_315 : _GEN_251; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_380 = w3_en ? _GEN_316 : _GEN_252; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_381 = w3_en ? _GEN_317 : _GEN_253; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_382 = w3_en ? _GEN_318 : _GEN_254; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_383 = w3_en ? _GEN_319 : _GEN_255; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_384 = w3_en ? _GEN_320 : _GEN_256; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_385 = w3_en ? _GEN_321 : _GEN_257; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_386 = w3_en ? _GEN_322 : _GEN_258; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_387 = w3_en ? _GEN_323 : _GEN_259; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_388 = w3_en ? _GEN_324 : _GEN_260; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_389 = w3_en ? _GEN_325 : _GEN_261; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_390 = w3_en ? _GEN_326 : _GEN_262; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_391 = w3_en ? _GEN_327 : _GEN_263; // @[PRF.scala 145:54]
+  wire [63:0] _GEN_392 = w3_en ? _GEN_328 : _GEN_264; // @[PRF.scala 145:54]
   LVT_Mem prf ( // @[PRF.scala 73:19]
     .clock(prf_clock),
     .reset(prf_reset),
@@ -51171,6 +51813,70 @@ module PRF(
   assign toExec_prfDest = toExec_prfDest_REG; // @[PRF.scala 87:18]
   assign toStore_valid = toStore_valid_REG_1; // @[PRF.scala 140:17]
   assign toStore_rs2Data = prf_io_R3_data; // @[PRF.scala 101:19]
+  assign registerFileOutput_0 = physicalRegisterFile_0; // @[PRF.scala 146:22]
+  assign registerFileOutput_1 = physicalRegisterFile_1; // @[PRF.scala 146:22]
+  assign registerFileOutput_2 = physicalRegisterFile_2; // @[PRF.scala 146:22]
+  assign registerFileOutput_3 = physicalRegisterFile_3; // @[PRF.scala 146:22]
+  assign registerFileOutput_4 = physicalRegisterFile_4; // @[PRF.scala 146:22]
+  assign registerFileOutput_5 = physicalRegisterFile_5; // @[PRF.scala 146:22]
+  assign registerFileOutput_6 = physicalRegisterFile_6; // @[PRF.scala 146:22]
+  assign registerFileOutput_7 = physicalRegisterFile_7; // @[PRF.scala 146:22]
+  assign registerFileOutput_8 = physicalRegisterFile_8; // @[PRF.scala 146:22]
+  assign registerFileOutput_9 = physicalRegisterFile_9; // @[PRF.scala 146:22]
+  assign registerFileOutput_10 = physicalRegisterFile_10; // @[PRF.scala 146:22]
+  assign registerFileOutput_11 = physicalRegisterFile_11; // @[PRF.scala 146:22]
+  assign registerFileOutput_12 = physicalRegisterFile_12; // @[PRF.scala 146:22]
+  assign registerFileOutput_13 = physicalRegisterFile_13; // @[PRF.scala 146:22]
+  assign registerFileOutput_14 = physicalRegisterFile_14; // @[PRF.scala 146:22]
+  assign registerFileOutput_15 = physicalRegisterFile_15; // @[PRF.scala 146:22]
+  assign registerFileOutput_16 = physicalRegisterFile_16; // @[PRF.scala 146:22]
+  assign registerFileOutput_17 = physicalRegisterFile_17; // @[PRF.scala 146:22]
+  assign registerFileOutput_18 = physicalRegisterFile_18; // @[PRF.scala 146:22]
+  assign registerFileOutput_19 = physicalRegisterFile_19; // @[PRF.scala 146:22]
+  assign registerFileOutput_20 = physicalRegisterFile_20; // @[PRF.scala 146:22]
+  assign registerFileOutput_21 = physicalRegisterFile_21; // @[PRF.scala 146:22]
+  assign registerFileOutput_22 = physicalRegisterFile_22; // @[PRF.scala 146:22]
+  assign registerFileOutput_23 = physicalRegisterFile_23; // @[PRF.scala 146:22]
+  assign registerFileOutput_24 = physicalRegisterFile_24; // @[PRF.scala 146:22]
+  assign registerFileOutput_25 = physicalRegisterFile_25; // @[PRF.scala 146:22]
+  assign registerFileOutput_26 = physicalRegisterFile_26; // @[PRF.scala 146:22]
+  assign registerFileOutput_27 = physicalRegisterFile_27; // @[PRF.scala 146:22]
+  assign registerFileOutput_28 = physicalRegisterFile_28; // @[PRF.scala 146:22]
+  assign registerFileOutput_29 = physicalRegisterFile_29; // @[PRF.scala 146:22]
+  assign registerFileOutput_30 = physicalRegisterFile_30; // @[PRF.scala 146:22]
+  assign registerFileOutput_31 = physicalRegisterFile_31; // @[PRF.scala 146:22]
+  assign registerFileOutput_32 = physicalRegisterFile_32; // @[PRF.scala 146:22]
+  assign registerFileOutput_33 = physicalRegisterFile_33; // @[PRF.scala 146:22]
+  assign registerFileOutput_34 = physicalRegisterFile_34; // @[PRF.scala 146:22]
+  assign registerFileOutput_35 = physicalRegisterFile_35; // @[PRF.scala 146:22]
+  assign registerFileOutput_36 = physicalRegisterFile_36; // @[PRF.scala 146:22]
+  assign registerFileOutput_37 = physicalRegisterFile_37; // @[PRF.scala 146:22]
+  assign registerFileOutput_38 = physicalRegisterFile_38; // @[PRF.scala 146:22]
+  assign registerFileOutput_39 = physicalRegisterFile_39; // @[PRF.scala 146:22]
+  assign registerFileOutput_40 = physicalRegisterFile_40; // @[PRF.scala 146:22]
+  assign registerFileOutput_41 = physicalRegisterFile_41; // @[PRF.scala 146:22]
+  assign registerFileOutput_42 = physicalRegisterFile_42; // @[PRF.scala 146:22]
+  assign registerFileOutput_43 = physicalRegisterFile_43; // @[PRF.scala 146:22]
+  assign registerFileOutput_44 = physicalRegisterFile_44; // @[PRF.scala 146:22]
+  assign registerFileOutput_45 = physicalRegisterFile_45; // @[PRF.scala 146:22]
+  assign registerFileOutput_46 = physicalRegisterFile_46; // @[PRF.scala 146:22]
+  assign registerFileOutput_47 = physicalRegisterFile_47; // @[PRF.scala 146:22]
+  assign registerFileOutput_48 = physicalRegisterFile_48; // @[PRF.scala 146:22]
+  assign registerFileOutput_49 = physicalRegisterFile_49; // @[PRF.scala 146:22]
+  assign registerFileOutput_50 = physicalRegisterFile_50; // @[PRF.scala 146:22]
+  assign registerFileOutput_51 = physicalRegisterFile_51; // @[PRF.scala 146:22]
+  assign registerFileOutput_52 = physicalRegisterFile_52; // @[PRF.scala 146:22]
+  assign registerFileOutput_53 = physicalRegisterFile_53; // @[PRF.scala 146:22]
+  assign registerFileOutput_54 = physicalRegisterFile_54; // @[PRF.scala 146:22]
+  assign registerFileOutput_55 = physicalRegisterFile_55; // @[PRF.scala 146:22]
+  assign registerFileOutput_56 = physicalRegisterFile_56; // @[PRF.scala 146:22]
+  assign registerFileOutput_57 = physicalRegisterFile_57; // @[PRF.scala 146:22]
+  assign registerFileOutput_58 = physicalRegisterFile_58; // @[PRF.scala 146:22]
+  assign registerFileOutput_59 = physicalRegisterFile_59; // @[PRF.scala 146:22]
+  assign registerFileOutput_60 = physicalRegisterFile_60; // @[PRF.scala 146:22]
+  assign registerFileOutput_61 = physicalRegisterFile_61; // @[PRF.scala 146:22]
+  assign registerFileOutput_62 = physicalRegisterFile_62; // @[PRF.scala 146:22]
+  assign registerFileOutput_63 = physicalRegisterFile_63; // @[PRF.scala 146:22]
   assign prf_clock = clock;
   assign prf_reset = reset;
   assign prf_io_R1_addr = execRead_rs1Addr; // @[PRF.scala 92:18]
@@ -51228,6 +51934,582 @@ module PRF(
     end else begin
       toStore_valid_REG_1 <= fromStore_valid; // @[PRF.scala 140:27]
     end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h0 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_0 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_0 <= _GEN_329;
+      end
+    end else begin
+      physicalRegisterFile_0 <= _GEN_329;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_1 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_1 <= _GEN_330;
+      end
+    end else begin
+      physicalRegisterFile_1 <= _GEN_330;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_2 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_2 <= _GEN_331;
+      end
+    end else begin
+      physicalRegisterFile_2 <= _GEN_331;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_3 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_3 <= _GEN_332;
+      end
+    end else begin
+      physicalRegisterFile_3 <= _GEN_332;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h4 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_4 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_4 <= _GEN_333;
+      end
+    end else begin
+      physicalRegisterFile_4 <= _GEN_333;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h5 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_5 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_5 <= _GEN_334;
+      end
+    end else begin
+      physicalRegisterFile_5 <= _GEN_334;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h6 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_6 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_6 <= _GEN_335;
+      end
+    end else begin
+      physicalRegisterFile_6 <= _GEN_335;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h7 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_7 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_7 <= _GEN_336;
+      end
+    end else begin
+      physicalRegisterFile_7 <= _GEN_336;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h8 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_8 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_8 <= _GEN_337;
+      end
+    end else begin
+      physicalRegisterFile_8 <= _GEN_337;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h9 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_9 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_9 <= _GEN_338;
+      end
+    end else begin
+      physicalRegisterFile_9 <= _GEN_338;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'ha == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_10 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_10 <= _GEN_339;
+      end
+    end else begin
+      physicalRegisterFile_10 <= _GEN_339;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'hb == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_11 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_11 <= _GEN_340;
+      end
+    end else begin
+      physicalRegisterFile_11 <= _GEN_340;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'hc == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_12 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_12 <= _GEN_341;
+      end
+    end else begin
+      physicalRegisterFile_12 <= _GEN_341;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'hd == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_13 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_13 <= _GEN_342;
+      end
+    end else begin
+      physicalRegisterFile_13 <= _GEN_342;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'he == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_14 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_14 <= _GEN_343;
+      end
+    end else begin
+      physicalRegisterFile_14 <= _GEN_343;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'hf == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_15 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_15 <= _GEN_344;
+      end
+    end else begin
+      physicalRegisterFile_15 <= _GEN_344;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h10 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_16 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_16 <= _GEN_345;
+      end
+    end else begin
+      physicalRegisterFile_16 <= _GEN_345;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h11 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_17 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_17 <= _GEN_346;
+      end
+    end else begin
+      physicalRegisterFile_17 <= _GEN_346;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h12 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_18 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_18 <= _GEN_347;
+      end
+    end else begin
+      physicalRegisterFile_18 <= _GEN_347;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h13 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_19 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_19 <= _GEN_348;
+      end
+    end else begin
+      physicalRegisterFile_19 <= _GEN_348;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h14 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_20 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_20 <= _GEN_349;
+      end
+    end else begin
+      physicalRegisterFile_20 <= _GEN_349;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h15 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_21 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_21 <= _GEN_350;
+      end
+    end else begin
+      physicalRegisterFile_21 <= _GEN_350;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h16 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_22 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_22 <= _GEN_351;
+      end
+    end else begin
+      physicalRegisterFile_22 <= _GEN_351;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h17 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_23 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_23 <= _GEN_352;
+      end
+    end else begin
+      physicalRegisterFile_23 <= _GEN_352;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h18 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_24 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_24 <= _GEN_353;
+      end
+    end else begin
+      physicalRegisterFile_24 <= _GEN_353;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h19 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_25 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_25 <= _GEN_354;
+      end
+    end else begin
+      physicalRegisterFile_25 <= _GEN_354;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1a == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_26 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_26 <= _GEN_355;
+      end
+    end else begin
+      physicalRegisterFile_26 <= _GEN_355;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1b == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_27 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_27 <= _GEN_356;
+      end
+    end else begin
+      physicalRegisterFile_27 <= _GEN_356;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1c == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_28 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_28 <= _GEN_357;
+      end
+    end else begin
+      physicalRegisterFile_28 <= _GEN_357;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1d == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_29 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_29 <= _GEN_358;
+      end
+    end else begin
+      physicalRegisterFile_29 <= _GEN_358;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1e == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_30 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_30 <= _GEN_359;
+      end
+    end else begin
+      physicalRegisterFile_30 <= _GEN_359;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h1f == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_31 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_31 <= _GEN_360;
+      end
+    end else begin
+      physicalRegisterFile_31 <= _GEN_360;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h20 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_32 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_32 <= _GEN_361;
+      end
+    end else begin
+      physicalRegisterFile_32 <= _GEN_361;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h21 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_33 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_33 <= _GEN_362;
+      end
+    end else begin
+      physicalRegisterFile_33 <= _GEN_362;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h22 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_34 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_34 <= _GEN_363;
+      end
+    end else begin
+      physicalRegisterFile_34 <= _GEN_363;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h23 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_35 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_35 <= _GEN_364;
+      end
+    end else begin
+      physicalRegisterFile_35 <= _GEN_364;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h24 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_36 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_36 <= _GEN_365;
+      end
+    end else begin
+      physicalRegisterFile_36 <= _GEN_365;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h25 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_37 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_37 <= _GEN_366;
+      end
+    end else begin
+      physicalRegisterFile_37 <= _GEN_366;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h26 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_38 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_38 <= _GEN_367;
+      end
+    end else begin
+      physicalRegisterFile_38 <= _GEN_367;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h27 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_39 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_39 <= _GEN_368;
+      end
+    end else begin
+      physicalRegisterFile_39 <= _GEN_368;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h28 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_40 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_40 <= _GEN_369;
+      end
+    end else begin
+      physicalRegisterFile_40 <= _GEN_369;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h29 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_41 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_41 <= _GEN_370;
+      end
+    end else begin
+      physicalRegisterFile_41 <= _GEN_370;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2a == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_42 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_42 <= _GEN_371;
+      end
+    end else begin
+      physicalRegisterFile_42 <= _GEN_371;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2b == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_43 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_43 <= _GEN_372;
+      end
+    end else begin
+      physicalRegisterFile_43 <= _GEN_372;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2c == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_44 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_44 <= _GEN_373;
+      end
+    end else begin
+      physicalRegisterFile_44 <= _GEN_373;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2d == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_45 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_45 <= _GEN_374;
+      end
+    end else begin
+      physicalRegisterFile_45 <= _GEN_374;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2e == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_46 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_46 <= _GEN_375;
+      end
+    end else begin
+      physicalRegisterFile_46 <= _GEN_375;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h2f == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_47 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_47 <= _GEN_376;
+      end
+    end else begin
+      physicalRegisterFile_47 <= _GEN_376;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h30 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_48 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_48 <= _GEN_377;
+      end
+    end else begin
+      physicalRegisterFile_48 <= _GEN_377;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h31 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_49 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_49 <= _GEN_378;
+      end
+    end else begin
+      physicalRegisterFile_49 <= _GEN_378;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h32 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_50 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_50 <= _GEN_379;
+      end
+    end else begin
+      physicalRegisterFile_50 <= _GEN_379;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h33 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_51 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_51 <= _GEN_380;
+      end
+    end else begin
+      physicalRegisterFile_51 <= _GEN_380;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h34 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_52 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_52 <= _GEN_381;
+      end
+    end else begin
+      physicalRegisterFile_52 <= _GEN_381;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h35 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_53 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_53 <= _GEN_382;
+      end
+    end else begin
+      physicalRegisterFile_53 <= _GEN_382;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h36 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_54 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_54 <= _GEN_383;
+      end
+    end else begin
+      physicalRegisterFile_54 <= _GEN_383;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h37 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_55 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_55 <= _GEN_384;
+      end
+    end else begin
+      physicalRegisterFile_55 <= _GEN_384;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h38 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_56 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_56 <= _GEN_385;
+      end
+    end else begin
+      physicalRegisterFile_56 <= _GEN_385;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h39 == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_57 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_57 <= _GEN_386;
+      end
+    end else begin
+      physicalRegisterFile_57 <= _GEN_386;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3a == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_58 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_58 <= _GEN_387;
+      end
+    end else begin
+      physicalRegisterFile_58 <= _GEN_387;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3b == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_59 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_59 <= _GEN_388;
+      end
+    end else begin
+      physicalRegisterFile_59 <= _GEN_388;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3c == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_60 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_60 <= _GEN_389;
+      end
+    end else begin
+      physicalRegisterFile_60 <= _GEN_389;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3d == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_61 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_61 <= _GEN_390;
+      end
+    end else begin
+      physicalRegisterFile_61 <= _GEN_390;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3e == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_62 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_62 <= _GEN_391;
+      end
+    end else begin
+      physicalRegisterFile_62 <= _GEN_391;
+    end
+    if (w4_en) begin // @[PRF.scala 145:54]
+      if (6'h3f == w4_addr) begin // @[PRF.scala 145:88]
+        physicalRegisterFile_63 <= w4_data; // @[PRF.scala 145:88]
+      end else begin
+        physicalRegisterFile_63 <= _GEN_392;
+      end
+    end else begin
+      physicalRegisterFile_63 <= _GEN_392;
+    end
   end
 // Register and memory initialization
 `ifdef RANDOMIZE_GARBAGE_ASSIGN
@@ -51281,6 +52563,134 @@ initial begin
   toExec_mask = _RAND_6[4:0];
   _RAND_7 = {1{`RANDOM}};
   toStore_valid_REG_1 = _RAND_7[0:0];
+  _RAND_8 = {2{`RANDOM}};
+  physicalRegisterFile_0 = _RAND_8[63:0];
+  _RAND_9 = {2{`RANDOM}};
+  physicalRegisterFile_1 = _RAND_9[63:0];
+  _RAND_10 = {2{`RANDOM}};
+  physicalRegisterFile_2 = _RAND_10[63:0];
+  _RAND_11 = {2{`RANDOM}};
+  physicalRegisterFile_3 = _RAND_11[63:0];
+  _RAND_12 = {2{`RANDOM}};
+  physicalRegisterFile_4 = _RAND_12[63:0];
+  _RAND_13 = {2{`RANDOM}};
+  physicalRegisterFile_5 = _RAND_13[63:0];
+  _RAND_14 = {2{`RANDOM}};
+  physicalRegisterFile_6 = _RAND_14[63:0];
+  _RAND_15 = {2{`RANDOM}};
+  physicalRegisterFile_7 = _RAND_15[63:0];
+  _RAND_16 = {2{`RANDOM}};
+  physicalRegisterFile_8 = _RAND_16[63:0];
+  _RAND_17 = {2{`RANDOM}};
+  physicalRegisterFile_9 = _RAND_17[63:0];
+  _RAND_18 = {2{`RANDOM}};
+  physicalRegisterFile_10 = _RAND_18[63:0];
+  _RAND_19 = {2{`RANDOM}};
+  physicalRegisterFile_11 = _RAND_19[63:0];
+  _RAND_20 = {2{`RANDOM}};
+  physicalRegisterFile_12 = _RAND_20[63:0];
+  _RAND_21 = {2{`RANDOM}};
+  physicalRegisterFile_13 = _RAND_21[63:0];
+  _RAND_22 = {2{`RANDOM}};
+  physicalRegisterFile_14 = _RAND_22[63:0];
+  _RAND_23 = {2{`RANDOM}};
+  physicalRegisterFile_15 = _RAND_23[63:0];
+  _RAND_24 = {2{`RANDOM}};
+  physicalRegisterFile_16 = _RAND_24[63:0];
+  _RAND_25 = {2{`RANDOM}};
+  physicalRegisterFile_17 = _RAND_25[63:0];
+  _RAND_26 = {2{`RANDOM}};
+  physicalRegisterFile_18 = _RAND_26[63:0];
+  _RAND_27 = {2{`RANDOM}};
+  physicalRegisterFile_19 = _RAND_27[63:0];
+  _RAND_28 = {2{`RANDOM}};
+  physicalRegisterFile_20 = _RAND_28[63:0];
+  _RAND_29 = {2{`RANDOM}};
+  physicalRegisterFile_21 = _RAND_29[63:0];
+  _RAND_30 = {2{`RANDOM}};
+  physicalRegisterFile_22 = _RAND_30[63:0];
+  _RAND_31 = {2{`RANDOM}};
+  physicalRegisterFile_23 = _RAND_31[63:0];
+  _RAND_32 = {2{`RANDOM}};
+  physicalRegisterFile_24 = _RAND_32[63:0];
+  _RAND_33 = {2{`RANDOM}};
+  physicalRegisterFile_25 = _RAND_33[63:0];
+  _RAND_34 = {2{`RANDOM}};
+  physicalRegisterFile_26 = _RAND_34[63:0];
+  _RAND_35 = {2{`RANDOM}};
+  physicalRegisterFile_27 = _RAND_35[63:0];
+  _RAND_36 = {2{`RANDOM}};
+  physicalRegisterFile_28 = _RAND_36[63:0];
+  _RAND_37 = {2{`RANDOM}};
+  physicalRegisterFile_29 = _RAND_37[63:0];
+  _RAND_38 = {2{`RANDOM}};
+  physicalRegisterFile_30 = _RAND_38[63:0];
+  _RAND_39 = {2{`RANDOM}};
+  physicalRegisterFile_31 = _RAND_39[63:0];
+  _RAND_40 = {2{`RANDOM}};
+  physicalRegisterFile_32 = _RAND_40[63:0];
+  _RAND_41 = {2{`RANDOM}};
+  physicalRegisterFile_33 = _RAND_41[63:0];
+  _RAND_42 = {2{`RANDOM}};
+  physicalRegisterFile_34 = _RAND_42[63:0];
+  _RAND_43 = {2{`RANDOM}};
+  physicalRegisterFile_35 = _RAND_43[63:0];
+  _RAND_44 = {2{`RANDOM}};
+  physicalRegisterFile_36 = _RAND_44[63:0];
+  _RAND_45 = {2{`RANDOM}};
+  physicalRegisterFile_37 = _RAND_45[63:0];
+  _RAND_46 = {2{`RANDOM}};
+  physicalRegisterFile_38 = _RAND_46[63:0];
+  _RAND_47 = {2{`RANDOM}};
+  physicalRegisterFile_39 = _RAND_47[63:0];
+  _RAND_48 = {2{`RANDOM}};
+  physicalRegisterFile_40 = _RAND_48[63:0];
+  _RAND_49 = {2{`RANDOM}};
+  physicalRegisterFile_41 = _RAND_49[63:0];
+  _RAND_50 = {2{`RANDOM}};
+  physicalRegisterFile_42 = _RAND_50[63:0];
+  _RAND_51 = {2{`RANDOM}};
+  physicalRegisterFile_43 = _RAND_51[63:0];
+  _RAND_52 = {2{`RANDOM}};
+  physicalRegisterFile_44 = _RAND_52[63:0];
+  _RAND_53 = {2{`RANDOM}};
+  physicalRegisterFile_45 = _RAND_53[63:0];
+  _RAND_54 = {2{`RANDOM}};
+  physicalRegisterFile_46 = _RAND_54[63:0];
+  _RAND_55 = {2{`RANDOM}};
+  physicalRegisterFile_47 = _RAND_55[63:0];
+  _RAND_56 = {2{`RANDOM}};
+  physicalRegisterFile_48 = _RAND_56[63:0];
+  _RAND_57 = {2{`RANDOM}};
+  physicalRegisterFile_49 = _RAND_57[63:0];
+  _RAND_58 = {2{`RANDOM}};
+  physicalRegisterFile_50 = _RAND_58[63:0];
+  _RAND_59 = {2{`RANDOM}};
+  physicalRegisterFile_51 = _RAND_59[63:0];
+  _RAND_60 = {2{`RANDOM}};
+  physicalRegisterFile_52 = _RAND_60[63:0];
+  _RAND_61 = {2{`RANDOM}};
+  physicalRegisterFile_53 = _RAND_61[63:0];
+  _RAND_62 = {2{`RANDOM}};
+  physicalRegisterFile_54 = _RAND_62[63:0];
+  _RAND_63 = {2{`RANDOM}};
+  physicalRegisterFile_55 = _RAND_63[63:0];
+  _RAND_64 = {2{`RANDOM}};
+  physicalRegisterFile_56 = _RAND_64[63:0];
+  _RAND_65 = {2{`RANDOM}};
+  physicalRegisterFile_57 = _RAND_65[63:0];
+  _RAND_66 = {2{`RANDOM}};
+  physicalRegisterFile_58 = _RAND_66[63:0];
+  _RAND_67 = {2{`RANDOM}};
+  physicalRegisterFile_59 = _RAND_67[63:0];
+  _RAND_68 = {2{`RANDOM}};
+  physicalRegisterFile_60 = _RAND_68[63:0];
+  _RAND_69 = {2{`RANDOM}};
+  physicalRegisterFile_61 = _RAND_69[63:0];
+  _RAND_70 = {2{`RANDOM}};
+  physicalRegisterFile_62 = _RAND_70[63:0];
+  _RAND_71 = {2{`RANDOM}};
+  physicalRegisterFile_63 = _RAND_71[63:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial
@@ -51362,6 +52772,39 @@ module soc1_Anon(
   output        core_sample0,
   output        core_sample1,
   input         MTIP,
+  output [63:0] registersOut_0,
+  output [63:0] registersOut_1,
+  output [63:0] registersOut_2,
+  output [63:0] registersOut_3,
+  output [63:0] registersOut_4,
+  output [63:0] registersOut_5,
+  output [63:0] registersOut_6,
+  output [63:0] registersOut_7,
+  output [63:0] registersOut_8,
+  output [63:0] registersOut_9,
+  output [63:0] registersOut_10,
+  output [63:0] registersOut_11,
+  output [63:0] registersOut_12,
+  output [63:0] registersOut_13,
+  output [63:0] registersOut_14,
+  output [63:0] registersOut_15,
+  output [63:0] registersOut_16,
+  output [63:0] registersOut_17,
+  output [63:0] registersOut_18,
+  output [63:0] registersOut_19,
+  output [63:0] registersOut_20,
+  output [63:0] registersOut_21,
+  output [63:0] registersOut_22,
+  output [63:0] registersOut_23,
+  output [63:0] registersOut_24,
+  output [63:0] registersOut_25,
+  output [63:0] registersOut_26,
+  output [63:0] registersOut_27,
+  output [63:0] registersOut_28,
+  output [63:0] registersOut_29,
+  output [63:0] registersOut_30,
+  output [63:0] registersOut_31,
+  output [63:0] registersOut_32,
   output        robOut_commitFired,
   output [63:0] robOut_pc,
   output [63:0] robOut_instruction,
@@ -51593,8 +53036,41 @@ module soc1_Anon(
   wire  decode_branchEvalIn_passFail; // @[core.scala 46:22]
   wire [4:0] decode_branchEvalIn_branchMask; // @[core.scala 46:22]
   wire [63:0] decode_branchEvalIn_targetPC; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_0; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_1; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_2; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_3; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_4; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_5; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_6; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_7; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_8; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_9; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_10; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_11; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_12; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_13; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_14; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_15; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_16; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_17; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_18; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_19; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_20; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_21; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_22; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_23; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_24; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_25; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_26; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_27; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_28; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_29; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_30; // @[core.scala 46:22]
+  wire [5:0] decode_retiredRenamedTable_table_31; // @[core.scala 46:22]
   wire [63:0] decode_interruptedPC; // @[core.scala 46:22]
   wire  decode_canTakeInterrupt; // @[core.scala 46:22]
+  wire [63:0] decode_registersOut_0; // @[core.scala 46:22]
   wire  dataQueue_clock; // @[core.scala 62:25]
   wire  dataQueue_reset; // @[core.scala 62:25]
   wire  dataQueue_fromROB_readyNow; // @[core.scala 62:25]
@@ -51809,6 +53285,70 @@ module soc1_Anon(
   wire  prf_branchCheck_pass; // @[core.scala 132:19]
   wire [4:0] prf_branchCheck_branchmask; // @[core.scala 132:19]
   wire  prf_branchCheck_valid; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_0; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_1; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_2; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_3; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_4; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_5; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_6; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_7; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_8; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_9; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_10; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_11; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_12; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_13; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_14; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_15; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_16; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_17; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_18; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_19; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_20; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_21; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_22; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_23; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_24; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_25; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_26; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_27; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_28; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_29; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_30; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_31; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_32; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_33; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_34; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_35; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_36; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_37; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_38; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_39; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_40; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_41; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_42; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_43; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_44; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_45; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_46; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_47; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_48; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_49; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_50; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_51; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_52; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_53; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_54; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_55; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_56; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_57; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_58; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_59; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_60; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_61; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_62; // @[core.scala 132:19]
+  wire [63:0] prf_registerFileOutput_63; // @[core.scala 132:19]
   wire  _fetch_toDecode_fired_T_3 = ~decode_fromFetch_expected_valid | decode_fromFetch_expected_pc == fetch_toDecode_pc
     ; // @[core.scala 55:40]
   wire  instructionDecodedReady = 5'h3 == decode_toExec_instruction[6:2] | 5'h5 == decode_toExec_instruction[6:2] | 5'hd
@@ -52341,6 +53881,1991 @@ module soc1_Anon(
   wire [63:0] _GEN_296 = 2'h1 == interruptInjectStatus ? {{32'd0}, rob_commit_instruction} : _GEN_292; // @[core.scala 1060:33 708:38]
   wire [63:0] _GEN_299 = 2'h0 == interruptInjectStatus ? {{32'd0}, fetch_toDecode_instruction} : _GEN_295; // @[core.scala 1060:33 59:32]
   wire [63:0] _GEN_300 = 2'h0 == interruptInjectStatus ? {{32'd0}, rob_commit_instruction} : _GEN_296; // @[core.scala 1060:33 708:38]
+  wire [63:0] _GEN_303 = prf_registerFileOutput_0; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_304 = 6'h1 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_305 = 6'h2 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_2 : _GEN_304; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_306 = 6'h3 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_3 : _GEN_305; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_307 = 6'h4 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_4 : _GEN_306; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_308 = 6'h5 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_5 : _GEN_307; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_309 = 6'h6 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_6 : _GEN_308; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_310 = 6'h7 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_7 : _GEN_309; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_311 = 6'h8 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_8 : _GEN_310; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_312 = 6'h9 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_9 : _GEN_311; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_313 = 6'ha == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_10 : _GEN_312; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_314 = 6'hb == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_11 : _GEN_313; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_315 = 6'hc == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_12 : _GEN_314; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_316 = 6'hd == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_13 : _GEN_315; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_317 = 6'he == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_14 : _GEN_316; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_318 = 6'hf == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_15 : _GEN_317; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_319 = 6'h10 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_16 : _GEN_318; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_320 = 6'h11 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_17 : _GEN_319; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_321 = 6'h12 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_18 : _GEN_320; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_322 = 6'h13 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_19 : _GEN_321; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_323 = 6'h14 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_20 : _GEN_322; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_324 = 6'h15 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_21 : _GEN_323; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_325 = 6'h16 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_22 : _GEN_324; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_326 = 6'h17 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_23 : _GEN_325; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_327 = 6'h18 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_24 : _GEN_326; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_328 = 6'h19 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_25 : _GEN_327; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_329 = 6'h1a == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_26 : _GEN_328; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_330 = 6'h1b == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_27 : _GEN_329; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_331 = 6'h1c == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_28 : _GEN_330; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_332 = 6'h1d == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_29 : _GEN_331; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_333 = 6'h1e == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_30 : _GEN_332; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_334 = 6'h1f == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_31 : _GEN_333; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_335 = 6'h20 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_32 : _GEN_334; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_336 = 6'h21 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_33 : _GEN_335; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_337 = 6'h22 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_34 : _GEN_336; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_338 = 6'h23 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_35 : _GEN_337; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_339 = 6'h24 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_36 : _GEN_338; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_340 = 6'h25 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_37 : _GEN_339; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_341 = 6'h26 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_38 : _GEN_340; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_342 = 6'h27 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_39 : _GEN_341; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_343 = 6'h28 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_40 : _GEN_342; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_344 = 6'h29 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_41 : _GEN_343; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_345 = 6'h2a == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_42 : _GEN_344; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_346 = 6'h2b == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_43 : _GEN_345; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_347 = 6'h2c == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_44 : _GEN_346; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_348 = 6'h2d == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_45 : _GEN_347; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_349 = 6'h2e == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_46 : _GEN_348; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_350 = 6'h2f == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_47 : _GEN_349; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_351 = 6'h30 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_48 : _GEN_350; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_352 = 6'h31 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_49 : _GEN_351; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_353 = 6'h32 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_50 : _GEN_352; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_354 = 6'h33 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_51 : _GEN_353; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_355 = 6'h34 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_52 : _GEN_354; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_356 = 6'h35 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_53 : _GEN_355; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_357 = 6'h36 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_54 : _GEN_356; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_358 = 6'h37 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_55 : _GEN_357; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_359 = 6'h38 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_56 : _GEN_358; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_360 = 6'h39 == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_57 : _GEN_359; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_361 = 6'h3a == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_58 : _GEN_360; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_362 = 6'h3b == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_59 : _GEN_361; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_363 = 6'h3c == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_60 : _GEN_362; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_364 = 6'h3d == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_61 : _GEN_363; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_365 = 6'h3e == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_62 : _GEN_364; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_368 = 6'h1 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_369 = 6'h2 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_2 : _GEN_368; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_370 = 6'h3 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_3 : _GEN_369; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_371 = 6'h4 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_4 : _GEN_370; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_372 = 6'h5 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_5 : _GEN_371; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_373 = 6'h6 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_6 : _GEN_372; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_374 = 6'h7 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_7 : _GEN_373; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_375 = 6'h8 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_8 : _GEN_374; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_376 = 6'h9 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_9 : _GEN_375; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_377 = 6'ha == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_10 : _GEN_376; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_378 = 6'hb == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_11 : _GEN_377; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_379 = 6'hc == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_12 : _GEN_378; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_380 = 6'hd == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_13 : _GEN_379; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_381 = 6'he == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_14 : _GEN_380; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_382 = 6'hf == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_15 : _GEN_381; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_383 = 6'h10 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_16 : _GEN_382; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_384 = 6'h11 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_17 : _GEN_383; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_385 = 6'h12 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_18 : _GEN_384; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_386 = 6'h13 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_19 : _GEN_385; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_387 = 6'h14 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_20 : _GEN_386; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_388 = 6'h15 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_21 : _GEN_387; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_389 = 6'h16 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_22 : _GEN_388; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_390 = 6'h17 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_23 : _GEN_389; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_391 = 6'h18 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_24 : _GEN_390; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_392 = 6'h19 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_25 : _GEN_391; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_393 = 6'h1a == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_26 : _GEN_392; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_394 = 6'h1b == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_27 : _GEN_393; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_395 = 6'h1c == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_28 : _GEN_394; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_396 = 6'h1d == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_29 : _GEN_395; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_397 = 6'h1e == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_30 : _GEN_396; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_398 = 6'h1f == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_31 : _GEN_397; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_399 = 6'h20 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_32 : _GEN_398; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_400 = 6'h21 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_33 : _GEN_399; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_401 = 6'h22 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_34 : _GEN_400; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_402 = 6'h23 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_35 : _GEN_401; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_403 = 6'h24 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_36 : _GEN_402; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_404 = 6'h25 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_37 : _GEN_403; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_405 = 6'h26 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_38 : _GEN_404; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_406 = 6'h27 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_39 : _GEN_405; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_407 = 6'h28 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_40 : _GEN_406; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_408 = 6'h29 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_41 : _GEN_407; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_409 = 6'h2a == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_42 : _GEN_408; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_410 = 6'h2b == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_43 : _GEN_409; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_411 = 6'h2c == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_44 : _GEN_410; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_412 = 6'h2d == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_45 : _GEN_411; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_413 = 6'h2e == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_46 : _GEN_412; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_414 = 6'h2f == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_47 : _GEN_413; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_415 = 6'h30 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_48 : _GEN_414; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_416 = 6'h31 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_49 : _GEN_415; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_417 = 6'h32 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_50 : _GEN_416; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_418 = 6'h33 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_51 : _GEN_417; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_419 = 6'h34 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_52 : _GEN_418; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_420 = 6'h35 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_53 : _GEN_419; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_421 = 6'h36 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_54 : _GEN_420; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_422 = 6'h37 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_55 : _GEN_421; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_423 = 6'h38 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_56 : _GEN_422; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_424 = 6'h39 == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_57 : _GEN_423; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_425 = 6'h3a == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_58 : _GEN_424; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_426 = 6'h3b == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_59 : _GEN_425; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_427 = 6'h3c == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_60 : _GEN_426; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_428 = 6'h3d == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_61 : _GEN_427; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_429 = 6'h3e == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_62 : _GEN_428; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_432 = 6'h1 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_433 = 6'h2 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_2 : _GEN_432; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_434 = 6'h3 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_3 : _GEN_433; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_435 = 6'h4 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_4 : _GEN_434; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_436 = 6'h5 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_5 : _GEN_435; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_437 = 6'h6 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_6 : _GEN_436; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_438 = 6'h7 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_7 : _GEN_437; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_439 = 6'h8 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_8 : _GEN_438; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_440 = 6'h9 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_9 : _GEN_439; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_441 = 6'ha == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_10 : _GEN_440; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_442 = 6'hb == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_11 : _GEN_441; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_443 = 6'hc == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_12 : _GEN_442; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_444 = 6'hd == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_13 : _GEN_443; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_445 = 6'he == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_14 : _GEN_444; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_446 = 6'hf == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_15 : _GEN_445; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_447 = 6'h10 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_16 : _GEN_446; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_448 = 6'h11 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_17 : _GEN_447; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_449 = 6'h12 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_18 : _GEN_448; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_450 = 6'h13 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_19 : _GEN_449; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_451 = 6'h14 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_20 : _GEN_450; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_452 = 6'h15 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_21 : _GEN_451; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_453 = 6'h16 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_22 : _GEN_452; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_454 = 6'h17 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_23 : _GEN_453; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_455 = 6'h18 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_24 : _GEN_454; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_456 = 6'h19 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_25 : _GEN_455; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_457 = 6'h1a == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_26 : _GEN_456; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_458 = 6'h1b == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_27 : _GEN_457; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_459 = 6'h1c == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_28 : _GEN_458; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_460 = 6'h1d == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_29 : _GEN_459; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_461 = 6'h1e == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_30 : _GEN_460; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_462 = 6'h1f == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_31 : _GEN_461; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_463 = 6'h20 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_32 : _GEN_462; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_464 = 6'h21 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_33 : _GEN_463; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_465 = 6'h22 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_34 : _GEN_464; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_466 = 6'h23 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_35 : _GEN_465; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_467 = 6'h24 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_36 : _GEN_466; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_468 = 6'h25 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_37 : _GEN_467; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_469 = 6'h26 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_38 : _GEN_468; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_470 = 6'h27 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_39 : _GEN_469; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_471 = 6'h28 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_40 : _GEN_470; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_472 = 6'h29 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_41 : _GEN_471; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_473 = 6'h2a == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_42 : _GEN_472; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_474 = 6'h2b == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_43 : _GEN_473; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_475 = 6'h2c == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_44 : _GEN_474; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_476 = 6'h2d == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_45 : _GEN_475; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_477 = 6'h2e == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_46 : _GEN_476; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_478 = 6'h2f == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_47 : _GEN_477; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_479 = 6'h30 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_48 : _GEN_478; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_480 = 6'h31 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_49 : _GEN_479; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_481 = 6'h32 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_50 : _GEN_480; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_482 = 6'h33 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_51 : _GEN_481; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_483 = 6'h34 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_52 : _GEN_482; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_484 = 6'h35 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_53 : _GEN_483; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_485 = 6'h36 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_54 : _GEN_484; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_486 = 6'h37 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_55 : _GEN_485; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_487 = 6'h38 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_56 : _GEN_486; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_488 = 6'h39 == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_57 : _GEN_487; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_489 = 6'h3a == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_58 : _GEN_488; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_490 = 6'h3b == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_59 : _GEN_489; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_491 = 6'h3c == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_60 : _GEN_490; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_492 = 6'h3d == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_61 : _GEN_491; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_493 = 6'h3e == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_62 : _GEN_492; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_496 = 6'h1 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_497 = 6'h2 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_2 : _GEN_496; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_498 = 6'h3 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_3 : _GEN_497; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_499 = 6'h4 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_4 : _GEN_498; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_500 = 6'h5 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_5 : _GEN_499; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_501 = 6'h6 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_6 : _GEN_500; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_502 = 6'h7 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_7 : _GEN_501; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_503 = 6'h8 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_8 : _GEN_502; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_504 = 6'h9 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_9 : _GEN_503; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_505 = 6'ha == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_10 : _GEN_504; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_506 = 6'hb == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_11 : _GEN_505; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_507 = 6'hc == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_12 : _GEN_506; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_508 = 6'hd == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_13 : _GEN_507; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_509 = 6'he == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_14 : _GEN_508; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_510 = 6'hf == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_15 : _GEN_509; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_511 = 6'h10 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_16 : _GEN_510; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_512 = 6'h11 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_17 : _GEN_511; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_513 = 6'h12 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_18 : _GEN_512; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_514 = 6'h13 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_19 : _GEN_513; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_515 = 6'h14 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_20 : _GEN_514; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_516 = 6'h15 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_21 : _GEN_515; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_517 = 6'h16 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_22 : _GEN_516; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_518 = 6'h17 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_23 : _GEN_517; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_519 = 6'h18 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_24 : _GEN_518; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_520 = 6'h19 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_25 : _GEN_519; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_521 = 6'h1a == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_26 : _GEN_520; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_522 = 6'h1b == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_27 : _GEN_521; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_523 = 6'h1c == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_28 : _GEN_522; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_524 = 6'h1d == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_29 : _GEN_523; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_525 = 6'h1e == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_30 : _GEN_524; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_526 = 6'h1f == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_31 : _GEN_525; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_527 = 6'h20 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_32 : _GEN_526; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_528 = 6'h21 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_33 : _GEN_527; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_529 = 6'h22 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_34 : _GEN_528; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_530 = 6'h23 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_35 : _GEN_529; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_531 = 6'h24 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_36 : _GEN_530; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_532 = 6'h25 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_37 : _GEN_531; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_533 = 6'h26 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_38 : _GEN_532; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_534 = 6'h27 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_39 : _GEN_533; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_535 = 6'h28 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_40 : _GEN_534; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_536 = 6'h29 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_41 : _GEN_535; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_537 = 6'h2a == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_42 : _GEN_536; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_538 = 6'h2b == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_43 : _GEN_537; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_539 = 6'h2c == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_44 : _GEN_538; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_540 = 6'h2d == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_45 : _GEN_539; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_541 = 6'h2e == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_46 : _GEN_540; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_542 = 6'h2f == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_47 : _GEN_541; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_543 = 6'h30 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_48 : _GEN_542; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_544 = 6'h31 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_49 : _GEN_543; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_545 = 6'h32 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_50 : _GEN_544; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_546 = 6'h33 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_51 : _GEN_545; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_547 = 6'h34 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_52 : _GEN_546; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_548 = 6'h35 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_53 : _GEN_547; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_549 = 6'h36 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_54 : _GEN_548; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_550 = 6'h37 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_55 : _GEN_549; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_551 = 6'h38 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_56 : _GEN_550; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_552 = 6'h39 == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_57 : _GEN_551; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_553 = 6'h3a == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_58 : _GEN_552; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_554 = 6'h3b == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_59 : _GEN_553; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_555 = 6'h3c == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_60 : _GEN_554; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_556 = 6'h3d == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_61 : _GEN_555; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_557 = 6'h3e == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_62 : _GEN_556; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_560 = 6'h1 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_561 = 6'h2 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_2 : _GEN_560; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_562 = 6'h3 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_3 : _GEN_561; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_563 = 6'h4 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_4 : _GEN_562; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_564 = 6'h5 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_5 : _GEN_563; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_565 = 6'h6 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_6 : _GEN_564; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_566 = 6'h7 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_7 : _GEN_565; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_567 = 6'h8 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_8 : _GEN_566; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_568 = 6'h9 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_9 : _GEN_567; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_569 = 6'ha == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_10 : _GEN_568; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_570 = 6'hb == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_11 : _GEN_569; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_571 = 6'hc == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_12 : _GEN_570; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_572 = 6'hd == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_13 : _GEN_571; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_573 = 6'he == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_14 : _GEN_572; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_574 = 6'hf == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_15 : _GEN_573; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_575 = 6'h10 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_16 : _GEN_574; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_576 = 6'h11 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_17 : _GEN_575; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_577 = 6'h12 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_18 : _GEN_576; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_578 = 6'h13 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_19 : _GEN_577; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_579 = 6'h14 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_20 : _GEN_578; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_580 = 6'h15 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_21 : _GEN_579; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_581 = 6'h16 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_22 : _GEN_580; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_582 = 6'h17 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_23 : _GEN_581; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_583 = 6'h18 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_24 : _GEN_582; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_584 = 6'h19 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_25 : _GEN_583; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_585 = 6'h1a == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_26 : _GEN_584; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_586 = 6'h1b == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_27 : _GEN_585; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_587 = 6'h1c == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_28 : _GEN_586; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_588 = 6'h1d == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_29 : _GEN_587; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_589 = 6'h1e == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_30 : _GEN_588; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_590 = 6'h1f == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_31 : _GEN_589; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_591 = 6'h20 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_32 : _GEN_590; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_592 = 6'h21 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_33 : _GEN_591; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_593 = 6'h22 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_34 : _GEN_592; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_594 = 6'h23 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_35 : _GEN_593; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_595 = 6'h24 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_36 : _GEN_594; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_596 = 6'h25 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_37 : _GEN_595; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_597 = 6'h26 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_38 : _GEN_596; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_598 = 6'h27 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_39 : _GEN_597; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_599 = 6'h28 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_40 : _GEN_598; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_600 = 6'h29 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_41 : _GEN_599; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_601 = 6'h2a == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_42 : _GEN_600; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_602 = 6'h2b == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_43 : _GEN_601; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_603 = 6'h2c == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_44 : _GEN_602; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_604 = 6'h2d == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_45 : _GEN_603; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_605 = 6'h2e == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_46 : _GEN_604; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_606 = 6'h2f == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_47 : _GEN_605; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_607 = 6'h30 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_48 : _GEN_606; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_608 = 6'h31 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_49 : _GEN_607; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_609 = 6'h32 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_50 : _GEN_608; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_610 = 6'h33 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_51 : _GEN_609; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_611 = 6'h34 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_52 : _GEN_610; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_612 = 6'h35 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_53 : _GEN_611; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_613 = 6'h36 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_54 : _GEN_612; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_614 = 6'h37 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_55 : _GEN_613; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_615 = 6'h38 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_56 : _GEN_614; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_616 = 6'h39 == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_57 : _GEN_615; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_617 = 6'h3a == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_58 : _GEN_616; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_618 = 6'h3b == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_59 : _GEN_617; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_619 = 6'h3c == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_60 : _GEN_618; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_620 = 6'h3d == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_61 : _GEN_619; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_621 = 6'h3e == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_62 : _GEN_620; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_624 = 6'h1 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_625 = 6'h2 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_2 : _GEN_624; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_626 = 6'h3 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_3 : _GEN_625; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_627 = 6'h4 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_4 : _GEN_626; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_628 = 6'h5 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_5 : _GEN_627; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_629 = 6'h6 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_6 : _GEN_628; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_630 = 6'h7 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_7 : _GEN_629; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_631 = 6'h8 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_8 : _GEN_630; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_632 = 6'h9 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_9 : _GEN_631; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_633 = 6'ha == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_10 : _GEN_632; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_634 = 6'hb == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_11 : _GEN_633; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_635 = 6'hc == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_12 : _GEN_634; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_636 = 6'hd == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_13 : _GEN_635; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_637 = 6'he == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_14 : _GEN_636; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_638 = 6'hf == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_15 : _GEN_637; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_639 = 6'h10 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_16 : _GEN_638; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_640 = 6'h11 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_17 : _GEN_639; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_641 = 6'h12 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_18 : _GEN_640; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_642 = 6'h13 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_19 : _GEN_641; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_643 = 6'h14 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_20 : _GEN_642; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_644 = 6'h15 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_21 : _GEN_643; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_645 = 6'h16 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_22 : _GEN_644; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_646 = 6'h17 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_23 : _GEN_645; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_647 = 6'h18 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_24 : _GEN_646; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_648 = 6'h19 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_25 : _GEN_647; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_649 = 6'h1a == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_26 : _GEN_648; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_650 = 6'h1b == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_27 : _GEN_649; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_651 = 6'h1c == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_28 : _GEN_650; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_652 = 6'h1d == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_29 : _GEN_651; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_653 = 6'h1e == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_30 : _GEN_652; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_654 = 6'h1f == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_31 : _GEN_653; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_655 = 6'h20 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_32 : _GEN_654; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_656 = 6'h21 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_33 : _GEN_655; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_657 = 6'h22 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_34 : _GEN_656; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_658 = 6'h23 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_35 : _GEN_657; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_659 = 6'h24 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_36 : _GEN_658; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_660 = 6'h25 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_37 : _GEN_659; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_661 = 6'h26 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_38 : _GEN_660; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_662 = 6'h27 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_39 : _GEN_661; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_663 = 6'h28 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_40 : _GEN_662; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_664 = 6'h29 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_41 : _GEN_663; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_665 = 6'h2a == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_42 : _GEN_664; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_666 = 6'h2b == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_43 : _GEN_665; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_667 = 6'h2c == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_44 : _GEN_666; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_668 = 6'h2d == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_45 : _GEN_667; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_669 = 6'h2e == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_46 : _GEN_668; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_670 = 6'h2f == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_47 : _GEN_669; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_671 = 6'h30 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_48 : _GEN_670; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_672 = 6'h31 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_49 : _GEN_671; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_673 = 6'h32 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_50 : _GEN_672; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_674 = 6'h33 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_51 : _GEN_673; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_675 = 6'h34 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_52 : _GEN_674; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_676 = 6'h35 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_53 : _GEN_675; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_677 = 6'h36 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_54 : _GEN_676; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_678 = 6'h37 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_55 : _GEN_677; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_679 = 6'h38 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_56 : _GEN_678; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_680 = 6'h39 == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_57 : _GEN_679; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_681 = 6'h3a == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_58 : _GEN_680; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_682 = 6'h3b == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_59 : _GEN_681; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_683 = 6'h3c == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_60 : _GEN_682; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_684 = 6'h3d == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_61 : _GEN_683; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_685 = 6'h3e == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_62 : _GEN_684; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_688 = 6'h1 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_689 = 6'h2 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_2 : _GEN_688; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_690 = 6'h3 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_3 : _GEN_689; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_691 = 6'h4 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_4 : _GEN_690; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_692 = 6'h5 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_5 : _GEN_691; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_693 = 6'h6 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_6 : _GEN_692; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_694 = 6'h7 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_7 : _GEN_693; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_695 = 6'h8 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_8 : _GEN_694; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_696 = 6'h9 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_9 : _GEN_695; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_697 = 6'ha == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_10 : _GEN_696; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_698 = 6'hb == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_11 : _GEN_697; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_699 = 6'hc == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_12 : _GEN_698; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_700 = 6'hd == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_13 : _GEN_699; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_701 = 6'he == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_14 : _GEN_700; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_702 = 6'hf == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_15 : _GEN_701; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_703 = 6'h10 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_16 : _GEN_702; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_704 = 6'h11 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_17 : _GEN_703; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_705 = 6'h12 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_18 : _GEN_704; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_706 = 6'h13 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_19 : _GEN_705; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_707 = 6'h14 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_20 : _GEN_706; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_708 = 6'h15 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_21 : _GEN_707; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_709 = 6'h16 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_22 : _GEN_708; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_710 = 6'h17 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_23 : _GEN_709; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_711 = 6'h18 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_24 : _GEN_710; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_712 = 6'h19 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_25 : _GEN_711; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_713 = 6'h1a == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_26 : _GEN_712; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_714 = 6'h1b == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_27 : _GEN_713; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_715 = 6'h1c == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_28 : _GEN_714; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_716 = 6'h1d == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_29 : _GEN_715; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_717 = 6'h1e == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_30 : _GEN_716; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_718 = 6'h1f == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_31 : _GEN_717; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_719 = 6'h20 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_32 : _GEN_718; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_720 = 6'h21 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_33 : _GEN_719; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_721 = 6'h22 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_34 : _GEN_720; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_722 = 6'h23 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_35 : _GEN_721; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_723 = 6'h24 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_36 : _GEN_722; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_724 = 6'h25 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_37 : _GEN_723; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_725 = 6'h26 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_38 : _GEN_724; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_726 = 6'h27 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_39 : _GEN_725; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_727 = 6'h28 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_40 : _GEN_726; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_728 = 6'h29 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_41 : _GEN_727; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_729 = 6'h2a == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_42 : _GEN_728; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_730 = 6'h2b == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_43 : _GEN_729; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_731 = 6'h2c == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_44 : _GEN_730; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_732 = 6'h2d == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_45 : _GEN_731; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_733 = 6'h2e == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_46 : _GEN_732; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_734 = 6'h2f == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_47 : _GEN_733; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_735 = 6'h30 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_48 : _GEN_734; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_736 = 6'h31 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_49 : _GEN_735; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_737 = 6'h32 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_50 : _GEN_736; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_738 = 6'h33 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_51 : _GEN_737; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_739 = 6'h34 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_52 : _GEN_738; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_740 = 6'h35 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_53 : _GEN_739; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_741 = 6'h36 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_54 : _GEN_740; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_742 = 6'h37 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_55 : _GEN_741; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_743 = 6'h38 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_56 : _GEN_742; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_744 = 6'h39 == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_57 : _GEN_743; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_745 = 6'h3a == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_58 : _GEN_744; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_746 = 6'h3b == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_59 : _GEN_745; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_747 = 6'h3c == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_60 : _GEN_746; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_748 = 6'h3d == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_61 : _GEN_747; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_749 = 6'h3e == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_62 : _GEN_748; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_752 = 6'h1 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_753 = 6'h2 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_2 : _GEN_752; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_754 = 6'h3 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_3 : _GEN_753; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_755 = 6'h4 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_4 : _GEN_754; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_756 = 6'h5 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_5 : _GEN_755; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_757 = 6'h6 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_6 : _GEN_756; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_758 = 6'h7 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_7 : _GEN_757; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_759 = 6'h8 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_8 : _GEN_758; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_760 = 6'h9 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_9 : _GEN_759; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_761 = 6'ha == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_10 : _GEN_760; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_762 = 6'hb == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_11 : _GEN_761; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_763 = 6'hc == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_12 : _GEN_762; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_764 = 6'hd == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_13 : _GEN_763; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_765 = 6'he == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_14 : _GEN_764; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_766 = 6'hf == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_15 : _GEN_765; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_767 = 6'h10 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_16 : _GEN_766; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_768 = 6'h11 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_17 : _GEN_767; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_769 = 6'h12 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_18 : _GEN_768; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_770 = 6'h13 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_19 : _GEN_769; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_771 = 6'h14 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_20 : _GEN_770; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_772 = 6'h15 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_21 : _GEN_771; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_773 = 6'h16 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_22 : _GEN_772; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_774 = 6'h17 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_23 : _GEN_773; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_775 = 6'h18 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_24 : _GEN_774; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_776 = 6'h19 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_25 : _GEN_775; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_777 = 6'h1a == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_26 : _GEN_776; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_778 = 6'h1b == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_27 : _GEN_777; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_779 = 6'h1c == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_28 : _GEN_778; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_780 = 6'h1d == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_29 : _GEN_779; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_781 = 6'h1e == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_30 : _GEN_780; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_782 = 6'h1f == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_31 : _GEN_781; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_783 = 6'h20 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_32 : _GEN_782; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_784 = 6'h21 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_33 : _GEN_783; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_785 = 6'h22 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_34 : _GEN_784; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_786 = 6'h23 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_35 : _GEN_785; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_787 = 6'h24 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_36 : _GEN_786; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_788 = 6'h25 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_37 : _GEN_787; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_789 = 6'h26 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_38 : _GEN_788; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_790 = 6'h27 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_39 : _GEN_789; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_791 = 6'h28 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_40 : _GEN_790; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_792 = 6'h29 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_41 : _GEN_791; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_793 = 6'h2a == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_42 : _GEN_792; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_794 = 6'h2b == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_43 : _GEN_793; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_795 = 6'h2c == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_44 : _GEN_794; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_796 = 6'h2d == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_45 : _GEN_795; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_797 = 6'h2e == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_46 : _GEN_796; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_798 = 6'h2f == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_47 : _GEN_797; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_799 = 6'h30 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_48 : _GEN_798; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_800 = 6'h31 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_49 : _GEN_799; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_801 = 6'h32 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_50 : _GEN_800; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_802 = 6'h33 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_51 : _GEN_801; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_803 = 6'h34 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_52 : _GEN_802; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_804 = 6'h35 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_53 : _GEN_803; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_805 = 6'h36 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_54 : _GEN_804; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_806 = 6'h37 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_55 : _GEN_805; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_807 = 6'h38 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_56 : _GEN_806; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_808 = 6'h39 == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_57 : _GEN_807; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_809 = 6'h3a == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_58 : _GEN_808; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_810 = 6'h3b == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_59 : _GEN_809; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_811 = 6'h3c == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_60 : _GEN_810; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_812 = 6'h3d == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_61 : _GEN_811; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_813 = 6'h3e == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_62 : _GEN_812; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_816 = 6'h1 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_817 = 6'h2 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_2 : _GEN_816; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_818 = 6'h3 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_3 : _GEN_817; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_819 = 6'h4 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_4 : _GEN_818; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_820 = 6'h5 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_5 : _GEN_819; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_821 = 6'h6 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_6 : _GEN_820; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_822 = 6'h7 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_7 : _GEN_821; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_823 = 6'h8 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_8 : _GEN_822; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_824 = 6'h9 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_9 : _GEN_823; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_825 = 6'ha == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_10 : _GEN_824; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_826 = 6'hb == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_11 : _GEN_825; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_827 = 6'hc == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_12 : _GEN_826; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_828 = 6'hd == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_13 : _GEN_827; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_829 = 6'he == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_14 : _GEN_828; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_830 = 6'hf == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_15 : _GEN_829; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_831 = 6'h10 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_16 : _GEN_830; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_832 = 6'h11 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_17 : _GEN_831; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_833 = 6'h12 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_18 : _GEN_832; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_834 = 6'h13 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_19 : _GEN_833; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_835 = 6'h14 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_20 : _GEN_834; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_836 = 6'h15 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_21 : _GEN_835; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_837 = 6'h16 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_22 : _GEN_836; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_838 = 6'h17 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_23 : _GEN_837; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_839 = 6'h18 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_24 : _GEN_838; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_840 = 6'h19 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_25 : _GEN_839; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_841 = 6'h1a == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_26 : _GEN_840; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_842 = 6'h1b == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_27 : _GEN_841; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_843 = 6'h1c == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_28 : _GEN_842; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_844 = 6'h1d == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_29 : _GEN_843; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_845 = 6'h1e == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_30 : _GEN_844; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_846 = 6'h1f == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_31 : _GEN_845; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_847 = 6'h20 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_32 : _GEN_846; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_848 = 6'h21 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_33 : _GEN_847; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_849 = 6'h22 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_34 : _GEN_848; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_850 = 6'h23 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_35 : _GEN_849; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_851 = 6'h24 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_36 : _GEN_850; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_852 = 6'h25 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_37 : _GEN_851; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_853 = 6'h26 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_38 : _GEN_852; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_854 = 6'h27 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_39 : _GEN_853; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_855 = 6'h28 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_40 : _GEN_854; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_856 = 6'h29 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_41 : _GEN_855; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_857 = 6'h2a == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_42 : _GEN_856; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_858 = 6'h2b == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_43 : _GEN_857; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_859 = 6'h2c == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_44 : _GEN_858; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_860 = 6'h2d == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_45 : _GEN_859; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_861 = 6'h2e == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_46 : _GEN_860; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_862 = 6'h2f == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_47 : _GEN_861; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_863 = 6'h30 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_48 : _GEN_862; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_864 = 6'h31 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_49 : _GEN_863; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_865 = 6'h32 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_50 : _GEN_864; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_866 = 6'h33 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_51 : _GEN_865; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_867 = 6'h34 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_52 : _GEN_866; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_868 = 6'h35 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_53 : _GEN_867; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_869 = 6'h36 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_54 : _GEN_868; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_870 = 6'h37 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_55 : _GEN_869; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_871 = 6'h38 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_56 : _GEN_870; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_872 = 6'h39 == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_57 : _GEN_871; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_873 = 6'h3a == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_58 : _GEN_872; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_874 = 6'h3b == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_59 : _GEN_873; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_875 = 6'h3c == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_60 : _GEN_874; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_876 = 6'h3d == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_61 : _GEN_875; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_877 = 6'h3e == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_62 : _GEN_876; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_880 = 6'h1 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_881 = 6'h2 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_2 : _GEN_880; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_882 = 6'h3 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_3 : _GEN_881; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_883 = 6'h4 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_4 : _GEN_882; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_884 = 6'h5 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_5 : _GEN_883; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_885 = 6'h6 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_6 : _GEN_884; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_886 = 6'h7 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_7 : _GEN_885; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_887 = 6'h8 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_8 : _GEN_886; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_888 = 6'h9 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_9 : _GEN_887; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_889 = 6'ha == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_10 : _GEN_888; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_890 = 6'hb == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_11 : _GEN_889; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_891 = 6'hc == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_12 : _GEN_890; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_892 = 6'hd == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_13 : _GEN_891; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_893 = 6'he == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_14 : _GEN_892; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_894 = 6'hf == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_15 : _GEN_893; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_895 = 6'h10 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_16 : _GEN_894; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_896 = 6'h11 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_17 : _GEN_895; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_897 = 6'h12 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_18 : _GEN_896; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_898 = 6'h13 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_19 : _GEN_897; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_899 = 6'h14 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_20 : _GEN_898; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_900 = 6'h15 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_21 : _GEN_899; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_901 = 6'h16 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_22 : _GEN_900; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_902 = 6'h17 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_23 : _GEN_901; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_903 = 6'h18 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_24 : _GEN_902; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_904 = 6'h19 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_25 : _GEN_903; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_905 = 6'h1a == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_26 : _GEN_904; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_906 = 6'h1b == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_27 : _GEN_905; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_907 = 6'h1c == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_28 : _GEN_906; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_908 = 6'h1d == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_29 : _GEN_907; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_909 = 6'h1e == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_30 : _GEN_908; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_910 = 6'h1f == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_31 : _GEN_909; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_911 = 6'h20 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_32 : _GEN_910; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_912 = 6'h21 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_33 : _GEN_911; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_913 = 6'h22 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_34 : _GEN_912; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_914 = 6'h23 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_35 : _GEN_913; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_915 = 6'h24 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_36 : _GEN_914; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_916 = 6'h25 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_37 : _GEN_915; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_917 = 6'h26 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_38 : _GEN_916; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_918 = 6'h27 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_39 : _GEN_917; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_919 = 6'h28 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_40 : _GEN_918; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_920 = 6'h29 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_41 : _GEN_919; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_921 = 6'h2a == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_42 : _GEN_920; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_922 = 6'h2b == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_43 : _GEN_921; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_923 = 6'h2c == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_44 : _GEN_922; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_924 = 6'h2d == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_45 : _GEN_923; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_925 = 6'h2e == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_46 : _GEN_924; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_926 = 6'h2f == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_47 : _GEN_925; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_927 = 6'h30 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_48 : _GEN_926; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_928 = 6'h31 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_49 : _GEN_927; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_929 = 6'h32 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_50 : _GEN_928; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_930 = 6'h33 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_51 : _GEN_929; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_931 = 6'h34 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_52 : _GEN_930; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_932 = 6'h35 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_53 : _GEN_931; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_933 = 6'h36 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_54 : _GEN_932; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_934 = 6'h37 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_55 : _GEN_933; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_935 = 6'h38 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_56 : _GEN_934; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_936 = 6'h39 == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_57 : _GEN_935; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_937 = 6'h3a == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_58 : _GEN_936; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_938 = 6'h3b == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_59 : _GEN_937; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_939 = 6'h3c == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_60 : _GEN_938; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_940 = 6'h3d == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_61 : _GEN_939; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_941 = 6'h3e == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_62 : _GEN_940; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_944 = 6'h1 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_945 = 6'h2 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_2 : _GEN_944; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_946 = 6'h3 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_3 : _GEN_945; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_947 = 6'h4 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_4 : _GEN_946; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_948 = 6'h5 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_5 : _GEN_947; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_949 = 6'h6 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_6 : _GEN_948; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_950 = 6'h7 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_7 : _GEN_949; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_951 = 6'h8 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_8 : _GEN_950; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_952 = 6'h9 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_9 : _GEN_951; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_953 = 6'ha == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_10 : _GEN_952; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_954 = 6'hb == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_11 : _GEN_953; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_955 = 6'hc == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_12 : _GEN_954; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_956 = 6'hd == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_13 : _GEN_955; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_957 = 6'he == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_14 : _GEN_956; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_958 = 6'hf == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_15 : _GEN_957; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_959 = 6'h10 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_16 : _GEN_958; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_960 = 6'h11 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_17 : _GEN_959; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_961 = 6'h12 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_18 : _GEN_960; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_962 = 6'h13 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_19 : _GEN_961; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_963 = 6'h14 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_20 : _GEN_962; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_964 = 6'h15 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_21 : _GEN_963; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_965 = 6'h16 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_22 : _GEN_964; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_966 = 6'h17 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_23 : _GEN_965; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_967 = 6'h18 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_24 : _GEN_966; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_968 = 6'h19 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_25 : _GEN_967; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_969 = 6'h1a == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_26 : _GEN_968; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_970 = 6'h1b == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_27 : _GEN_969; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_971 = 6'h1c == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_28 : _GEN_970; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_972 = 6'h1d == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_29 : _GEN_971; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_973 = 6'h1e == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_30 : _GEN_972; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_974 = 6'h1f == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_31 : _GEN_973; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_975 = 6'h20 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_32 : _GEN_974; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_976 = 6'h21 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_33 : _GEN_975; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_977 = 6'h22 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_34 : _GEN_976; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_978 = 6'h23 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_35 : _GEN_977; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_979 = 6'h24 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_36 : _GEN_978; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_980 = 6'h25 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_37 : _GEN_979; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_981 = 6'h26 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_38 : _GEN_980; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_982 = 6'h27 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_39 : _GEN_981; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_983 = 6'h28 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_40 : _GEN_982; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_984 = 6'h29 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_41 : _GEN_983; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_985 = 6'h2a == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_42 : _GEN_984; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_986 = 6'h2b == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_43 : _GEN_985; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_987 = 6'h2c == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_44 : _GEN_986; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_988 = 6'h2d == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_45 : _GEN_987; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_989 = 6'h2e == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_46 : _GEN_988; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_990 = 6'h2f == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_47 : _GEN_989; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_991 = 6'h30 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_48 : _GEN_990; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_992 = 6'h31 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_49 : _GEN_991; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_993 = 6'h32 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_50 : _GEN_992; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_994 = 6'h33 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_51 : _GEN_993; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_995 = 6'h34 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_52 : _GEN_994; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_996 = 6'h35 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_53 : _GEN_995; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_997 = 6'h36 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_54 : _GEN_996; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_998 = 6'h37 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_55 : _GEN_997; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_999 = 6'h38 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_56 : _GEN_998; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1000 = 6'h39 == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_57 : _GEN_999; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1001 = 6'h3a == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_58 : _GEN_1000; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1002 = 6'h3b == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_59 : _GEN_1001; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1003 = 6'h3c == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_60 : _GEN_1002; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1004 = 6'h3d == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_61 : _GEN_1003; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1005 = 6'h3e == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_62 : _GEN_1004; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1008 = 6'h1 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1009 = 6'h2 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_2 : _GEN_1008; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1010 = 6'h3 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_3 : _GEN_1009; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1011 = 6'h4 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_4 : _GEN_1010; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1012 = 6'h5 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_5 : _GEN_1011; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1013 = 6'h6 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_6 : _GEN_1012; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1014 = 6'h7 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_7 : _GEN_1013; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1015 = 6'h8 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_8 : _GEN_1014; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1016 = 6'h9 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_9 : _GEN_1015; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1017 = 6'ha == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_10 : _GEN_1016; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1018 = 6'hb == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_11 : _GEN_1017; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1019 = 6'hc == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_12 : _GEN_1018; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1020 = 6'hd == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_13 : _GEN_1019; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1021 = 6'he == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_14 : _GEN_1020; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1022 = 6'hf == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_15 : _GEN_1021; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1023 = 6'h10 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_16 : _GEN_1022; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1024 = 6'h11 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_17 : _GEN_1023; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1025 = 6'h12 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_18 : _GEN_1024; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1026 = 6'h13 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_19 : _GEN_1025; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1027 = 6'h14 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_20 : _GEN_1026; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1028 = 6'h15 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_21 : _GEN_1027; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1029 = 6'h16 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_22 : _GEN_1028; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1030 = 6'h17 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_23 : _GEN_1029; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1031 = 6'h18 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_24 : _GEN_1030; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1032 = 6'h19 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_25 : _GEN_1031; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1033 = 6'h1a == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_26 : _GEN_1032; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1034 = 6'h1b == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_27 : _GEN_1033; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1035 = 6'h1c == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_28 : _GEN_1034; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1036 = 6'h1d == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_29 : _GEN_1035; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1037 = 6'h1e == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_30 : _GEN_1036; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1038 = 6'h1f == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_31 : _GEN_1037; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1039 = 6'h20 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_32 : _GEN_1038; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1040 = 6'h21 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_33 : _GEN_1039; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1041 = 6'h22 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_34 : _GEN_1040; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1042 = 6'h23 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_35 : _GEN_1041; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1043 = 6'h24 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_36 : _GEN_1042; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1044 = 6'h25 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_37 : _GEN_1043; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1045 = 6'h26 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_38 : _GEN_1044; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1046 = 6'h27 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_39 : _GEN_1045; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1047 = 6'h28 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_40 : _GEN_1046; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1048 = 6'h29 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_41 : _GEN_1047; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1049 = 6'h2a == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_42 : _GEN_1048; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1050 = 6'h2b == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_43 : _GEN_1049; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1051 = 6'h2c == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_44 : _GEN_1050; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1052 = 6'h2d == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_45 : _GEN_1051; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1053 = 6'h2e == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_46 : _GEN_1052; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1054 = 6'h2f == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_47 : _GEN_1053; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1055 = 6'h30 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_48 : _GEN_1054; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1056 = 6'h31 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_49 : _GEN_1055; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1057 = 6'h32 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_50 : _GEN_1056; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1058 = 6'h33 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_51 : _GEN_1057; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1059 = 6'h34 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_52 : _GEN_1058; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1060 = 6'h35 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_53 : _GEN_1059; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1061 = 6'h36 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_54 : _GEN_1060; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1062 = 6'h37 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_55 : _GEN_1061; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1063 = 6'h38 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_56 : _GEN_1062; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1064 = 6'h39 == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_57 : _GEN_1063; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1065 = 6'h3a == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_58 : _GEN_1064; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1066 = 6'h3b == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_59 : _GEN_1065; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1067 = 6'h3c == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_60 : _GEN_1066; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1068 = 6'h3d == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_61 : _GEN_1067; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1069 = 6'h3e == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_62 : _GEN_1068; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1072 = 6'h1 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1073 = 6'h2 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_2 : _GEN_1072; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1074 = 6'h3 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_3 : _GEN_1073; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1075 = 6'h4 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_4 : _GEN_1074; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1076 = 6'h5 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_5 : _GEN_1075; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1077 = 6'h6 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_6 : _GEN_1076; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1078 = 6'h7 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_7 : _GEN_1077; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1079 = 6'h8 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_8 : _GEN_1078; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1080 = 6'h9 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_9 : _GEN_1079; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1081 = 6'ha == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_10 : _GEN_1080; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1082 = 6'hb == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_11 : _GEN_1081; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1083 = 6'hc == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_12 : _GEN_1082; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1084 = 6'hd == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_13 : _GEN_1083; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1085 = 6'he == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_14 : _GEN_1084; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1086 = 6'hf == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_15 : _GEN_1085; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1087 = 6'h10 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_16 : _GEN_1086; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1088 = 6'h11 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_17 : _GEN_1087; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1089 = 6'h12 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_18 : _GEN_1088; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1090 = 6'h13 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_19 : _GEN_1089; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1091 = 6'h14 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_20 : _GEN_1090; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1092 = 6'h15 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_21 : _GEN_1091; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1093 = 6'h16 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_22 : _GEN_1092; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1094 = 6'h17 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_23 : _GEN_1093; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1095 = 6'h18 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_24 : _GEN_1094; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1096 = 6'h19 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_25 : _GEN_1095; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1097 = 6'h1a == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_26 : _GEN_1096; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1098 = 6'h1b == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_27 : _GEN_1097; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1099 = 6'h1c == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_28 : _GEN_1098; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1100 = 6'h1d == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_29 : _GEN_1099; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1101 = 6'h1e == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_30 : _GEN_1100; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1102 = 6'h1f == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_31 : _GEN_1101; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1103 = 6'h20 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_32 : _GEN_1102; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1104 = 6'h21 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_33 : _GEN_1103; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1105 = 6'h22 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_34 : _GEN_1104; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1106 = 6'h23 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_35 : _GEN_1105; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1107 = 6'h24 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_36 : _GEN_1106; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1108 = 6'h25 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_37 : _GEN_1107; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1109 = 6'h26 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_38 : _GEN_1108; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1110 = 6'h27 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_39 : _GEN_1109; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1111 = 6'h28 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_40 : _GEN_1110; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1112 = 6'h29 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_41 : _GEN_1111; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1113 = 6'h2a == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_42 : _GEN_1112; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1114 = 6'h2b == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_43 : _GEN_1113; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1115 = 6'h2c == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_44 : _GEN_1114; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1116 = 6'h2d == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_45 : _GEN_1115; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1117 = 6'h2e == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_46 : _GEN_1116; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1118 = 6'h2f == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_47 : _GEN_1117; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1119 = 6'h30 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_48 : _GEN_1118; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1120 = 6'h31 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_49 : _GEN_1119; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1121 = 6'h32 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_50 : _GEN_1120; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1122 = 6'h33 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_51 : _GEN_1121; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1123 = 6'h34 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_52 : _GEN_1122; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1124 = 6'h35 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_53 : _GEN_1123; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1125 = 6'h36 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_54 : _GEN_1124; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1126 = 6'h37 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_55 : _GEN_1125; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1127 = 6'h38 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_56 : _GEN_1126; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1128 = 6'h39 == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_57 : _GEN_1127; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1129 = 6'h3a == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_58 : _GEN_1128; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1130 = 6'h3b == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_59 : _GEN_1129; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1131 = 6'h3c == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_60 : _GEN_1130; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1132 = 6'h3d == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_61 : _GEN_1131; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1133 = 6'h3e == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_62 : _GEN_1132; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1136 = 6'h1 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1137 = 6'h2 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_2 : _GEN_1136; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1138 = 6'h3 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_3 : _GEN_1137; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1139 = 6'h4 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_4 : _GEN_1138; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1140 = 6'h5 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_5 : _GEN_1139; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1141 = 6'h6 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_6 : _GEN_1140; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1142 = 6'h7 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_7 : _GEN_1141; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1143 = 6'h8 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_8 : _GEN_1142; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1144 = 6'h9 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_9 : _GEN_1143; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1145 = 6'ha == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_10 : _GEN_1144; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1146 = 6'hb == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_11 : _GEN_1145; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1147 = 6'hc == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_12 : _GEN_1146; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1148 = 6'hd == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_13 : _GEN_1147; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1149 = 6'he == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_14 : _GEN_1148; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1150 = 6'hf == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_15 : _GEN_1149; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1151 = 6'h10 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_16 : _GEN_1150; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1152 = 6'h11 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_17 : _GEN_1151; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1153 = 6'h12 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_18 : _GEN_1152; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1154 = 6'h13 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_19 : _GEN_1153; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1155 = 6'h14 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_20 : _GEN_1154; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1156 = 6'h15 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_21 : _GEN_1155; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1157 = 6'h16 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_22 : _GEN_1156; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1158 = 6'h17 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_23 : _GEN_1157; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1159 = 6'h18 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_24 : _GEN_1158; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1160 = 6'h19 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_25 : _GEN_1159; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1161 = 6'h1a == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_26 : _GEN_1160; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1162 = 6'h1b == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_27 : _GEN_1161; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1163 = 6'h1c == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_28 : _GEN_1162; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1164 = 6'h1d == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_29 : _GEN_1163; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1165 = 6'h1e == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_30 : _GEN_1164; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1166 = 6'h1f == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_31 : _GEN_1165; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1167 = 6'h20 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_32 : _GEN_1166; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1168 = 6'h21 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_33 : _GEN_1167; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1169 = 6'h22 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_34 : _GEN_1168; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1170 = 6'h23 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_35 : _GEN_1169; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1171 = 6'h24 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_36 : _GEN_1170; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1172 = 6'h25 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_37 : _GEN_1171; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1173 = 6'h26 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_38 : _GEN_1172; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1174 = 6'h27 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_39 : _GEN_1173; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1175 = 6'h28 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_40 : _GEN_1174; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1176 = 6'h29 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_41 : _GEN_1175; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1177 = 6'h2a == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_42 : _GEN_1176; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1178 = 6'h2b == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_43 : _GEN_1177; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1179 = 6'h2c == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_44 : _GEN_1178; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1180 = 6'h2d == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_45 : _GEN_1179; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1181 = 6'h2e == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_46 : _GEN_1180; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1182 = 6'h2f == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_47 : _GEN_1181; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1183 = 6'h30 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_48 : _GEN_1182; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1184 = 6'h31 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_49 : _GEN_1183; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1185 = 6'h32 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_50 : _GEN_1184; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1186 = 6'h33 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_51 : _GEN_1185; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1187 = 6'h34 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_52 : _GEN_1186; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1188 = 6'h35 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_53 : _GEN_1187; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1189 = 6'h36 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_54 : _GEN_1188; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1190 = 6'h37 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_55 : _GEN_1189; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1191 = 6'h38 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_56 : _GEN_1190; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1192 = 6'h39 == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_57 : _GEN_1191; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1193 = 6'h3a == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_58 : _GEN_1192; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1194 = 6'h3b == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_59 : _GEN_1193; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1195 = 6'h3c == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_60 : _GEN_1194; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1196 = 6'h3d == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_61 : _GEN_1195; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1197 = 6'h3e == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_62 : _GEN_1196; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1200 = 6'h1 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1201 = 6'h2 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_2 : _GEN_1200; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1202 = 6'h3 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_3 : _GEN_1201; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1203 = 6'h4 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_4 : _GEN_1202; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1204 = 6'h5 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_5 : _GEN_1203; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1205 = 6'h6 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_6 : _GEN_1204; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1206 = 6'h7 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_7 : _GEN_1205; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1207 = 6'h8 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_8 : _GEN_1206; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1208 = 6'h9 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_9 : _GEN_1207; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1209 = 6'ha == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_10 : _GEN_1208; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1210 = 6'hb == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_11 : _GEN_1209; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1211 = 6'hc == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_12 : _GEN_1210; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1212 = 6'hd == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_13 : _GEN_1211; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1213 = 6'he == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_14 : _GEN_1212; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1214 = 6'hf == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_15 : _GEN_1213; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1215 = 6'h10 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_16 : _GEN_1214; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1216 = 6'h11 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_17 : _GEN_1215; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1217 = 6'h12 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_18 : _GEN_1216; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1218 = 6'h13 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_19 : _GEN_1217; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1219 = 6'h14 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_20 : _GEN_1218; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1220 = 6'h15 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_21 : _GEN_1219; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1221 = 6'h16 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_22 : _GEN_1220; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1222 = 6'h17 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_23 : _GEN_1221; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1223 = 6'h18 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_24 : _GEN_1222; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1224 = 6'h19 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_25 : _GEN_1223; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1225 = 6'h1a == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_26 : _GEN_1224; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1226 = 6'h1b == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_27 : _GEN_1225; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1227 = 6'h1c == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_28 : _GEN_1226; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1228 = 6'h1d == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_29 : _GEN_1227; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1229 = 6'h1e == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_30 : _GEN_1228; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1230 = 6'h1f == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_31 : _GEN_1229; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1231 = 6'h20 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_32 : _GEN_1230; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1232 = 6'h21 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_33 : _GEN_1231; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1233 = 6'h22 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_34 : _GEN_1232; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1234 = 6'h23 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_35 : _GEN_1233; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1235 = 6'h24 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_36 : _GEN_1234; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1236 = 6'h25 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_37 : _GEN_1235; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1237 = 6'h26 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_38 : _GEN_1236; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1238 = 6'h27 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_39 : _GEN_1237; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1239 = 6'h28 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_40 : _GEN_1238; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1240 = 6'h29 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_41 : _GEN_1239; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1241 = 6'h2a == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_42 : _GEN_1240; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1242 = 6'h2b == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_43 : _GEN_1241; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1243 = 6'h2c == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_44 : _GEN_1242; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1244 = 6'h2d == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_45 : _GEN_1243; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1245 = 6'h2e == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_46 : _GEN_1244; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1246 = 6'h2f == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_47 : _GEN_1245; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1247 = 6'h30 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_48 : _GEN_1246; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1248 = 6'h31 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_49 : _GEN_1247; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1249 = 6'h32 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_50 : _GEN_1248; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1250 = 6'h33 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_51 : _GEN_1249; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1251 = 6'h34 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_52 : _GEN_1250; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1252 = 6'h35 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_53 : _GEN_1251; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1253 = 6'h36 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_54 : _GEN_1252; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1254 = 6'h37 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_55 : _GEN_1253; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1255 = 6'h38 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_56 : _GEN_1254; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1256 = 6'h39 == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_57 : _GEN_1255; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1257 = 6'h3a == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_58 : _GEN_1256; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1258 = 6'h3b == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_59 : _GEN_1257; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1259 = 6'h3c == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_60 : _GEN_1258; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1260 = 6'h3d == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_61 : _GEN_1259; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1261 = 6'h3e == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_62 : _GEN_1260; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1264 = 6'h1 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1265 = 6'h2 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_2 : _GEN_1264; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1266 = 6'h3 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_3 : _GEN_1265; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1267 = 6'h4 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_4 : _GEN_1266; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1268 = 6'h5 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_5 : _GEN_1267; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1269 = 6'h6 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_6 : _GEN_1268; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1270 = 6'h7 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_7 : _GEN_1269; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1271 = 6'h8 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_8 : _GEN_1270; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1272 = 6'h9 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_9 : _GEN_1271; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1273 = 6'ha == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_10 : _GEN_1272; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1274 = 6'hb == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_11 : _GEN_1273; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1275 = 6'hc == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_12 : _GEN_1274; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1276 = 6'hd == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_13 : _GEN_1275; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1277 = 6'he == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_14 : _GEN_1276; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1278 = 6'hf == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_15 : _GEN_1277; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1279 = 6'h10 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_16 : _GEN_1278; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1280 = 6'h11 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_17 : _GEN_1279; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1281 = 6'h12 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_18 : _GEN_1280; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1282 = 6'h13 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_19 : _GEN_1281; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1283 = 6'h14 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_20 : _GEN_1282; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1284 = 6'h15 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_21 : _GEN_1283; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1285 = 6'h16 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_22 : _GEN_1284; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1286 = 6'h17 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_23 : _GEN_1285; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1287 = 6'h18 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_24 : _GEN_1286; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1288 = 6'h19 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_25 : _GEN_1287; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1289 = 6'h1a == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_26 : _GEN_1288; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1290 = 6'h1b == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_27 : _GEN_1289; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1291 = 6'h1c == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_28 : _GEN_1290; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1292 = 6'h1d == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_29 : _GEN_1291; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1293 = 6'h1e == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_30 : _GEN_1292; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1294 = 6'h1f == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_31 : _GEN_1293; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1295 = 6'h20 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_32 : _GEN_1294; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1296 = 6'h21 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_33 : _GEN_1295; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1297 = 6'h22 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_34 : _GEN_1296; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1298 = 6'h23 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_35 : _GEN_1297; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1299 = 6'h24 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_36 : _GEN_1298; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1300 = 6'h25 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_37 : _GEN_1299; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1301 = 6'h26 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_38 : _GEN_1300; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1302 = 6'h27 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_39 : _GEN_1301; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1303 = 6'h28 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_40 : _GEN_1302; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1304 = 6'h29 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_41 : _GEN_1303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1305 = 6'h2a == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_42 : _GEN_1304; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1306 = 6'h2b == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_43 : _GEN_1305; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1307 = 6'h2c == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_44 : _GEN_1306; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1308 = 6'h2d == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_45 : _GEN_1307; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1309 = 6'h2e == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_46 : _GEN_1308; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1310 = 6'h2f == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_47 : _GEN_1309; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1311 = 6'h30 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_48 : _GEN_1310; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1312 = 6'h31 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_49 : _GEN_1311; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1313 = 6'h32 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_50 : _GEN_1312; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1314 = 6'h33 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_51 : _GEN_1313; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1315 = 6'h34 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_52 : _GEN_1314; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1316 = 6'h35 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_53 : _GEN_1315; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1317 = 6'h36 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_54 : _GEN_1316; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1318 = 6'h37 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_55 : _GEN_1317; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1319 = 6'h38 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_56 : _GEN_1318; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1320 = 6'h39 == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_57 : _GEN_1319; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1321 = 6'h3a == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_58 : _GEN_1320; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1322 = 6'h3b == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_59 : _GEN_1321; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1323 = 6'h3c == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_60 : _GEN_1322; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1324 = 6'h3d == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_61 : _GEN_1323; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1325 = 6'h3e == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_62 : _GEN_1324; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1328 = 6'h1 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1329 = 6'h2 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_2 : _GEN_1328; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1330 = 6'h3 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_3 : _GEN_1329; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1331 = 6'h4 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_4 : _GEN_1330; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1332 = 6'h5 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_5 : _GEN_1331; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1333 = 6'h6 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_6 : _GEN_1332; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1334 = 6'h7 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_7 : _GEN_1333; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1335 = 6'h8 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_8 : _GEN_1334; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1336 = 6'h9 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_9 : _GEN_1335; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1337 = 6'ha == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_10 : _GEN_1336; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1338 = 6'hb == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_11 : _GEN_1337; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1339 = 6'hc == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_12 : _GEN_1338; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1340 = 6'hd == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_13 : _GEN_1339; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1341 = 6'he == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_14 : _GEN_1340; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1342 = 6'hf == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_15 : _GEN_1341; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1343 = 6'h10 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_16 : _GEN_1342; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1344 = 6'h11 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_17 : _GEN_1343; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1345 = 6'h12 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_18 : _GEN_1344; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1346 = 6'h13 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_19 : _GEN_1345; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1347 = 6'h14 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_20 : _GEN_1346; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1348 = 6'h15 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_21 : _GEN_1347; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1349 = 6'h16 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_22 : _GEN_1348; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1350 = 6'h17 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_23 : _GEN_1349; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1351 = 6'h18 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_24 : _GEN_1350; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1352 = 6'h19 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_25 : _GEN_1351; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1353 = 6'h1a == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_26 : _GEN_1352; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1354 = 6'h1b == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_27 : _GEN_1353; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1355 = 6'h1c == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_28 : _GEN_1354; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1356 = 6'h1d == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_29 : _GEN_1355; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1357 = 6'h1e == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_30 : _GEN_1356; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1358 = 6'h1f == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_31 : _GEN_1357; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1359 = 6'h20 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_32 : _GEN_1358; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1360 = 6'h21 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_33 : _GEN_1359; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1361 = 6'h22 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_34 : _GEN_1360; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1362 = 6'h23 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_35 : _GEN_1361; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1363 = 6'h24 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_36 : _GEN_1362; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1364 = 6'h25 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_37 : _GEN_1363; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1365 = 6'h26 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_38 : _GEN_1364; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1366 = 6'h27 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_39 : _GEN_1365; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1367 = 6'h28 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_40 : _GEN_1366; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1368 = 6'h29 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_41 : _GEN_1367; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1369 = 6'h2a == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_42 : _GEN_1368; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1370 = 6'h2b == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_43 : _GEN_1369; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1371 = 6'h2c == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_44 : _GEN_1370; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1372 = 6'h2d == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_45 : _GEN_1371; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1373 = 6'h2e == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_46 : _GEN_1372; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1374 = 6'h2f == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_47 : _GEN_1373; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1375 = 6'h30 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_48 : _GEN_1374; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1376 = 6'h31 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_49 : _GEN_1375; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1377 = 6'h32 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_50 : _GEN_1376; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1378 = 6'h33 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_51 : _GEN_1377; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1379 = 6'h34 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_52 : _GEN_1378; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1380 = 6'h35 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_53 : _GEN_1379; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1381 = 6'h36 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_54 : _GEN_1380; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1382 = 6'h37 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_55 : _GEN_1381; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1383 = 6'h38 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_56 : _GEN_1382; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1384 = 6'h39 == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_57 : _GEN_1383; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1385 = 6'h3a == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_58 : _GEN_1384; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1386 = 6'h3b == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_59 : _GEN_1385; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1387 = 6'h3c == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_60 : _GEN_1386; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1388 = 6'h3d == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_61 : _GEN_1387; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1389 = 6'h3e == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_62 : _GEN_1388; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1392 = 6'h1 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1393 = 6'h2 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_2 : _GEN_1392; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1394 = 6'h3 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_3 : _GEN_1393; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1395 = 6'h4 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_4 : _GEN_1394; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1396 = 6'h5 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_5 : _GEN_1395; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1397 = 6'h6 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_6 : _GEN_1396; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1398 = 6'h7 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_7 : _GEN_1397; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1399 = 6'h8 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_8 : _GEN_1398; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1400 = 6'h9 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_9 : _GEN_1399; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1401 = 6'ha == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_10 : _GEN_1400; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1402 = 6'hb == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_11 : _GEN_1401; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1403 = 6'hc == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_12 : _GEN_1402; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1404 = 6'hd == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_13 : _GEN_1403; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1405 = 6'he == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_14 : _GEN_1404; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1406 = 6'hf == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_15 : _GEN_1405; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1407 = 6'h10 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_16 : _GEN_1406; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1408 = 6'h11 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_17 : _GEN_1407; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1409 = 6'h12 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_18 : _GEN_1408; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1410 = 6'h13 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_19 : _GEN_1409; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1411 = 6'h14 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_20 : _GEN_1410; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1412 = 6'h15 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_21 : _GEN_1411; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1413 = 6'h16 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_22 : _GEN_1412; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1414 = 6'h17 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_23 : _GEN_1413; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1415 = 6'h18 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_24 : _GEN_1414; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1416 = 6'h19 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_25 : _GEN_1415; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1417 = 6'h1a == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_26 : _GEN_1416; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1418 = 6'h1b == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_27 : _GEN_1417; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1419 = 6'h1c == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_28 : _GEN_1418; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1420 = 6'h1d == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_29 : _GEN_1419; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1421 = 6'h1e == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_30 : _GEN_1420; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1422 = 6'h1f == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_31 : _GEN_1421; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1423 = 6'h20 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_32 : _GEN_1422; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1424 = 6'h21 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_33 : _GEN_1423; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1425 = 6'h22 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_34 : _GEN_1424; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1426 = 6'h23 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_35 : _GEN_1425; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1427 = 6'h24 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_36 : _GEN_1426; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1428 = 6'h25 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_37 : _GEN_1427; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1429 = 6'h26 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_38 : _GEN_1428; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1430 = 6'h27 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_39 : _GEN_1429; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1431 = 6'h28 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_40 : _GEN_1430; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1432 = 6'h29 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_41 : _GEN_1431; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1433 = 6'h2a == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_42 : _GEN_1432; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1434 = 6'h2b == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_43 : _GEN_1433; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1435 = 6'h2c == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_44 : _GEN_1434; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1436 = 6'h2d == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_45 : _GEN_1435; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1437 = 6'h2e == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_46 : _GEN_1436; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1438 = 6'h2f == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_47 : _GEN_1437; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1439 = 6'h30 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_48 : _GEN_1438; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1440 = 6'h31 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_49 : _GEN_1439; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1441 = 6'h32 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_50 : _GEN_1440; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1442 = 6'h33 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_51 : _GEN_1441; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1443 = 6'h34 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_52 : _GEN_1442; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1444 = 6'h35 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_53 : _GEN_1443; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1445 = 6'h36 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_54 : _GEN_1444; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1446 = 6'h37 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_55 : _GEN_1445; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1447 = 6'h38 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_56 : _GEN_1446; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1448 = 6'h39 == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_57 : _GEN_1447; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1449 = 6'h3a == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_58 : _GEN_1448; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1450 = 6'h3b == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_59 : _GEN_1449; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1451 = 6'h3c == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_60 : _GEN_1450; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1452 = 6'h3d == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_61 : _GEN_1451; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1453 = 6'h3e == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_62 : _GEN_1452; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1456 = 6'h1 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1457 = 6'h2 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_2 : _GEN_1456; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1458 = 6'h3 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_3 : _GEN_1457; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1459 = 6'h4 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_4 : _GEN_1458; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1460 = 6'h5 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_5 : _GEN_1459; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1461 = 6'h6 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_6 : _GEN_1460; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1462 = 6'h7 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_7 : _GEN_1461; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1463 = 6'h8 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_8 : _GEN_1462; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1464 = 6'h9 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_9 : _GEN_1463; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1465 = 6'ha == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_10 : _GEN_1464; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1466 = 6'hb == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_11 : _GEN_1465; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1467 = 6'hc == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_12 : _GEN_1466; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1468 = 6'hd == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_13 : _GEN_1467; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1469 = 6'he == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_14 : _GEN_1468; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1470 = 6'hf == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_15 : _GEN_1469; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1471 = 6'h10 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_16 : _GEN_1470; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1472 = 6'h11 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_17 : _GEN_1471; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1473 = 6'h12 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_18 : _GEN_1472; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1474 = 6'h13 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_19 : _GEN_1473; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1475 = 6'h14 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_20 : _GEN_1474; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1476 = 6'h15 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_21 : _GEN_1475; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1477 = 6'h16 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_22 : _GEN_1476; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1478 = 6'h17 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_23 : _GEN_1477; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1479 = 6'h18 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_24 : _GEN_1478; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1480 = 6'h19 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_25 : _GEN_1479; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1481 = 6'h1a == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_26 : _GEN_1480; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1482 = 6'h1b == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_27 : _GEN_1481; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1483 = 6'h1c == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_28 : _GEN_1482; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1484 = 6'h1d == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_29 : _GEN_1483; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1485 = 6'h1e == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_30 : _GEN_1484; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1486 = 6'h1f == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_31 : _GEN_1485; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1487 = 6'h20 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_32 : _GEN_1486; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1488 = 6'h21 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_33 : _GEN_1487; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1489 = 6'h22 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_34 : _GEN_1488; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1490 = 6'h23 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_35 : _GEN_1489; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1491 = 6'h24 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_36 : _GEN_1490; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1492 = 6'h25 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_37 : _GEN_1491; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1493 = 6'h26 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_38 : _GEN_1492; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1494 = 6'h27 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_39 : _GEN_1493; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1495 = 6'h28 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_40 : _GEN_1494; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1496 = 6'h29 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_41 : _GEN_1495; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1497 = 6'h2a == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_42 : _GEN_1496; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1498 = 6'h2b == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_43 : _GEN_1497; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1499 = 6'h2c == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_44 : _GEN_1498; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1500 = 6'h2d == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_45 : _GEN_1499; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1501 = 6'h2e == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_46 : _GEN_1500; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1502 = 6'h2f == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_47 : _GEN_1501; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1503 = 6'h30 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_48 : _GEN_1502; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1504 = 6'h31 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_49 : _GEN_1503; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1505 = 6'h32 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_50 : _GEN_1504; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1506 = 6'h33 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_51 : _GEN_1505; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1507 = 6'h34 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_52 : _GEN_1506; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1508 = 6'h35 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_53 : _GEN_1507; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1509 = 6'h36 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_54 : _GEN_1508; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1510 = 6'h37 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_55 : _GEN_1509; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1511 = 6'h38 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_56 : _GEN_1510; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1512 = 6'h39 == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_57 : _GEN_1511; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1513 = 6'h3a == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_58 : _GEN_1512; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1514 = 6'h3b == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_59 : _GEN_1513; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1515 = 6'h3c == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_60 : _GEN_1514; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1516 = 6'h3d == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_61 : _GEN_1515; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1517 = 6'h3e == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_62 : _GEN_1516; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1520 = 6'h1 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1521 = 6'h2 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_2 : _GEN_1520; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1522 = 6'h3 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_3 : _GEN_1521; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1523 = 6'h4 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_4 : _GEN_1522; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1524 = 6'h5 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_5 : _GEN_1523; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1525 = 6'h6 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_6 : _GEN_1524; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1526 = 6'h7 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_7 : _GEN_1525; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1527 = 6'h8 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_8 : _GEN_1526; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1528 = 6'h9 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_9 : _GEN_1527; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1529 = 6'ha == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_10 : _GEN_1528; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1530 = 6'hb == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_11 : _GEN_1529; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1531 = 6'hc == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_12 : _GEN_1530; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1532 = 6'hd == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_13 : _GEN_1531; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1533 = 6'he == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_14 : _GEN_1532; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1534 = 6'hf == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_15 : _GEN_1533; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1535 = 6'h10 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_16 : _GEN_1534; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1536 = 6'h11 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_17 : _GEN_1535; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1537 = 6'h12 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_18 : _GEN_1536; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1538 = 6'h13 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_19 : _GEN_1537; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1539 = 6'h14 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_20 : _GEN_1538; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1540 = 6'h15 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_21 : _GEN_1539; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1541 = 6'h16 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_22 : _GEN_1540; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1542 = 6'h17 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_23 : _GEN_1541; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1543 = 6'h18 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_24 : _GEN_1542; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1544 = 6'h19 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_25 : _GEN_1543; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1545 = 6'h1a == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_26 : _GEN_1544; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1546 = 6'h1b == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_27 : _GEN_1545; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1547 = 6'h1c == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_28 : _GEN_1546; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1548 = 6'h1d == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_29 : _GEN_1547; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1549 = 6'h1e == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_30 : _GEN_1548; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1550 = 6'h1f == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_31 : _GEN_1549; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1551 = 6'h20 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_32 : _GEN_1550; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1552 = 6'h21 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_33 : _GEN_1551; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1553 = 6'h22 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_34 : _GEN_1552; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1554 = 6'h23 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_35 : _GEN_1553; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1555 = 6'h24 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_36 : _GEN_1554; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1556 = 6'h25 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_37 : _GEN_1555; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1557 = 6'h26 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_38 : _GEN_1556; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1558 = 6'h27 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_39 : _GEN_1557; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1559 = 6'h28 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_40 : _GEN_1558; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1560 = 6'h29 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_41 : _GEN_1559; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1561 = 6'h2a == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_42 : _GEN_1560; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1562 = 6'h2b == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_43 : _GEN_1561; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1563 = 6'h2c == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_44 : _GEN_1562; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1564 = 6'h2d == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_45 : _GEN_1563; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1565 = 6'h2e == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_46 : _GEN_1564; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1566 = 6'h2f == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_47 : _GEN_1565; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1567 = 6'h30 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_48 : _GEN_1566; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1568 = 6'h31 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_49 : _GEN_1567; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1569 = 6'h32 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_50 : _GEN_1568; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1570 = 6'h33 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_51 : _GEN_1569; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1571 = 6'h34 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_52 : _GEN_1570; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1572 = 6'h35 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_53 : _GEN_1571; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1573 = 6'h36 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_54 : _GEN_1572; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1574 = 6'h37 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_55 : _GEN_1573; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1575 = 6'h38 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_56 : _GEN_1574; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1576 = 6'h39 == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_57 : _GEN_1575; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1577 = 6'h3a == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_58 : _GEN_1576; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1578 = 6'h3b == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_59 : _GEN_1577; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1579 = 6'h3c == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_60 : _GEN_1578; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1580 = 6'h3d == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_61 : _GEN_1579; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1581 = 6'h3e == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_62 : _GEN_1580; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1584 = 6'h1 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1585 = 6'h2 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_2 : _GEN_1584; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1586 = 6'h3 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_3 : _GEN_1585; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1587 = 6'h4 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_4 : _GEN_1586; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1588 = 6'h5 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_5 : _GEN_1587; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1589 = 6'h6 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_6 : _GEN_1588; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1590 = 6'h7 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_7 : _GEN_1589; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1591 = 6'h8 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_8 : _GEN_1590; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1592 = 6'h9 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_9 : _GEN_1591; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1593 = 6'ha == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_10 : _GEN_1592; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1594 = 6'hb == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_11 : _GEN_1593; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1595 = 6'hc == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_12 : _GEN_1594; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1596 = 6'hd == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_13 : _GEN_1595; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1597 = 6'he == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_14 : _GEN_1596; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1598 = 6'hf == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_15 : _GEN_1597; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1599 = 6'h10 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_16 : _GEN_1598; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1600 = 6'h11 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_17 : _GEN_1599; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1601 = 6'h12 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_18 : _GEN_1600; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1602 = 6'h13 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_19 : _GEN_1601; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1603 = 6'h14 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_20 : _GEN_1602; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1604 = 6'h15 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_21 : _GEN_1603; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1605 = 6'h16 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_22 : _GEN_1604; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1606 = 6'h17 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_23 : _GEN_1605; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1607 = 6'h18 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_24 : _GEN_1606; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1608 = 6'h19 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_25 : _GEN_1607; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1609 = 6'h1a == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_26 : _GEN_1608; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1610 = 6'h1b == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_27 : _GEN_1609; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1611 = 6'h1c == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_28 : _GEN_1610; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1612 = 6'h1d == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_29 : _GEN_1611; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1613 = 6'h1e == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_30 : _GEN_1612; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1614 = 6'h1f == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_31 : _GEN_1613; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1615 = 6'h20 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_32 : _GEN_1614; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1616 = 6'h21 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_33 : _GEN_1615; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1617 = 6'h22 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_34 : _GEN_1616; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1618 = 6'h23 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_35 : _GEN_1617; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1619 = 6'h24 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_36 : _GEN_1618; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1620 = 6'h25 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_37 : _GEN_1619; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1621 = 6'h26 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_38 : _GEN_1620; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1622 = 6'h27 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_39 : _GEN_1621; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1623 = 6'h28 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_40 : _GEN_1622; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1624 = 6'h29 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_41 : _GEN_1623; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1625 = 6'h2a == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_42 : _GEN_1624; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1626 = 6'h2b == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_43 : _GEN_1625; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1627 = 6'h2c == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_44 : _GEN_1626; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1628 = 6'h2d == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_45 : _GEN_1627; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1629 = 6'h2e == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_46 : _GEN_1628; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1630 = 6'h2f == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_47 : _GEN_1629; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1631 = 6'h30 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_48 : _GEN_1630; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1632 = 6'h31 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_49 : _GEN_1631; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1633 = 6'h32 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_50 : _GEN_1632; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1634 = 6'h33 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_51 : _GEN_1633; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1635 = 6'h34 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_52 : _GEN_1634; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1636 = 6'h35 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_53 : _GEN_1635; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1637 = 6'h36 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_54 : _GEN_1636; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1638 = 6'h37 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_55 : _GEN_1637; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1639 = 6'h38 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_56 : _GEN_1638; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1640 = 6'h39 == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_57 : _GEN_1639; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1641 = 6'h3a == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_58 : _GEN_1640; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1642 = 6'h3b == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_59 : _GEN_1641; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1643 = 6'h3c == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_60 : _GEN_1642; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1644 = 6'h3d == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_61 : _GEN_1643; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1645 = 6'h3e == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_62 : _GEN_1644; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1648 = 6'h1 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1649 = 6'h2 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_2 : _GEN_1648; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1650 = 6'h3 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_3 : _GEN_1649; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1651 = 6'h4 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_4 : _GEN_1650; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1652 = 6'h5 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_5 : _GEN_1651; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1653 = 6'h6 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_6 : _GEN_1652; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1654 = 6'h7 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_7 : _GEN_1653; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1655 = 6'h8 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_8 : _GEN_1654; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1656 = 6'h9 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_9 : _GEN_1655; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1657 = 6'ha == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_10 : _GEN_1656; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1658 = 6'hb == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_11 : _GEN_1657; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1659 = 6'hc == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_12 : _GEN_1658; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1660 = 6'hd == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_13 : _GEN_1659; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1661 = 6'he == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_14 : _GEN_1660; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1662 = 6'hf == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_15 : _GEN_1661; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1663 = 6'h10 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_16 : _GEN_1662; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1664 = 6'h11 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_17 : _GEN_1663; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1665 = 6'h12 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_18 : _GEN_1664; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1666 = 6'h13 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_19 : _GEN_1665; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1667 = 6'h14 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_20 : _GEN_1666; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1668 = 6'h15 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_21 : _GEN_1667; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1669 = 6'h16 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_22 : _GEN_1668; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1670 = 6'h17 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_23 : _GEN_1669; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1671 = 6'h18 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_24 : _GEN_1670; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1672 = 6'h19 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_25 : _GEN_1671; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1673 = 6'h1a == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_26 : _GEN_1672; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1674 = 6'h1b == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_27 : _GEN_1673; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1675 = 6'h1c == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_28 : _GEN_1674; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1676 = 6'h1d == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_29 : _GEN_1675; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1677 = 6'h1e == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_30 : _GEN_1676; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1678 = 6'h1f == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_31 : _GEN_1677; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1679 = 6'h20 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_32 : _GEN_1678; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1680 = 6'h21 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_33 : _GEN_1679; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1681 = 6'h22 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_34 : _GEN_1680; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1682 = 6'h23 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_35 : _GEN_1681; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1683 = 6'h24 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_36 : _GEN_1682; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1684 = 6'h25 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_37 : _GEN_1683; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1685 = 6'h26 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_38 : _GEN_1684; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1686 = 6'h27 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_39 : _GEN_1685; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1687 = 6'h28 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_40 : _GEN_1686; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1688 = 6'h29 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_41 : _GEN_1687; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1689 = 6'h2a == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_42 : _GEN_1688; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1690 = 6'h2b == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_43 : _GEN_1689; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1691 = 6'h2c == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_44 : _GEN_1690; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1692 = 6'h2d == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_45 : _GEN_1691; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1693 = 6'h2e == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_46 : _GEN_1692; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1694 = 6'h2f == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_47 : _GEN_1693; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1695 = 6'h30 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_48 : _GEN_1694; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1696 = 6'h31 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_49 : _GEN_1695; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1697 = 6'h32 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_50 : _GEN_1696; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1698 = 6'h33 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_51 : _GEN_1697; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1699 = 6'h34 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_52 : _GEN_1698; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1700 = 6'h35 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_53 : _GEN_1699; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1701 = 6'h36 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_54 : _GEN_1700; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1702 = 6'h37 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_55 : _GEN_1701; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1703 = 6'h38 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_56 : _GEN_1702; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1704 = 6'h39 == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_57 : _GEN_1703; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1705 = 6'h3a == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_58 : _GEN_1704; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1706 = 6'h3b == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_59 : _GEN_1705; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1707 = 6'h3c == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_60 : _GEN_1706; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1708 = 6'h3d == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_61 : _GEN_1707; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1709 = 6'h3e == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_62 : _GEN_1708; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1712 = 6'h1 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1713 = 6'h2 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_2 : _GEN_1712; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1714 = 6'h3 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_3 : _GEN_1713; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1715 = 6'h4 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_4 : _GEN_1714; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1716 = 6'h5 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_5 : _GEN_1715; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1717 = 6'h6 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_6 : _GEN_1716; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1718 = 6'h7 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_7 : _GEN_1717; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1719 = 6'h8 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_8 : _GEN_1718; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1720 = 6'h9 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_9 : _GEN_1719; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1721 = 6'ha == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_10 : _GEN_1720; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1722 = 6'hb == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_11 : _GEN_1721; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1723 = 6'hc == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_12 : _GEN_1722; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1724 = 6'hd == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_13 : _GEN_1723; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1725 = 6'he == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_14 : _GEN_1724; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1726 = 6'hf == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_15 : _GEN_1725; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1727 = 6'h10 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_16 : _GEN_1726; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1728 = 6'h11 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_17 : _GEN_1727; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1729 = 6'h12 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_18 : _GEN_1728; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1730 = 6'h13 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_19 : _GEN_1729; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1731 = 6'h14 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_20 : _GEN_1730; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1732 = 6'h15 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_21 : _GEN_1731; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1733 = 6'h16 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_22 : _GEN_1732; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1734 = 6'h17 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_23 : _GEN_1733; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1735 = 6'h18 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_24 : _GEN_1734; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1736 = 6'h19 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_25 : _GEN_1735; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1737 = 6'h1a == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_26 : _GEN_1736; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1738 = 6'h1b == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_27 : _GEN_1737; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1739 = 6'h1c == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_28 : _GEN_1738; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1740 = 6'h1d == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_29 : _GEN_1739; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1741 = 6'h1e == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_30 : _GEN_1740; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1742 = 6'h1f == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_31 : _GEN_1741; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1743 = 6'h20 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_32 : _GEN_1742; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1744 = 6'h21 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_33 : _GEN_1743; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1745 = 6'h22 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_34 : _GEN_1744; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1746 = 6'h23 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_35 : _GEN_1745; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1747 = 6'h24 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_36 : _GEN_1746; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1748 = 6'h25 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_37 : _GEN_1747; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1749 = 6'h26 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_38 : _GEN_1748; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1750 = 6'h27 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_39 : _GEN_1749; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1751 = 6'h28 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_40 : _GEN_1750; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1752 = 6'h29 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_41 : _GEN_1751; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1753 = 6'h2a == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_42 : _GEN_1752; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1754 = 6'h2b == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_43 : _GEN_1753; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1755 = 6'h2c == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_44 : _GEN_1754; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1756 = 6'h2d == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_45 : _GEN_1755; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1757 = 6'h2e == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_46 : _GEN_1756; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1758 = 6'h2f == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_47 : _GEN_1757; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1759 = 6'h30 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_48 : _GEN_1758; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1760 = 6'h31 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_49 : _GEN_1759; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1761 = 6'h32 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_50 : _GEN_1760; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1762 = 6'h33 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_51 : _GEN_1761; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1763 = 6'h34 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_52 : _GEN_1762; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1764 = 6'h35 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_53 : _GEN_1763; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1765 = 6'h36 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_54 : _GEN_1764; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1766 = 6'h37 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_55 : _GEN_1765; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1767 = 6'h38 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_56 : _GEN_1766; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1768 = 6'h39 == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_57 : _GEN_1767; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1769 = 6'h3a == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_58 : _GEN_1768; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1770 = 6'h3b == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_59 : _GEN_1769; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1771 = 6'h3c == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_60 : _GEN_1770; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1772 = 6'h3d == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_61 : _GEN_1771; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1773 = 6'h3e == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_62 : _GEN_1772; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1776 = 6'h1 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1777 = 6'h2 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_2 : _GEN_1776; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1778 = 6'h3 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_3 : _GEN_1777; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1779 = 6'h4 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_4 : _GEN_1778; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1780 = 6'h5 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_5 : _GEN_1779; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1781 = 6'h6 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_6 : _GEN_1780; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1782 = 6'h7 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_7 : _GEN_1781; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1783 = 6'h8 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_8 : _GEN_1782; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1784 = 6'h9 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_9 : _GEN_1783; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1785 = 6'ha == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_10 : _GEN_1784; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1786 = 6'hb == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_11 : _GEN_1785; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1787 = 6'hc == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_12 : _GEN_1786; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1788 = 6'hd == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_13 : _GEN_1787; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1789 = 6'he == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_14 : _GEN_1788; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1790 = 6'hf == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_15 : _GEN_1789; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1791 = 6'h10 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_16 : _GEN_1790; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1792 = 6'h11 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_17 : _GEN_1791; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1793 = 6'h12 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_18 : _GEN_1792; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1794 = 6'h13 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_19 : _GEN_1793; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1795 = 6'h14 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_20 : _GEN_1794; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1796 = 6'h15 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_21 : _GEN_1795; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1797 = 6'h16 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_22 : _GEN_1796; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1798 = 6'h17 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_23 : _GEN_1797; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1799 = 6'h18 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_24 : _GEN_1798; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1800 = 6'h19 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_25 : _GEN_1799; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1801 = 6'h1a == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_26 : _GEN_1800; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1802 = 6'h1b == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_27 : _GEN_1801; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1803 = 6'h1c == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_28 : _GEN_1802; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1804 = 6'h1d == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_29 : _GEN_1803; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1805 = 6'h1e == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_30 : _GEN_1804; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1806 = 6'h1f == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_31 : _GEN_1805; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1807 = 6'h20 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_32 : _GEN_1806; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1808 = 6'h21 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_33 : _GEN_1807; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1809 = 6'h22 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_34 : _GEN_1808; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1810 = 6'h23 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_35 : _GEN_1809; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1811 = 6'h24 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_36 : _GEN_1810; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1812 = 6'h25 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_37 : _GEN_1811; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1813 = 6'h26 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_38 : _GEN_1812; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1814 = 6'h27 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_39 : _GEN_1813; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1815 = 6'h28 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_40 : _GEN_1814; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1816 = 6'h29 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_41 : _GEN_1815; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1817 = 6'h2a == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_42 : _GEN_1816; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1818 = 6'h2b == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_43 : _GEN_1817; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1819 = 6'h2c == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_44 : _GEN_1818; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1820 = 6'h2d == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_45 : _GEN_1819; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1821 = 6'h2e == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_46 : _GEN_1820; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1822 = 6'h2f == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_47 : _GEN_1821; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1823 = 6'h30 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_48 : _GEN_1822; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1824 = 6'h31 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_49 : _GEN_1823; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1825 = 6'h32 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_50 : _GEN_1824; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1826 = 6'h33 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_51 : _GEN_1825; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1827 = 6'h34 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_52 : _GEN_1826; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1828 = 6'h35 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_53 : _GEN_1827; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1829 = 6'h36 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_54 : _GEN_1828; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1830 = 6'h37 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_55 : _GEN_1829; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1831 = 6'h38 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_56 : _GEN_1830; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1832 = 6'h39 == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_57 : _GEN_1831; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1833 = 6'h3a == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_58 : _GEN_1832; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1834 = 6'h3b == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_59 : _GEN_1833; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1835 = 6'h3c == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_60 : _GEN_1834; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1836 = 6'h3d == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_61 : _GEN_1835; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1837 = 6'h3e == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_62 : _GEN_1836; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1840 = 6'h1 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1841 = 6'h2 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_2 : _GEN_1840; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1842 = 6'h3 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_3 : _GEN_1841; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1843 = 6'h4 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_4 : _GEN_1842; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1844 = 6'h5 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_5 : _GEN_1843; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1845 = 6'h6 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_6 : _GEN_1844; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1846 = 6'h7 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_7 : _GEN_1845; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1847 = 6'h8 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_8 : _GEN_1846; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1848 = 6'h9 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_9 : _GEN_1847; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1849 = 6'ha == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_10 : _GEN_1848; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1850 = 6'hb == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_11 : _GEN_1849; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1851 = 6'hc == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_12 : _GEN_1850; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1852 = 6'hd == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_13 : _GEN_1851; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1853 = 6'he == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_14 : _GEN_1852; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1854 = 6'hf == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_15 : _GEN_1853; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1855 = 6'h10 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_16 : _GEN_1854; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1856 = 6'h11 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_17 : _GEN_1855; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1857 = 6'h12 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_18 : _GEN_1856; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1858 = 6'h13 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_19 : _GEN_1857; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1859 = 6'h14 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_20 : _GEN_1858; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1860 = 6'h15 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_21 : _GEN_1859; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1861 = 6'h16 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_22 : _GEN_1860; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1862 = 6'h17 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_23 : _GEN_1861; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1863 = 6'h18 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_24 : _GEN_1862; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1864 = 6'h19 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_25 : _GEN_1863; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1865 = 6'h1a == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_26 : _GEN_1864; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1866 = 6'h1b == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_27 : _GEN_1865; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1867 = 6'h1c == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_28 : _GEN_1866; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1868 = 6'h1d == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_29 : _GEN_1867; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1869 = 6'h1e == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_30 : _GEN_1868; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1870 = 6'h1f == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_31 : _GEN_1869; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1871 = 6'h20 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_32 : _GEN_1870; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1872 = 6'h21 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_33 : _GEN_1871; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1873 = 6'h22 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_34 : _GEN_1872; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1874 = 6'h23 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_35 : _GEN_1873; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1875 = 6'h24 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_36 : _GEN_1874; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1876 = 6'h25 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_37 : _GEN_1875; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1877 = 6'h26 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_38 : _GEN_1876; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1878 = 6'h27 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_39 : _GEN_1877; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1879 = 6'h28 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_40 : _GEN_1878; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1880 = 6'h29 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_41 : _GEN_1879; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1881 = 6'h2a == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_42 : _GEN_1880; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1882 = 6'h2b == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_43 : _GEN_1881; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1883 = 6'h2c == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_44 : _GEN_1882; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1884 = 6'h2d == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_45 : _GEN_1883; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1885 = 6'h2e == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_46 : _GEN_1884; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1886 = 6'h2f == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_47 : _GEN_1885; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1887 = 6'h30 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_48 : _GEN_1886; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1888 = 6'h31 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_49 : _GEN_1887; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1889 = 6'h32 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_50 : _GEN_1888; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1890 = 6'h33 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_51 : _GEN_1889; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1891 = 6'h34 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_52 : _GEN_1890; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1892 = 6'h35 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_53 : _GEN_1891; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1893 = 6'h36 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_54 : _GEN_1892; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1894 = 6'h37 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_55 : _GEN_1893; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1895 = 6'h38 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_56 : _GEN_1894; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1896 = 6'h39 == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_57 : _GEN_1895; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1897 = 6'h3a == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_58 : _GEN_1896; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1898 = 6'h3b == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_59 : _GEN_1897; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1899 = 6'h3c == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_60 : _GEN_1898; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1900 = 6'h3d == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_61 : _GEN_1899; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1901 = 6'h3e == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_62 : _GEN_1900; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1904 = 6'h1 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1905 = 6'h2 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_2 : _GEN_1904; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1906 = 6'h3 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_3 : _GEN_1905; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1907 = 6'h4 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_4 : _GEN_1906; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1908 = 6'h5 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_5 : _GEN_1907; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1909 = 6'h6 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_6 : _GEN_1908; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1910 = 6'h7 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_7 : _GEN_1909; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1911 = 6'h8 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_8 : _GEN_1910; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1912 = 6'h9 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_9 : _GEN_1911; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1913 = 6'ha == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_10 : _GEN_1912; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1914 = 6'hb == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_11 : _GEN_1913; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1915 = 6'hc == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_12 : _GEN_1914; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1916 = 6'hd == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_13 : _GEN_1915; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1917 = 6'he == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_14 : _GEN_1916; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1918 = 6'hf == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_15 : _GEN_1917; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1919 = 6'h10 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_16 : _GEN_1918; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1920 = 6'h11 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_17 : _GEN_1919; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1921 = 6'h12 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_18 : _GEN_1920; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1922 = 6'h13 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_19 : _GEN_1921; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1923 = 6'h14 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_20 : _GEN_1922; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1924 = 6'h15 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_21 : _GEN_1923; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1925 = 6'h16 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_22 : _GEN_1924; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1926 = 6'h17 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_23 : _GEN_1925; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1927 = 6'h18 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_24 : _GEN_1926; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1928 = 6'h19 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_25 : _GEN_1927; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1929 = 6'h1a == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_26 : _GEN_1928; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1930 = 6'h1b == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_27 : _GEN_1929; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1931 = 6'h1c == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_28 : _GEN_1930; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1932 = 6'h1d == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_29 : _GEN_1931; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1933 = 6'h1e == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_30 : _GEN_1932; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1934 = 6'h1f == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_31 : _GEN_1933; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1935 = 6'h20 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_32 : _GEN_1934; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1936 = 6'h21 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_33 : _GEN_1935; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1937 = 6'h22 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_34 : _GEN_1936; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1938 = 6'h23 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_35 : _GEN_1937; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1939 = 6'h24 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_36 : _GEN_1938; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1940 = 6'h25 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_37 : _GEN_1939; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1941 = 6'h26 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_38 : _GEN_1940; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1942 = 6'h27 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_39 : _GEN_1941; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1943 = 6'h28 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_40 : _GEN_1942; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1944 = 6'h29 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_41 : _GEN_1943; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1945 = 6'h2a == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_42 : _GEN_1944; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1946 = 6'h2b == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_43 : _GEN_1945; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1947 = 6'h2c == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_44 : _GEN_1946; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1948 = 6'h2d == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_45 : _GEN_1947; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1949 = 6'h2e == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_46 : _GEN_1948; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1950 = 6'h2f == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_47 : _GEN_1949; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1951 = 6'h30 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_48 : _GEN_1950; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1952 = 6'h31 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_49 : _GEN_1951; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1953 = 6'h32 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_50 : _GEN_1952; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1954 = 6'h33 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_51 : _GEN_1953; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1955 = 6'h34 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_52 : _GEN_1954; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1956 = 6'h35 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_53 : _GEN_1955; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1957 = 6'h36 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_54 : _GEN_1956; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1958 = 6'h37 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_55 : _GEN_1957; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1959 = 6'h38 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_56 : _GEN_1958; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1960 = 6'h39 == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_57 : _GEN_1959; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1961 = 6'h3a == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_58 : _GEN_1960; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1962 = 6'h3b == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_59 : _GEN_1961; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1963 = 6'h3c == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_60 : _GEN_1962; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1964 = 6'h3d == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_61 : _GEN_1963; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1965 = 6'h3e == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_62 : _GEN_1964; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1968 = 6'h1 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1969 = 6'h2 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_2 : _GEN_1968; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1970 = 6'h3 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_3 : _GEN_1969; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1971 = 6'h4 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_4 : _GEN_1970; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1972 = 6'h5 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_5 : _GEN_1971; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1973 = 6'h6 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_6 : _GEN_1972; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1974 = 6'h7 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_7 : _GEN_1973; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1975 = 6'h8 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_8 : _GEN_1974; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1976 = 6'h9 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_9 : _GEN_1975; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1977 = 6'ha == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_10 : _GEN_1976; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1978 = 6'hb == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_11 : _GEN_1977; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1979 = 6'hc == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_12 : _GEN_1978; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1980 = 6'hd == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_13 : _GEN_1979; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1981 = 6'he == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_14 : _GEN_1980; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1982 = 6'hf == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_15 : _GEN_1981; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1983 = 6'h10 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_16 : _GEN_1982; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1984 = 6'h11 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_17 : _GEN_1983; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1985 = 6'h12 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_18 : _GEN_1984; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1986 = 6'h13 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_19 : _GEN_1985; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1987 = 6'h14 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_20 : _GEN_1986; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1988 = 6'h15 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_21 : _GEN_1987; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1989 = 6'h16 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_22 : _GEN_1988; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1990 = 6'h17 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_23 : _GEN_1989; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1991 = 6'h18 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_24 : _GEN_1990; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1992 = 6'h19 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_25 : _GEN_1991; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1993 = 6'h1a == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_26 : _GEN_1992; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1994 = 6'h1b == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_27 : _GEN_1993; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1995 = 6'h1c == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_28 : _GEN_1994; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1996 = 6'h1d == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_29 : _GEN_1995; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1997 = 6'h1e == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_30 : _GEN_1996; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1998 = 6'h1f == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_31 : _GEN_1997; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_1999 = 6'h20 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_32 : _GEN_1998; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2000 = 6'h21 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_33 : _GEN_1999; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2001 = 6'h22 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_34 : _GEN_2000; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2002 = 6'h23 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_35 : _GEN_2001; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2003 = 6'h24 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_36 : _GEN_2002; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2004 = 6'h25 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_37 : _GEN_2003; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2005 = 6'h26 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_38 : _GEN_2004; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2006 = 6'h27 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_39 : _GEN_2005; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2007 = 6'h28 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_40 : _GEN_2006; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2008 = 6'h29 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_41 : _GEN_2007; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2009 = 6'h2a == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_42 : _GEN_2008; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2010 = 6'h2b == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_43 : _GEN_2009; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2011 = 6'h2c == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_44 : _GEN_2010; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2012 = 6'h2d == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_45 : _GEN_2011; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2013 = 6'h2e == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_46 : _GEN_2012; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2014 = 6'h2f == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_47 : _GEN_2013; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2015 = 6'h30 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_48 : _GEN_2014; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2016 = 6'h31 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_49 : _GEN_2015; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2017 = 6'h32 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_50 : _GEN_2016; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2018 = 6'h33 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_51 : _GEN_2017; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2019 = 6'h34 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_52 : _GEN_2018; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2020 = 6'h35 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_53 : _GEN_2019; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2021 = 6'h36 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_54 : _GEN_2020; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2022 = 6'h37 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_55 : _GEN_2021; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2023 = 6'h38 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_56 : _GEN_2022; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2024 = 6'h39 == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_57 : _GEN_2023; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2025 = 6'h3a == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_58 : _GEN_2024; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2026 = 6'h3b == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_59 : _GEN_2025; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2027 = 6'h3c == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_60 : _GEN_2026; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2028 = 6'h3d == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_61 : _GEN_2027; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2029 = 6'h3e == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_62 : _GEN_2028; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2032 = 6'h1 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2033 = 6'h2 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_2 : _GEN_2032; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2034 = 6'h3 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_3 : _GEN_2033; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2035 = 6'h4 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_4 : _GEN_2034; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2036 = 6'h5 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_5 : _GEN_2035; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2037 = 6'h6 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_6 : _GEN_2036; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2038 = 6'h7 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_7 : _GEN_2037; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2039 = 6'h8 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_8 : _GEN_2038; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2040 = 6'h9 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_9 : _GEN_2039; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2041 = 6'ha == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_10 : _GEN_2040; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2042 = 6'hb == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_11 : _GEN_2041; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2043 = 6'hc == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_12 : _GEN_2042; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2044 = 6'hd == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_13 : _GEN_2043; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2045 = 6'he == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_14 : _GEN_2044; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2046 = 6'hf == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_15 : _GEN_2045; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2047 = 6'h10 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_16 : _GEN_2046; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2048 = 6'h11 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_17 : _GEN_2047; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2049 = 6'h12 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_18 : _GEN_2048; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2050 = 6'h13 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_19 : _GEN_2049; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2051 = 6'h14 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_20 : _GEN_2050; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2052 = 6'h15 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_21 : _GEN_2051; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2053 = 6'h16 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_22 : _GEN_2052; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2054 = 6'h17 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_23 : _GEN_2053; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2055 = 6'h18 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_24 : _GEN_2054; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2056 = 6'h19 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_25 : _GEN_2055; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2057 = 6'h1a == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_26 : _GEN_2056; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2058 = 6'h1b == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_27 : _GEN_2057; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2059 = 6'h1c == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_28 : _GEN_2058; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2060 = 6'h1d == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_29 : _GEN_2059; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2061 = 6'h1e == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_30 : _GEN_2060; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2062 = 6'h1f == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_31 : _GEN_2061; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2063 = 6'h20 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_32 : _GEN_2062; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2064 = 6'h21 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_33 : _GEN_2063; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2065 = 6'h22 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_34 : _GEN_2064; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2066 = 6'h23 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_35 : _GEN_2065; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2067 = 6'h24 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_36 : _GEN_2066; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2068 = 6'h25 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_37 : _GEN_2067; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2069 = 6'h26 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_38 : _GEN_2068; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2070 = 6'h27 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_39 : _GEN_2069; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2071 = 6'h28 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_40 : _GEN_2070; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2072 = 6'h29 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_41 : _GEN_2071; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2073 = 6'h2a == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_42 : _GEN_2072; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2074 = 6'h2b == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_43 : _GEN_2073; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2075 = 6'h2c == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_44 : _GEN_2074; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2076 = 6'h2d == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_45 : _GEN_2075; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2077 = 6'h2e == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_46 : _GEN_2076; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2078 = 6'h2f == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_47 : _GEN_2077; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2079 = 6'h30 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_48 : _GEN_2078; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2080 = 6'h31 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_49 : _GEN_2079; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2081 = 6'h32 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_50 : _GEN_2080; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2082 = 6'h33 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_51 : _GEN_2081; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2083 = 6'h34 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_52 : _GEN_2082; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2084 = 6'h35 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_53 : _GEN_2083; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2085 = 6'h36 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_54 : _GEN_2084; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2086 = 6'h37 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_55 : _GEN_2085; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2087 = 6'h38 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_56 : _GEN_2086; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2088 = 6'h39 == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_57 : _GEN_2087; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2089 = 6'h3a == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_58 : _GEN_2088; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2090 = 6'h3b == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_59 : _GEN_2089; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2091 = 6'h3c == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_60 : _GEN_2090; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2092 = 6'h3d == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_61 : _GEN_2091; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2093 = 6'h3e == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_62 : _GEN_2092; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2096 = 6'h1 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2097 = 6'h2 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_2 : _GEN_2096; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2098 = 6'h3 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_3 : _GEN_2097; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2099 = 6'h4 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_4 : _GEN_2098; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2100 = 6'h5 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_5 : _GEN_2099; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2101 = 6'h6 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_6 : _GEN_2100; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2102 = 6'h7 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_7 : _GEN_2101; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2103 = 6'h8 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_8 : _GEN_2102; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2104 = 6'h9 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_9 : _GEN_2103; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2105 = 6'ha == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_10 : _GEN_2104; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2106 = 6'hb == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_11 : _GEN_2105; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2107 = 6'hc == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_12 : _GEN_2106; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2108 = 6'hd == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_13 : _GEN_2107; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2109 = 6'he == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_14 : _GEN_2108; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2110 = 6'hf == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_15 : _GEN_2109; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2111 = 6'h10 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_16 : _GEN_2110; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2112 = 6'h11 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_17 : _GEN_2111; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2113 = 6'h12 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_18 : _GEN_2112; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2114 = 6'h13 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_19 : _GEN_2113; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2115 = 6'h14 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_20 : _GEN_2114; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2116 = 6'h15 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_21 : _GEN_2115; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2117 = 6'h16 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_22 : _GEN_2116; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2118 = 6'h17 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_23 : _GEN_2117; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2119 = 6'h18 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_24 : _GEN_2118; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2120 = 6'h19 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_25 : _GEN_2119; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2121 = 6'h1a == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_26 : _GEN_2120; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2122 = 6'h1b == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_27 : _GEN_2121; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2123 = 6'h1c == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_28 : _GEN_2122; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2124 = 6'h1d == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_29 : _GEN_2123; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2125 = 6'h1e == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_30 : _GEN_2124; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2126 = 6'h1f == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_31 : _GEN_2125; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2127 = 6'h20 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_32 : _GEN_2126; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2128 = 6'h21 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_33 : _GEN_2127; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2129 = 6'h22 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_34 : _GEN_2128; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2130 = 6'h23 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_35 : _GEN_2129; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2131 = 6'h24 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_36 : _GEN_2130; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2132 = 6'h25 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_37 : _GEN_2131; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2133 = 6'h26 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_38 : _GEN_2132; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2134 = 6'h27 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_39 : _GEN_2133; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2135 = 6'h28 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_40 : _GEN_2134; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2136 = 6'h29 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_41 : _GEN_2135; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2137 = 6'h2a == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_42 : _GEN_2136; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2138 = 6'h2b == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_43 : _GEN_2137; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2139 = 6'h2c == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_44 : _GEN_2138; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2140 = 6'h2d == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_45 : _GEN_2139; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2141 = 6'h2e == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_46 : _GEN_2140; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2142 = 6'h2f == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_47 : _GEN_2141; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2143 = 6'h30 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_48 : _GEN_2142; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2144 = 6'h31 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_49 : _GEN_2143; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2145 = 6'h32 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_50 : _GEN_2144; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2146 = 6'h33 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_51 : _GEN_2145; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2147 = 6'h34 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_52 : _GEN_2146; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2148 = 6'h35 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_53 : _GEN_2147; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2149 = 6'h36 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_54 : _GEN_2148; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2150 = 6'h37 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_55 : _GEN_2149; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2151 = 6'h38 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_56 : _GEN_2150; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2152 = 6'h39 == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_57 : _GEN_2151; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2153 = 6'h3a == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_58 : _GEN_2152; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2154 = 6'h3b == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_59 : _GEN_2153; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2155 = 6'h3c == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_60 : _GEN_2154; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2156 = 6'h3d == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_61 : _GEN_2155; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2157 = 6'h3e == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_62 : _GEN_2156; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2160 = 6'h1 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2161 = 6'h2 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_2 : _GEN_2160; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2162 = 6'h3 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_3 : _GEN_2161; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2163 = 6'h4 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_4 : _GEN_2162; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2164 = 6'h5 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_5 : _GEN_2163; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2165 = 6'h6 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_6 : _GEN_2164; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2166 = 6'h7 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_7 : _GEN_2165; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2167 = 6'h8 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_8 : _GEN_2166; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2168 = 6'h9 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_9 : _GEN_2167; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2169 = 6'ha == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_10 : _GEN_2168; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2170 = 6'hb == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_11 : _GEN_2169; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2171 = 6'hc == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_12 : _GEN_2170; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2172 = 6'hd == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_13 : _GEN_2171; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2173 = 6'he == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_14 : _GEN_2172; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2174 = 6'hf == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_15 : _GEN_2173; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2175 = 6'h10 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_16 : _GEN_2174; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2176 = 6'h11 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_17 : _GEN_2175; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2177 = 6'h12 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_18 : _GEN_2176; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2178 = 6'h13 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_19 : _GEN_2177; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2179 = 6'h14 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_20 : _GEN_2178; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2180 = 6'h15 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_21 : _GEN_2179; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2181 = 6'h16 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_22 : _GEN_2180; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2182 = 6'h17 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_23 : _GEN_2181; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2183 = 6'h18 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_24 : _GEN_2182; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2184 = 6'h19 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_25 : _GEN_2183; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2185 = 6'h1a == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_26 : _GEN_2184; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2186 = 6'h1b == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_27 : _GEN_2185; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2187 = 6'h1c == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_28 : _GEN_2186; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2188 = 6'h1d == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_29 : _GEN_2187; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2189 = 6'h1e == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_30 : _GEN_2188; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2190 = 6'h1f == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_31 : _GEN_2189; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2191 = 6'h20 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_32 : _GEN_2190; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2192 = 6'h21 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_33 : _GEN_2191; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2193 = 6'h22 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_34 : _GEN_2192; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2194 = 6'h23 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_35 : _GEN_2193; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2195 = 6'h24 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_36 : _GEN_2194; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2196 = 6'h25 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_37 : _GEN_2195; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2197 = 6'h26 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_38 : _GEN_2196; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2198 = 6'h27 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_39 : _GEN_2197; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2199 = 6'h28 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_40 : _GEN_2198; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2200 = 6'h29 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_41 : _GEN_2199; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2201 = 6'h2a == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_42 : _GEN_2200; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2202 = 6'h2b == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_43 : _GEN_2201; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2203 = 6'h2c == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_44 : _GEN_2202; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2204 = 6'h2d == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_45 : _GEN_2203; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2205 = 6'h2e == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_46 : _GEN_2204; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2206 = 6'h2f == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_47 : _GEN_2205; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2207 = 6'h30 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_48 : _GEN_2206; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2208 = 6'h31 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_49 : _GEN_2207; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2209 = 6'h32 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_50 : _GEN_2208; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2210 = 6'h33 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_51 : _GEN_2209; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2211 = 6'h34 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_52 : _GEN_2210; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2212 = 6'h35 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_53 : _GEN_2211; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2213 = 6'h36 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_54 : _GEN_2212; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2214 = 6'h37 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_55 : _GEN_2213; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2215 = 6'h38 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_56 : _GEN_2214; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2216 = 6'h39 == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_57 : _GEN_2215; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2217 = 6'h3a == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_58 : _GEN_2216; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2218 = 6'h3b == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_59 : _GEN_2217; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2219 = 6'h3c == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_60 : _GEN_2218; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2220 = 6'h3d == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_61 : _GEN_2219; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2221 = 6'h3e == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_62 : _GEN_2220; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2224 = 6'h1 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2225 = 6'h2 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_2 : _GEN_2224; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2226 = 6'h3 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_3 : _GEN_2225; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2227 = 6'h4 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_4 : _GEN_2226; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2228 = 6'h5 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_5 : _GEN_2227; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2229 = 6'h6 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_6 : _GEN_2228; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2230 = 6'h7 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_7 : _GEN_2229; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2231 = 6'h8 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_8 : _GEN_2230; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2232 = 6'h9 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_9 : _GEN_2231; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2233 = 6'ha == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_10 : _GEN_2232; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2234 = 6'hb == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_11 : _GEN_2233; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2235 = 6'hc == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_12 : _GEN_2234; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2236 = 6'hd == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_13 : _GEN_2235; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2237 = 6'he == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_14 : _GEN_2236; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2238 = 6'hf == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_15 : _GEN_2237; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2239 = 6'h10 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_16 : _GEN_2238; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2240 = 6'h11 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_17 : _GEN_2239; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2241 = 6'h12 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_18 : _GEN_2240; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2242 = 6'h13 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_19 : _GEN_2241; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2243 = 6'h14 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_20 : _GEN_2242; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2244 = 6'h15 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_21 : _GEN_2243; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2245 = 6'h16 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_22 : _GEN_2244; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2246 = 6'h17 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_23 : _GEN_2245; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2247 = 6'h18 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_24 : _GEN_2246; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2248 = 6'h19 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_25 : _GEN_2247; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2249 = 6'h1a == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_26 : _GEN_2248; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2250 = 6'h1b == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_27 : _GEN_2249; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2251 = 6'h1c == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_28 : _GEN_2250; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2252 = 6'h1d == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_29 : _GEN_2251; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2253 = 6'h1e == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_30 : _GEN_2252; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2254 = 6'h1f == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_31 : _GEN_2253; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2255 = 6'h20 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_32 : _GEN_2254; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2256 = 6'h21 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_33 : _GEN_2255; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2257 = 6'h22 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_34 : _GEN_2256; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2258 = 6'h23 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_35 : _GEN_2257; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2259 = 6'h24 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_36 : _GEN_2258; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2260 = 6'h25 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_37 : _GEN_2259; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2261 = 6'h26 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_38 : _GEN_2260; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2262 = 6'h27 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_39 : _GEN_2261; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2263 = 6'h28 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_40 : _GEN_2262; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2264 = 6'h29 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_41 : _GEN_2263; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2265 = 6'h2a == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_42 : _GEN_2264; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2266 = 6'h2b == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_43 : _GEN_2265; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2267 = 6'h2c == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_44 : _GEN_2266; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2268 = 6'h2d == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_45 : _GEN_2267; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2269 = 6'h2e == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_46 : _GEN_2268; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2270 = 6'h2f == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_47 : _GEN_2269; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2271 = 6'h30 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_48 : _GEN_2270; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2272 = 6'h31 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_49 : _GEN_2271; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2273 = 6'h32 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_50 : _GEN_2272; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2274 = 6'h33 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_51 : _GEN_2273; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2275 = 6'h34 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_52 : _GEN_2274; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2276 = 6'h35 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_53 : _GEN_2275; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2277 = 6'h36 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_54 : _GEN_2276; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2278 = 6'h37 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_55 : _GEN_2277; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2279 = 6'h38 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_56 : _GEN_2278; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2280 = 6'h39 == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_57 : _GEN_2279; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2281 = 6'h3a == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_58 : _GEN_2280; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2282 = 6'h3b == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_59 : _GEN_2281; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2283 = 6'h3c == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_60 : _GEN_2282; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2284 = 6'h3d == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_61 : _GEN_2283; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2285 = 6'h3e == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_62 : _GEN_2284; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2288 = 6'h1 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_1 : _GEN_303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2289 = 6'h2 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_2 : _GEN_2288; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2290 = 6'h3 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_3 : _GEN_2289; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2291 = 6'h4 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_4 : _GEN_2290; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2292 = 6'h5 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_5 : _GEN_2291; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2293 = 6'h6 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_6 : _GEN_2292; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2294 = 6'h7 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_7 : _GEN_2293; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2295 = 6'h8 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_8 : _GEN_2294; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2296 = 6'h9 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_9 : _GEN_2295; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2297 = 6'ha == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_10 : _GEN_2296; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2298 = 6'hb == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_11 : _GEN_2297; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2299 = 6'hc == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_12 : _GEN_2298; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2300 = 6'hd == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_13 : _GEN_2299; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2301 = 6'he == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_14 : _GEN_2300; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2302 = 6'hf == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_15 : _GEN_2301; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2303 = 6'h10 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_16 : _GEN_2302; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2304 = 6'h11 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_17 : _GEN_2303; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2305 = 6'h12 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_18 : _GEN_2304; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2306 = 6'h13 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_19 : _GEN_2305; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2307 = 6'h14 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_20 : _GEN_2306; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2308 = 6'h15 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_21 : _GEN_2307; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2309 = 6'h16 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_22 : _GEN_2308; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2310 = 6'h17 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_23 : _GEN_2309; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2311 = 6'h18 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_24 : _GEN_2310; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2312 = 6'h19 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_25 : _GEN_2311; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2313 = 6'h1a == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_26 : _GEN_2312; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2314 = 6'h1b == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_27 : _GEN_2313; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2315 = 6'h1c == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_28 : _GEN_2314; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2316 = 6'h1d == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_29 : _GEN_2315; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2317 = 6'h1e == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_30 : _GEN_2316; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2318 = 6'h1f == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_31 : _GEN_2317; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2319 = 6'h20 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_32 : _GEN_2318; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2320 = 6'h21 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_33 : _GEN_2319; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2321 = 6'h22 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_34 : _GEN_2320; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2322 = 6'h23 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_35 : _GEN_2321; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2323 = 6'h24 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_36 : _GEN_2322; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2324 = 6'h25 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_37 : _GEN_2323; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2325 = 6'h26 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_38 : _GEN_2324; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2326 = 6'h27 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_39 : _GEN_2325; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2327 = 6'h28 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_40 : _GEN_2326; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2328 = 6'h29 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_41 : _GEN_2327; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2329 = 6'h2a == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_42 : _GEN_2328; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2330 = 6'h2b == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_43 : _GEN_2329; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2331 = 6'h2c == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_44 : _GEN_2330; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2332 = 6'h2d == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_45 : _GEN_2331; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2333 = 6'h2e == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_46 : _GEN_2332; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2334 = 6'h2f == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_47 : _GEN_2333; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2335 = 6'h30 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_48 : _GEN_2334; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2336 = 6'h31 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_49 : _GEN_2335; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2337 = 6'h32 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_50 : _GEN_2336; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2338 = 6'h33 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_51 : _GEN_2337; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2339 = 6'h34 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_52 : _GEN_2338; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2340 = 6'h35 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_53 : _GEN_2339; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2341 = 6'h36 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_54 : _GEN_2340; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2342 = 6'h37 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_55 : _GEN_2341; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2343 = 6'h38 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_56 : _GEN_2342; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2344 = 6'h39 == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_57 : _GEN_2343; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2345 = 6'h3a == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_58 : _GEN_2344; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2346 = 6'h3b == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_59 : _GEN_2345; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2347 = 6'h3c == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_60 : _GEN_2346; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2348 = 6'h3d == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_61 : _GEN_2347; // @[soc.scala 95:{44,44}]
+  wire [63:0] _GEN_2349 = 6'h3e == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_62 : _GEN_2348; // @[soc.scala 95:{44,44}]
   wire [4:0] _GEN_249 = reset ? 5'h0 : _GEN_267; // @[core.scala 1022:{30,30}]
   iCache icache ( // @[core.scala 27:22]
     .clock(icache_clock),
@@ -52434,8 +55959,41 @@ module soc1_Anon(
     .branchEvalIn_passFail(decode_branchEvalIn_passFail),
     .branchEvalIn_branchMask(decode_branchEvalIn_branchMask),
     .branchEvalIn_targetPC(decode_branchEvalIn_targetPC),
+    .retiredRenamedTable_table_0(decode_retiredRenamedTable_table_0),
+    .retiredRenamedTable_table_1(decode_retiredRenamedTable_table_1),
+    .retiredRenamedTable_table_2(decode_retiredRenamedTable_table_2),
+    .retiredRenamedTable_table_3(decode_retiredRenamedTable_table_3),
+    .retiredRenamedTable_table_4(decode_retiredRenamedTable_table_4),
+    .retiredRenamedTable_table_5(decode_retiredRenamedTable_table_5),
+    .retiredRenamedTable_table_6(decode_retiredRenamedTable_table_6),
+    .retiredRenamedTable_table_7(decode_retiredRenamedTable_table_7),
+    .retiredRenamedTable_table_8(decode_retiredRenamedTable_table_8),
+    .retiredRenamedTable_table_9(decode_retiredRenamedTable_table_9),
+    .retiredRenamedTable_table_10(decode_retiredRenamedTable_table_10),
+    .retiredRenamedTable_table_11(decode_retiredRenamedTable_table_11),
+    .retiredRenamedTable_table_12(decode_retiredRenamedTable_table_12),
+    .retiredRenamedTable_table_13(decode_retiredRenamedTable_table_13),
+    .retiredRenamedTable_table_14(decode_retiredRenamedTable_table_14),
+    .retiredRenamedTable_table_15(decode_retiredRenamedTable_table_15),
+    .retiredRenamedTable_table_16(decode_retiredRenamedTable_table_16),
+    .retiredRenamedTable_table_17(decode_retiredRenamedTable_table_17),
+    .retiredRenamedTable_table_18(decode_retiredRenamedTable_table_18),
+    .retiredRenamedTable_table_19(decode_retiredRenamedTable_table_19),
+    .retiredRenamedTable_table_20(decode_retiredRenamedTable_table_20),
+    .retiredRenamedTable_table_21(decode_retiredRenamedTable_table_21),
+    .retiredRenamedTable_table_22(decode_retiredRenamedTable_table_22),
+    .retiredRenamedTable_table_23(decode_retiredRenamedTable_table_23),
+    .retiredRenamedTable_table_24(decode_retiredRenamedTable_table_24),
+    .retiredRenamedTable_table_25(decode_retiredRenamedTable_table_25),
+    .retiredRenamedTable_table_26(decode_retiredRenamedTable_table_26),
+    .retiredRenamedTable_table_27(decode_retiredRenamedTable_table_27),
+    .retiredRenamedTable_table_28(decode_retiredRenamedTable_table_28),
+    .retiredRenamedTable_table_29(decode_retiredRenamedTable_table_29),
+    .retiredRenamedTable_table_30(decode_retiredRenamedTable_table_30),
+    .retiredRenamedTable_table_31(decode_retiredRenamedTable_table_31),
     .interruptedPC(decode_interruptedPC),
-    .canTakeInterrupt(decode_canTakeInterrupt)
+    .canTakeInterrupt(decode_canTakeInterrupt),
+    .registersOut_0(decode_registersOut_0)
   );
   storeDataIssue dataQueue ( // @[core.scala 62:25]
     .clock(dataQueue_clock),
@@ -52659,7 +56217,71 @@ module soc1_Anon(
     .toStore_rs2Data(prf_toStore_rs2Data),
     .branchCheck_pass(prf_branchCheck_pass),
     .branchCheck_branchmask(prf_branchCheck_branchmask),
-    .branchCheck_valid(prf_branchCheck_valid)
+    .branchCheck_valid(prf_branchCheck_valid),
+    .registerFileOutput_0(prf_registerFileOutput_0),
+    .registerFileOutput_1(prf_registerFileOutput_1),
+    .registerFileOutput_2(prf_registerFileOutput_2),
+    .registerFileOutput_3(prf_registerFileOutput_3),
+    .registerFileOutput_4(prf_registerFileOutput_4),
+    .registerFileOutput_5(prf_registerFileOutput_5),
+    .registerFileOutput_6(prf_registerFileOutput_6),
+    .registerFileOutput_7(prf_registerFileOutput_7),
+    .registerFileOutput_8(prf_registerFileOutput_8),
+    .registerFileOutput_9(prf_registerFileOutput_9),
+    .registerFileOutput_10(prf_registerFileOutput_10),
+    .registerFileOutput_11(prf_registerFileOutput_11),
+    .registerFileOutput_12(prf_registerFileOutput_12),
+    .registerFileOutput_13(prf_registerFileOutput_13),
+    .registerFileOutput_14(prf_registerFileOutput_14),
+    .registerFileOutput_15(prf_registerFileOutput_15),
+    .registerFileOutput_16(prf_registerFileOutput_16),
+    .registerFileOutput_17(prf_registerFileOutput_17),
+    .registerFileOutput_18(prf_registerFileOutput_18),
+    .registerFileOutput_19(prf_registerFileOutput_19),
+    .registerFileOutput_20(prf_registerFileOutput_20),
+    .registerFileOutput_21(prf_registerFileOutput_21),
+    .registerFileOutput_22(prf_registerFileOutput_22),
+    .registerFileOutput_23(prf_registerFileOutput_23),
+    .registerFileOutput_24(prf_registerFileOutput_24),
+    .registerFileOutput_25(prf_registerFileOutput_25),
+    .registerFileOutput_26(prf_registerFileOutput_26),
+    .registerFileOutput_27(prf_registerFileOutput_27),
+    .registerFileOutput_28(prf_registerFileOutput_28),
+    .registerFileOutput_29(prf_registerFileOutput_29),
+    .registerFileOutput_30(prf_registerFileOutput_30),
+    .registerFileOutput_31(prf_registerFileOutput_31),
+    .registerFileOutput_32(prf_registerFileOutput_32),
+    .registerFileOutput_33(prf_registerFileOutput_33),
+    .registerFileOutput_34(prf_registerFileOutput_34),
+    .registerFileOutput_35(prf_registerFileOutput_35),
+    .registerFileOutput_36(prf_registerFileOutput_36),
+    .registerFileOutput_37(prf_registerFileOutput_37),
+    .registerFileOutput_38(prf_registerFileOutput_38),
+    .registerFileOutput_39(prf_registerFileOutput_39),
+    .registerFileOutput_40(prf_registerFileOutput_40),
+    .registerFileOutput_41(prf_registerFileOutput_41),
+    .registerFileOutput_42(prf_registerFileOutput_42),
+    .registerFileOutput_43(prf_registerFileOutput_43),
+    .registerFileOutput_44(prf_registerFileOutput_44),
+    .registerFileOutput_45(prf_registerFileOutput_45),
+    .registerFileOutput_46(prf_registerFileOutput_46),
+    .registerFileOutput_47(prf_registerFileOutput_47),
+    .registerFileOutput_48(prf_registerFileOutput_48),
+    .registerFileOutput_49(prf_registerFileOutput_49),
+    .registerFileOutput_50(prf_registerFileOutput_50),
+    .registerFileOutput_51(prf_registerFileOutput_51),
+    .registerFileOutput_52(prf_registerFileOutput_52),
+    .registerFileOutput_53(prf_registerFileOutput_53),
+    .registerFileOutput_54(prf_registerFileOutput_54),
+    .registerFileOutput_55(prf_registerFileOutput_55),
+    .registerFileOutput_56(prf_registerFileOutput_56),
+    .registerFileOutput_57(prf_registerFileOutput_57),
+    .registerFileOutput_58(prf_registerFileOutput_58),
+    .registerFileOutput_59(prf_registerFileOutput_59),
+    .registerFileOutput_60(prf_registerFileOutput_60),
+    .registerFileOutput_61(prf_registerFileOutput_61),
+    .registerFileOutput_62(prf_registerFileOutput_62),
+    .registerFileOutput_63(prf_registerFileOutput_63)
   );
   assign iPort_ARADDR = icache_lowLevelMem_ARADDR; // @[core.scala 30:9]
   assign iPort_ARVALID = icache_lowLevelMem_ARVALID; // @[core.scala 30:9]
@@ -52701,6 +56323,39 @@ module soc1_Anon(
   assign peripheral_RREADY = memAccess_peripheral_RREADY; // @[core.scala 836:14]
   assign core_sample0 = decode_fromFetch_expected_valid; // @[core.scala 984:16]
   assign core_sample1 = decode_fromFetch_expected_pc[30]; // @[core.scala 985:47]
+  assign registersOut_0 = 6'h3f == decode_retiredRenamedTable_table_0 ? prf_registerFileOutput_63 : _GEN_365; // @[soc.scala 95:{44,44}]
+  assign registersOut_1 = 6'h3f == decode_retiredRenamedTable_table_1 ? prf_registerFileOutput_63 : _GEN_429; // @[soc.scala 95:{44,44}]
+  assign registersOut_2 = 6'h3f == decode_retiredRenamedTable_table_2 ? prf_registerFileOutput_63 : _GEN_493; // @[soc.scala 95:{44,44}]
+  assign registersOut_3 = 6'h3f == decode_retiredRenamedTable_table_3 ? prf_registerFileOutput_63 : _GEN_557; // @[soc.scala 95:{44,44}]
+  assign registersOut_4 = 6'h3f == decode_retiredRenamedTable_table_4 ? prf_registerFileOutput_63 : _GEN_621; // @[soc.scala 95:{44,44}]
+  assign registersOut_5 = 6'h3f == decode_retiredRenamedTable_table_5 ? prf_registerFileOutput_63 : _GEN_685; // @[soc.scala 95:{44,44}]
+  assign registersOut_6 = 6'h3f == decode_retiredRenamedTable_table_6 ? prf_registerFileOutput_63 : _GEN_749; // @[soc.scala 95:{44,44}]
+  assign registersOut_7 = 6'h3f == decode_retiredRenamedTable_table_7 ? prf_registerFileOutput_63 : _GEN_813; // @[soc.scala 95:{44,44}]
+  assign registersOut_8 = 6'h3f == decode_retiredRenamedTable_table_8 ? prf_registerFileOutput_63 : _GEN_877; // @[soc.scala 95:{44,44}]
+  assign registersOut_9 = 6'h3f == decode_retiredRenamedTable_table_9 ? prf_registerFileOutput_63 : _GEN_941; // @[soc.scala 95:{44,44}]
+  assign registersOut_10 = 6'h3f == decode_retiredRenamedTable_table_10 ? prf_registerFileOutput_63 : _GEN_1005; // @[soc.scala 95:{44,44}]
+  assign registersOut_11 = 6'h3f == decode_retiredRenamedTable_table_11 ? prf_registerFileOutput_63 : _GEN_1069; // @[soc.scala 95:{44,44}]
+  assign registersOut_12 = 6'h3f == decode_retiredRenamedTable_table_12 ? prf_registerFileOutput_63 : _GEN_1133; // @[soc.scala 95:{44,44}]
+  assign registersOut_13 = 6'h3f == decode_retiredRenamedTable_table_13 ? prf_registerFileOutput_63 : _GEN_1197; // @[soc.scala 95:{44,44}]
+  assign registersOut_14 = 6'h3f == decode_retiredRenamedTable_table_14 ? prf_registerFileOutput_63 : _GEN_1261; // @[soc.scala 95:{44,44}]
+  assign registersOut_15 = 6'h3f == decode_retiredRenamedTable_table_15 ? prf_registerFileOutput_63 : _GEN_1325; // @[soc.scala 95:{44,44}]
+  assign registersOut_16 = 6'h3f == decode_retiredRenamedTable_table_16 ? prf_registerFileOutput_63 : _GEN_1389; // @[soc.scala 95:{44,44}]
+  assign registersOut_17 = 6'h3f == decode_retiredRenamedTable_table_17 ? prf_registerFileOutput_63 : _GEN_1453; // @[soc.scala 95:{44,44}]
+  assign registersOut_18 = 6'h3f == decode_retiredRenamedTable_table_18 ? prf_registerFileOutput_63 : _GEN_1517; // @[soc.scala 95:{44,44}]
+  assign registersOut_19 = 6'h3f == decode_retiredRenamedTable_table_19 ? prf_registerFileOutput_63 : _GEN_1581; // @[soc.scala 95:{44,44}]
+  assign registersOut_20 = 6'h3f == decode_retiredRenamedTable_table_20 ? prf_registerFileOutput_63 : _GEN_1645; // @[soc.scala 95:{44,44}]
+  assign registersOut_21 = 6'h3f == decode_retiredRenamedTable_table_21 ? prf_registerFileOutput_63 : _GEN_1709; // @[soc.scala 95:{44,44}]
+  assign registersOut_22 = 6'h3f == decode_retiredRenamedTable_table_22 ? prf_registerFileOutput_63 : _GEN_1773; // @[soc.scala 95:{44,44}]
+  assign registersOut_23 = 6'h3f == decode_retiredRenamedTable_table_23 ? prf_registerFileOutput_63 : _GEN_1837; // @[soc.scala 95:{44,44}]
+  assign registersOut_24 = 6'h3f == decode_retiredRenamedTable_table_24 ? prf_registerFileOutput_63 : _GEN_1901; // @[soc.scala 95:{44,44}]
+  assign registersOut_25 = 6'h3f == decode_retiredRenamedTable_table_25 ? prf_registerFileOutput_63 : _GEN_1965; // @[soc.scala 95:{44,44}]
+  assign registersOut_26 = 6'h3f == decode_retiredRenamedTable_table_26 ? prf_registerFileOutput_63 : _GEN_2029; // @[soc.scala 95:{44,44}]
+  assign registersOut_27 = 6'h3f == decode_retiredRenamedTable_table_27 ? prf_registerFileOutput_63 : _GEN_2093; // @[soc.scala 95:{44,44}]
+  assign registersOut_28 = 6'h3f == decode_retiredRenamedTable_table_28 ? prf_registerFileOutput_63 : _GEN_2157; // @[soc.scala 95:{44,44}]
+  assign registersOut_29 = 6'h3f == decode_retiredRenamedTable_table_29 ? prf_registerFileOutput_63 : _GEN_2221; // @[soc.scala 95:{44,44}]
+  assign registersOut_30 = 6'h3f == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_63 : _GEN_2285; // @[soc.scala 95:{44,44}]
+  assign registersOut_31 = 6'h3f == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_63 : _GEN_2349; // @[soc.scala 95:{44,44}]
+  assign registersOut_32 = decode_registersOut_0; // @[soc.scala 97:31]
   assign robOut_commitFired = rob_commit_fired; // @[soc.scala 104:24]
   assign robOut_pc = rob_commit_pc; // @[soc.scala 105:24]
   assign robOut_instruction = {{32'd0}, rob_commit_instruction}; // @[soc.scala 106:24]
@@ -55149,7 +58804,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc1(
+module soc7(
   input         clock,
   input         reset,
   output        L2_AWVALID,
@@ -55229,6 +58884,39 @@ module soc1(
   input         peripheral_RLAST,
   input         peripheral_RVALID,
   output        peripheral_RREADY,
+  output [63:0] registersOut_0,
+  output [63:0] registersOut_1,
+  output [63:0] registersOut_2,
+  output [63:0] registersOut_3,
+  output [63:0] registersOut_4,
+  output [63:0] registersOut_5,
+  output [63:0] registersOut_6,
+  output [63:0] registersOut_7,
+  output [63:0] registersOut_8,
+  output [63:0] registersOut_9,
+  output [63:0] registersOut_10,
+  output [63:0] registersOut_11,
+  output [63:0] registersOut_12,
+  output [63:0] registersOut_13,
+  output [63:0] registersOut_14,
+  output [63:0] registersOut_15,
+  output [63:0] registersOut_16,
+  output [63:0] registersOut_17,
+  output [63:0] registersOut_18,
+  output [63:0] registersOut_19,
+  output [63:0] registersOut_20,
+  output [63:0] registersOut_21,
+  output [63:0] registersOut_22,
+  output [63:0] registersOut_23,
+  output [63:0] registersOut_24,
+  output [63:0] registersOut_25,
+  output [63:0] registersOut_26,
+  output [63:0] registersOut_27,
+  output [63:0] registersOut_28,
+  output [63:0] registersOut_29,
+  output [63:0] registersOut_30,
+  output [63:0] registersOut_31,
+  output [63:0] registersOut_32,
   output        robOut_commitFired,
   output [63:0] robOut_pc,
   output [63:0] robOut_instruction,
@@ -55245,6 +58933,9 @@ module soc1(
   output [63:0] memAccessOut_lookupReplayBuffer_info,
   output [63:0] memAccessOut_lookupReplayBuffer_data
 );
+`ifdef RANDOMIZE_REG_INIT
+  reg [31:0] _RAND_0;
+`endif // RANDOMIZE_REG_INIT
   wire  core0_clock; // @[soc.scala 88:21]
   wire  core0_reset; // @[soc.scala 88:21]
   wire [31:0] core0_iPort_ARADDR; // @[soc.scala 88:21]
@@ -55317,6 +59008,39 @@ module soc1(
   wire  core0_core_sample0; // @[soc.scala 88:21]
   wire  core0_core_sample1; // @[soc.scala 88:21]
   wire  core0_MTIP; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_0; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_1; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_2; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_3; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_4; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_5; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_6; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_7; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_8; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_9; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_10; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_11; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_12; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_13; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_14; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_15; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_16; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_17; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_18; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_19; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_20; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_21; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_22; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_23; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_24; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_25; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_26; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_27; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_28; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_29; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_30; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_31; // @[soc.scala 88:21]
+  wire [63:0] core0_registersOut_32; // @[soc.scala 88:21]
   wire  core0_robOut_commitFired; // @[soc.scala 88:21]
   wire [63:0] core0_robOut_pc; // @[soc.scala 88:21]
   wire [63:0] core0_robOut_instruction; // @[soc.scala 88:21]
@@ -55393,6 +59117,7 @@ module soc1(
   wire  interconnect__io_L2_BREADY; // @[soc.scala 118:28]
   wire [1:0] interconnect__io_L2_BID; // @[soc.scala 118:28]
   wire [1:0] interconnect__io_L2_BRESP; // @[soc.scala 118:28]
+  reg  REG; // @[soc.scala 328:58]
   soc1_Anon core0 ( // @[soc.scala 88:21]
     .clock(core0_clock),
     .reset(core0_reset),
@@ -55466,6 +59191,39 @@ module soc1(
     .core_sample0(core0_core_sample0),
     .core_sample1(core0_core_sample1),
     .MTIP(core0_MTIP),
+    .registersOut_0(core0_registersOut_0),
+    .registersOut_1(core0_registersOut_1),
+    .registersOut_2(core0_registersOut_2),
+    .registersOut_3(core0_registersOut_3),
+    .registersOut_4(core0_registersOut_4),
+    .registersOut_5(core0_registersOut_5),
+    .registersOut_6(core0_registersOut_6),
+    .registersOut_7(core0_registersOut_7),
+    .registersOut_8(core0_registersOut_8),
+    .registersOut_9(core0_registersOut_9),
+    .registersOut_10(core0_registersOut_10),
+    .registersOut_11(core0_registersOut_11),
+    .registersOut_12(core0_registersOut_12),
+    .registersOut_13(core0_registersOut_13),
+    .registersOut_14(core0_registersOut_14),
+    .registersOut_15(core0_registersOut_15),
+    .registersOut_16(core0_registersOut_16),
+    .registersOut_17(core0_registersOut_17),
+    .registersOut_18(core0_registersOut_18),
+    .registersOut_19(core0_registersOut_19),
+    .registersOut_20(core0_registersOut_20),
+    .registersOut_21(core0_registersOut_21),
+    .registersOut_22(core0_registersOut_22),
+    .registersOut_23(core0_registersOut_23),
+    .registersOut_24(core0_registersOut_24),
+    .registersOut_25(core0_registersOut_25),
+    .registersOut_26(core0_registersOut_26),
+    .registersOut_27(core0_registersOut_27),
+    .registersOut_28(core0_registersOut_28),
+    .registersOut_29(core0_registersOut_29),
+    .registersOut_30(core0_registersOut_30),
+    .registersOut_31(core0_registersOut_31),
+    .registersOut_32(core0_registersOut_32),
     .robOut_commitFired(core0_robOut_commitFired),
     .robOut_pc(core0_robOut_pc),
     .robOut_instruction(core0_robOut_instruction),
@@ -55599,6 +59357,39 @@ module soc1(
   assign peripheral_ARQOS = 4'h0; // @[soc.scala 123:20]
   assign peripheral_ARVALID = core0_peripheral_ARVALID; // @[soc.scala 123:20]
   assign peripheral_RREADY = core0_peripheral_RREADY; // @[soc.scala 123:20]
+  assign registersOut_0 = core0_robOut_commitFired & REG ? core0_registersOut_0 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_1 = core0_robOut_commitFired & REG ? core0_registersOut_1 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_2 = core0_robOut_commitFired & REG ? core0_registersOut_2 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_3 = core0_robOut_commitFired & REG ? core0_registersOut_3 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_4 = core0_robOut_commitFired & REG ? core0_registersOut_4 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_5 = core0_robOut_commitFired & REG ? core0_registersOut_5 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_6 = core0_robOut_commitFired & REG ? core0_registersOut_6 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_7 = core0_robOut_commitFired & REG ? core0_registersOut_7 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_8 = core0_robOut_commitFired & REG ? core0_registersOut_8 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_9 = core0_robOut_commitFired & REG ? core0_registersOut_9 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_10 = core0_robOut_commitFired & REG ? core0_registersOut_10 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_11 = core0_robOut_commitFired & REG ? core0_registersOut_11 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_12 = core0_robOut_commitFired & REG ? core0_registersOut_12 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_13 = core0_robOut_commitFired & REG ? core0_registersOut_13 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_14 = core0_robOut_commitFired & REG ? core0_registersOut_14 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_15 = core0_robOut_commitFired & REG ? core0_registersOut_15 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_16 = core0_robOut_commitFired & REG ? core0_registersOut_16 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_17 = core0_robOut_commitFired & REG ? core0_registersOut_17 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_18 = core0_robOut_commitFired & REG ? core0_registersOut_18 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_19 = core0_robOut_commitFired & REG ? core0_registersOut_19 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_20 = core0_robOut_commitFired & REG ? core0_registersOut_20 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_21 = core0_robOut_commitFired & REG ? core0_registersOut_21 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_22 = core0_robOut_commitFired & REG ? core0_registersOut_22 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_23 = core0_robOut_commitFired & REG ? core0_registersOut_23 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_24 = core0_robOut_commitFired & REG ? core0_registersOut_24 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_25 = core0_robOut_commitFired & REG ? core0_registersOut_25 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_26 = core0_robOut_commitFired & REG ? core0_registersOut_26 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_27 = core0_robOut_commitFired & REG ? core0_registersOut_27 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_28 = core0_robOut_commitFired & REG ? core0_registersOut_28 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_29 = core0_robOut_commitFired & REG ? core0_registersOut_29 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_30 = core0_robOut_commitFired & REG ? core0_registersOut_30 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_31 = core0_robOut_commitFired & REG ? core0_registersOut_31 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_32 = core0_registersOut_32; // @[soc.scala 329:20]
   assign robOut_commitFired = core0_robOut_commitFired; // @[soc.scala 332:10]
   assign robOut_pc = core0_robOut_pc; // @[soc.scala 332:10]
   assign robOut_instruction = core0_robOut_instruction; // @[soc.scala 332:10]
@@ -55678,4 +59469,56 @@ module soc1(
   assign interconnect__io_L2_BVALID = L2_BVALID; // @[soc.scala 318:29]
   assign interconnect__io_L2_BID = L2_BID; // @[soc.scala 320:26]
   assign interconnect__io_L2_BRESP = L2_BRESP; // @[soc.scala 321:28]
+  always @(posedge clock) begin
+    if (reset) begin // @[soc.scala 328:58]
+      REG <= 1'h0; // @[soc.scala 328:58]
+    end else begin
+      REG <= core0_robOut_commitFired; // @[soc.scala 328:58]
+    end
+  end
+// Register and memory initialization
+`ifdef RANDOMIZE_GARBAGE_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_INVALID_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_REG_INIT
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+`define RANDOMIZE
+`endif
+`ifndef RANDOM
+`define RANDOM $random
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+  integer initvar;
+`endif
+`ifndef SYNTHESIS
+`ifdef FIRRTL_BEFORE_INITIAL
+`FIRRTL_BEFORE_INITIAL
+`endif
+initial begin
+  `ifdef RANDOMIZE
+    `ifdef INIT_RANDOM
+      `INIT_RANDOM
+    `endif
+    `ifndef VERILATOR
+      `ifdef RANDOMIZE_DELAY
+        #`RANDOMIZE_DELAY begin end
+      `else
+        #0.002 begin end
+      `endif
+    `endif
+`ifdef RANDOMIZE_REG_INIT
+  _RAND_0 = {1{`RANDOM}};
+  REG = _RAND_0[0:0];
+`endif // RANDOMIZE_REG_INIT
+  `endif // RANDOMIZE
+end // initial
+`ifdef FIRRTL_AFTER_INITIAL
+`FIRRTL_AFTER_INITIAL
+`endif
+`endif // SYNTHESIS
 endmodule
