@@ -52819,7 +52819,8 @@ module soc1_Anon(
   output [63:0] memAccessOut_lookupReadBuffer_info,
   output [63:0] memAccessOut_lookupReadBuffer_data,
   output [63:0] memAccessOut_lookupReplayBuffer_info,
-  output [63:0] memAccessOut_lookupReplayBuffer_data
+  output [63:0] memAccessOut_lookupReplayBuffer_data,
+  output        allRobFiresOut
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -56356,7 +56357,8 @@ module soc1_Anon(
   assign registersOut_30 = 6'h3f == decode_retiredRenamedTable_table_30 ? prf_registerFileOutput_63 : _GEN_2285; // @[soc.scala 95:{44,44}]
   assign registersOut_31 = 6'h3f == decode_retiredRenamedTable_table_31 ? prf_registerFileOutput_63 : _GEN_2349; // @[soc.scala 95:{44,44}]
   assign registersOut_32 = decode_registersOut_0; // @[soc.scala 97:31]
-  assign robOut_commitFired = rob_commit_fired; // @[soc.scala 104:24]
+  assign robOut_commitFired = rob_commit_instruction[6:0] == 7'h73 & |rob_commit_instruction[14:12] ? 1'h0 :
+    rob_commit_fired; // @[soc.scala 111:120 104:24 111:99]
   assign robOut_pc = rob_commit_pc; // @[soc.scala 105:24]
   assign robOut_instruction = {{32'd0}, rob_commit_instruction}; // @[soc.scala 106:24]
   assign memAccessOut_schedulerReqIn_info = memAccess_memAccessDebug_schedulerReqIn_info; // @[soc.scala 109:18]
@@ -56371,6 +56373,7 @@ module soc1_Anon(
   assign memAccessOut_lookupReadBuffer_data = memAccess_memAccessDebug_lookupReadBuffer_data; // @[soc.scala 109:18]
   assign memAccessOut_lookupReplayBuffer_info = memAccess_memAccessDebug_lookupReplayBuffer_info; // @[soc.scala 109:18]
   assign memAccessOut_lookupReplayBuffer_data = memAccess_memAccessDebug_lookupReplayBuffer_data; // @[soc.scala 109:18]
+  assign allRobFiresOut = rob_commit_fired; // @[soc.scala 114:20]
   assign icache_clock = clock;
   assign icache_reset = reset;
   assign icache_fromFetch_req_valid = fetch_cache_req_valid; // @[core.scala 38:24]
@@ -58804,7 +58807,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc7(
+module soc6(
   input         clock,
   input         reset,
   output        L2_AWVALID,
@@ -58934,7 +58937,40 @@ module soc7(
   output [63:0] memAccessOut_lookupReplayBuffer_data
 );
 `ifdef RANDOMIZE_REG_INIT
-  reg [31:0] _RAND_0;
+  reg [63:0] _RAND_0;
+  reg [63:0] _RAND_1;
+  reg [63:0] _RAND_2;
+  reg [63:0] _RAND_3;
+  reg [63:0] _RAND_4;
+  reg [63:0] _RAND_5;
+  reg [63:0] _RAND_6;
+  reg [63:0] _RAND_7;
+  reg [63:0] _RAND_8;
+  reg [63:0] _RAND_9;
+  reg [63:0] _RAND_10;
+  reg [63:0] _RAND_11;
+  reg [63:0] _RAND_12;
+  reg [63:0] _RAND_13;
+  reg [63:0] _RAND_14;
+  reg [63:0] _RAND_15;
+  reg [63:0] _RAND_16;
+  reg [63:0] _RAND_17;
+  reg [63:0] _RAND_18;
+  reg [63:0] _RAND_19;
+  reg [63:0] _RAND_20;
+  reg [63:0] _RAND_21;
+  reg [63:0] _RAND_22;
+  reg [63:0] _RAND_23;
+  reg [63:0] _RAND_24;
+  reg [63:0] _RAND_25;
+  reg [63:0] _RAND_26;
+  reg [63:0] _RAND_27;
+  reg [63:0] _RAND_28;
+  reg [63:0] _RAND_29;
+  reg [63:0] _RAND_30;
+  reg [63:0] _RAND_31;
+  reg [31:0] _RAND_32;
+  reg [31:0] _RAND_33;
 `endif // RANDOMIZE_REG_INIT
   wire  core0_clock; // @[soc.scala 88:21]
   wire  core0_reset; // @[soc.scala 88:21]
@@ -59056,6 +59092,7 @@ module soc7(
   wire [63:0] core0_memAccessOut_lookupReadBuffer_data; // @[soc.scala 88:21]
   wire [63:0] core0_memAccessOut_lookupReplayBuffer_info; // @[soc.scala 88:21]
   wire [63:0] core0_memAccessOut_lookupReplayBuffer_data; // @[soc.scala 88:21]
+  wire  core0_allRobFiresOut; // @[soc.scala 88:21]
   wire  interconnect__clock; // @[soc.scala 118:28]
   wire  interconnect__reset; // @[soc.scala 118:28]
   wire  interconnect__io_acePort0_AWVALID; // @[soc.scala 118:28]
@@ -59117,7 +59154,40 @@ module soc7(
   wire  interconnect__io_L2_BREADY; // @[soc.scala 118:28]
   wire [1:0] interconnect__io_L2_BID; // @[soc.scala 118:28]
   wire [1:0] interconnect__io_L2_BRESP; // @[soc.scala 118:28]
+  reg [63:0] registersOutBuffer_0; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_1; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_2; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_3; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_4; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_5; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_6; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_7; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_8; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_9; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_10; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_11; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_12; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_13; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_14; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_15; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_16; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_17; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_18; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_19; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_20; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_21; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_22; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_23; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_24; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_25; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_26; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_27; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_28; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_29; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_30; // @[soc.scala 327:31]
+  reg [63:0] registersOutBuffer_31; // @[soc.scala 327:31]
   reg  REG; // @[soc.scala 328:58]
+  reg  REG_1; // @[soc.scala 336:15]
   soc1_Anon core0 ( // @[soc.scala 88:21]
     .clock(core0_clock),
     .reset(core0_reset),
@@ -59238,7 +59308,8 @@ module soc7(
     .memAccessOut_lookupReadBuffer_info(core0_memAccessOut_lookupReadBuffer_info),
     .memAccessOut_lookupReadBuffer_data(core0_memAccessOut_lookupReadBuffer_data),
     .memAccessOut_lookupReplayBuffer_info(core0_memAccessOut_lookupReplayBuffer_info),
-    .memAccessOut_lookupReplayBuffer_data(core0_memAccessOut_lookupReplayBuffer_data)
+    .memAccessOut_lookupReplayBuffer_data(core0_memAccessOut_lookupReplayBuffer_data),
+    .allRobFiresOut(core0_allRobFiresOut)
   );
   Interconnect interconnect_ ( // @[soc.scala 118:28]
     .clock(interconnect__clock),
@@ -59357,38 +59428,38 @@ module soc7(
   assign peripheral_ARQOS = 4'h0; // @[soc.scala 123:20]
   assign peripheral_ARVALID = core0_peripheral_ARVALID; // @[soc.scala 123:20]
   assign peripheral_RREADY = core0_peripheral_RREADY; // @[soc.scala 123:20]
-  assign registersOut_0 = core0_robOut_commitFired & REG ? core0_registersOut_0 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_1 = core0_robOut_commitFired & REG ? core0_registersOut_1 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_2 = core0_robOut_commitFired & REG ? core0_registersOut_2 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_3 = core0_robOut_commitFired & REG ? core0_registersOut_3 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_4 = core0_robOut_commitFired & REG ? core0_registersOut_4 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_5 = core0_robOut_commitFired & REG ? core0_registersOut_5 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_6 = core0_robOut_commitFired & REG ? core0_registersOut_6 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_7 = core0_robOut_commitFired & REG ? core0_registersOut_7 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_8 = core0_robOut_commitFired & REG ? core0_registersOut_8 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_9 = core0_robOut_commitFired & REG ? core0_registersOut_9 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_10 = core0_robOut_commitFired & REG ? core0_registersOut_10 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_11 = core0_robOut_commitFired & REG ? core0_registersOut_11 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_12 = core0_robOut_commitFired & REG ? core0_registersOut_12 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_13 = core0_robOut_commitFired & REG ? core0_registersOut_13 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_14 = core0_robOut_commitFired & REG ? core0_registersOut_14 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_15 = core0_robOut_commitFired & REG ? core0_registersOut_15 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_16 = core0_robOut_commitFired & REG ? core0_registersOut_16 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_17 = core0_robOut_commitFired & REG ? core0_registersOut_17 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_18 = core0_robOut_commitFired & REG ? core0_registersOut_18 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_19 = core0_robOut_commitFired & REG ? core0_registersOut_19 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_20 = core0_robOut_commitFired & REG ? core0_registersOut_20 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_21 = core0_robOut_commitFired & REG ? core0_registersOut_21 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_22 = core0_robOut_commitFired & REG ? core0_registersOut_22 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_23 = core0_robOut_commitFired & REG ? core0_registersOut_23 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_24 = core0_robOut_commitFired & REG ? core0_registersOut_24 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_25 = core0_robOut_commitFired & REG ? core0_registersOut_25 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_26 = core0_robOut_commitFired & REG ? core0_registersOut_26 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_27 = core0_robOut_commitFired & REG ? core0_registersOut_27 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_28 = core0_robOut_commitFired & REG ? core0_registersOut_28 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_29 = core0_robOut_commitFired & REG ? core0_registersOut_29 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_30 = core0_robOut_commitFired & REG ? core0_registersOut_30 : 64'h0; // @[soc.scala 328:22]
-  assign registersOut_31 = core0_robOut_commitFired & REG ? core0_registersOut_31 : 64'h0; // @[soc.scala 328:22]
+  assign registersOut_0 = core0_robOut_commitFired & REG ? core0_registersOut_0 : registersOutBuffer_0; // @[soc.scala 328:22]
+  assign registersOut_1 = core0_robOut_commitFired & REG ? core0_registersOut_1 : registersOutBuffer_1; // @[soc.scala 328:22]
+  assign registersOut_2 = core0_robOut_commitFired & REG ? core0_registersOut_2 : registersOutBuffer_2; // @[soc.scala 328:22]
+  assign registersOut_3 = core0_robOut_commitFired & REG ? core0_registersOut_3 : registersOutBuffer_3; // @[soc.scala 328:22]
+  assign registersOut_4 = core0_robOut_commitFired & REG ? core0_registersOut_4 : registersOutBuffer_4; // @[soc.scala 328:22]
+  assign registersOut_5 = core0_robOut_commitFired & REG ? core0_registersOut_5 : registersOutBuffer_5; // @[soc.scala 328:22]
+  assign registersOut_6 = core0_robOut_commitFired & REG ? core0_registersOut_6 : registersOutBuffer_6; // @[soc.scala 328:22]
+  assign registersOut_7 = core0_robOut_commitFired & REG ? core0_registersOut_7 : registersOutBuffer_7; // @[soc.scala 328:22]
+  assign registersOut_8 = core0_robOut_commitFired & REG ? core0_registersOut_8 : registersOutBuffer_8; // @[soc.scala 328:22]
+  assign registersOut_9 = core0_robOut_commitFired & REG ? core0_registersOut_9 : registersOutBuffer_9; // @[soc.scala 328:22]
+  assign registersOut_10 = core0_robOut_commitFired & REG ? core0_registersOut_10 : registersOutBuffer_10; // @[soc.scala 328:22]
+  assign registersOut_11 = core0_robOut_commitFired & REG ? core0_registersOut_11 : registersOutBuffer_11; // @[soc.scala 328:22]
+  assign registersOut_12 = core0_robOut_commitFired & REG ? core0_registersOut_12 : registersOutBuffer_12; // @[soc.scala 328:22]
+  assign registersOut_13 = core0_robOut_commitFired & REG ? core0_registersOut_13 : registersOutBuffer_13; // @[soc.scala 328:22]
+  assign registersOut_14 = core0_robOut_commitFired & REG ? core0_registersOut_14 : registersOutBuffer_14; // @[soc.scala 328:22]
+  assign registersOut_15 = core0_robOut_commitFired & REG ? core0_registersOut_15 : registersOutBuffer_15; // @[soc.scala 328:22]
+  assign registersOut_16 = core0_robOut_commitFired & REG ? core0_registersOut_16 : registersOutBuffer_16; // @[soc.scala 328:22]
+  assign registersOut_17 = core0_robOut_commitFired & REG ? core0_registersOut_17 : registersOutBuffer_17; // @[soc.scala 328:22]
+  assign registersOut_18 = core0_robOut_commitFired & REG ? core0_registersOut_18 : registersOutBuffer_18; // @[soc.scala 328:22]
+  assign registersOut_19 = core0_robOut_commitFired & REG ? core0_registersOut_19 : registersOutBuffer_19; // @[soc.scala 328:22]
+  assign registersOut_20 = core0_robOut_commitFired & REG ? core0_registersOut_20 : registersOutBuffer_20; // @[soc.scala 328:22]
+  assign registersOut_21 = core0_robOut_commitFired & REG ? core0_registersOut_21 : registersOutBuffer_21; // @[soc.scala 328:22]
+  assign registersOut_22 = core0_robOut_commitFired & REG ? core0_registersOut_22 : registersOutBuffer_22; // @[soc.scala 328:22]
+  assign registersOut_23 = core0_robOut_commitFired & REG ? core0_registersOut_23 : registersOutBuffer_23; // @[soc.scala 328:22]
+  assign registersOut_24 = core0_robOut_commitFired & REG ? core0_registersOut_24 : registersOutBuffer_24; // @[soc.scala 328:22]
+  assign registersOut_25 = core0_robOut_commitFired & REG ? core0_registersOut_25 : registersOutBuffer_25; // @[soc.scala 328:22]
+  assign registersOut_26 = core0_robOut_commitFired & REG ? core0_registersOut_26 : registersOutBuffer_26; // @[soc.scala 328:22]
+  assign registersOut_27 = core0_robOut_commitFired & REG ? core0_registersOut_27 : registersOutBuffer_27; // @[soc.scala 328:22]
+  assign registersOut_28 = core0_robOut_commitFired & REG ? core0_registersOut_28 : registersOutBuffer_28; // @[soc.scala 328:22]
+  assign registersOut_29 = core0_robOut_commitFired & REG ? core0_registersOut_29 : registersOutBuffer_29; // @[soc.scala 328:22]
+  assign registersOut_30 = core0_robOut_commitFired & REG ? core0_registersOut_30 : registersOutBuffer_30; // @[soc.scala 328:22]
+  assign registersOut_31 = core0_robOut_commitFired & REG ? core0_registersOut_31 : registersOutBuffer_31; // @[soc.scala 328:22]
   assign registersOut_32 = core0_registersOut_32; // @[soc.scala 329:20]
   assign robOut_commitFired = core0_robOut_commitFired; // @[soc.scala 332:10]
   assign robOut_pc = core0_robOut_pc; // @[soc.scala 332:10]
@@ -59470,10 +59541,111 @@ module soc7(
   assign interconnect__io_L2_BID = L2_BID; // @[soc.scala 320:26]
   assign interconnect__io_L2_BRESP = L2_BRESP; // @[soc.scala 321:28]
   always @(posedge clock) begin
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_0 <= core0_registersOut_0; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_1 <= core0_registersOut_1; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_2 <= core0_registersOut_2; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_3 <= core0_registersOut_3; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_4 <= core0_registersOut_4; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_5 <= core0_registersOut_5; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_6 <= core0_registersOut_6; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_7 <= core0_registersOut_7; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_8 <= core0_registersOut_8; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_9 <= core0_registersOut_9; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_10 <= core0_registersOut_10; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_11 <= core0_registersOut_11; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_12 <= core0_registersOut_12; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_13 <= core0_registersOut_13; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_14 <= core0_registersOut_14; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_15 <= core0_registersOut_15; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_16 <= core0_registersOut_16; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_17 <= core0_registersOut_17; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_18 <= core0_registersOut_18; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_19 <= core0_registersOut_19; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_20 <= core0_registersOut_20; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_21 <= core0_registersOut_21; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_22 <= core0_registersOut_22; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_23 <= core0_registersOut_23; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_24 <= core0_registersOut_24; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_25 <= core0_registersOut_25; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_26 <= core0_registersOut_26; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_27 <= core0_registersOut_27; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_28 <= core0_registersOut_28; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_29 <= core0_registersOut_29; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_30 <= core0_registersOut_30; // @[soc.scala 336:69]
+    end
+    if (REG_1) begin // @[soc.scala 336:48]
+      registersOutBuffer_31 <= core0_registersOut_31; // @[soc.scala 336:69]
+    end
     if (reset) begin // @[soc.scala 328:58]
       REG <= 1'h0; // @[soc.scala 328:58]
     end else begin
       REG <= core0_robOut_commitFired; // @[soc.scala 328:58]
+    end
+    if (reset) begin // @[soc.scala 336:15]
+      REG_1 <= 1'h0; // @[soc.scala 336:15]
+    end else begin
+      REG_1 <= core0_allRobFiresOut; // @[soc.scala 336:15]
     end
   end
 // Register and memory initialization
@@ -59512,8 +59684,74 @@ initial begin
       `endif
     `endif
 `ifdef RANDOMIZE_REG_INIT
-  _RAND_0 = {1{`RANDOM}};
-  REG = _RAND_0[0:0];
+  _RAND_0 = {2{`RANDOM}};
+  registersOutBuffer_0 = _RAND_0[63:0];
+  _RAND_1 = {2{`RANDOM}};
+  registersOutBuffer_1 = _RAND_1[63:0];
+  _RAND_2 = {2{`RANDOM}};
+  registersOutBuffer_2 = _RAND_2[63:0];
+  _RAND_3 = {2{`RANDOM}};
+  registersOutBuffer_3 = _RAND_3[63:0];
+  _RAND_4 = {2{`RANDOM}};
+  registersOutBuffer_4 = _RAND_4[63:0];
+  _RAND_5 = {2{`RANDOM}};
+  registersOutBuffer_5 = _RAND_5[63:0];
+  _RAND_6 = {2{`RANDOM}};
+  registersOutBuffer_6 = _RAND_6[63:0];
+  _RAND_7 = {2{`RANDOM}};
+  registersOutBuffer_7 = _RAND_7[63:0];
+  _RAND_8 = {2{`RANDOM}};
+  registersOutBuffer_8 = _RAND_8[63:0];
+  _RAND_9 = {2{`RANDOM}};
+  registersOutBuffer_9 = _RAND_9[63:0];
+  _RAND_10 = {2{`RANDOM}};
+  registersOutBuffer_10 = _RAND_10[63:0];
+  _RAND_11 = {2{`RANDOM}};
+  registersOutBuffer_11 = _RAND_11[63:0];
+  _RAND_12 = {2{`RANDOM}};
+  registersOutBuffer_12 = _RAND_12[63:0];
+  _RAND_13 = {2{`RANDOM}};
+  registersOutBuffer_13 = _RAND_13[63:0];
+  _RAND_14 = {2{`RANDOM}};
+  registersOutBuffer_14 = _RAND_14[63:0];
+  _RAND_15 = {2{`RANDOM}};
+  registersOutBuffer_15 = _RAND_15[63:0];
+  _RAND_16 = {2{`RANDOM}};
+  registersOutBuffer_16 = _RAND_16[63:0];
+  _RAND_17 = {2{`RANDOM}};
+  registersOutBuffer_17 = _RAND_17[63:0];
+  _RAND_18 = {2{`RANDOM}};
+  registersOutBuffer_18 = _RAND_18[63:0];
+  _RAND_19 = {2{`RANDOM}};
+  registersOutBuffer_19 = _RAND_19[63:0];
+  _RAND_20 = {2{`RANDOM}};
+  registersOutBuffer_20 = _RAND_20[63:0];
+  _RAND_21 = {2{`RANDOM}};
+  registersOutBuffer_21 = _RAND_21[63:0];
+  _RAND_22 = {2{`RANDOM}};
+  registersOutBuffer_22 = _RAND_22[63:0];
+  _RAND_23 = {2{`RANDOM}};
+  registersOutBuffer_23 = _RAND_23[63:0];
+  _RAND_24 = {2{`RANDOM}};
+  registersOutBuffer_24 = _RAND_24[63:0];
+  _RAND_25 = {2{`RANDOM}};
+  registersOutBuffer_25 = _RAND_25[63:0];
+  _RAND_26 = {2{`RANDOM}};
+  registersOutBuffer_26 = _RAND_26[63:0];
+  _RAND_27 = {2{`RANDOM}};
+  registersOutBuffer_27 = _RAND_27[63:0];
+  _RAND_28 = {2{`RANDOM}};
+  registersOutBuffer_28 = _RAND_28[63:0];
+  _RAND_29 = {2{`RANDOM}};
+  registersOutBuffer_29 = _RAND_29[63:0];
+  _RAND_30 = {2{`RANDOM}};
+  registersOutBuffer_30 = _RAND_30[63:0];
+  _RAND_31 = {2{`RANDOM}};
+  registersOutBuffer_31 = _RAND_31[63:0];
+  _RAND_32 = {1{`RANDOM}};
+  REG = _RAND_32[0:0];
+  _RAND_33 = {1{`RANDOM}};
+  REG_1 = _RAND_33[0:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial
