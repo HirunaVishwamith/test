@@ -58935,7 +58935,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc8(
+module soc9(
   input         clock,
   input         reset,
   output        L2_AWVALID,
