@@ -36054,8 +36054,8 @@ module requestScheduler(
   wire  speculativeQueue_branchOps_valid; // @[requestScheduler.scala 33:32]
   wire [4:0] speculativeQueue_branchOps_branchMask; // @[requestScheduler.scala 33:32]
   wire  speculativeQueue_branchOps_passed; // @[requestScheduler.scala 33:32]
-  wire  _speculativeEntryWire_T_6 = requestIn_address >= 32'h10000000 & requestIn_address <= 32'h19000000; // @[utils.scala 45:25]
-  wire  speculativeEntryWire = requestIn_core_instruction[6:2] == 5'h0 & _speculativeEntryWire_T_6; // @[requestScheduler.scala 45:89]
+  wire  _speculativeEntryWire_T_2 = requestIn_address >= 32'h80000000; // @[utils.scala 45:10]
+  wire  speculativeEntryWire = requestIn_core_instruction[6:2] == 5'h0 & _speculativeEntryWire_T_2; // @[requestScheduler.scala 45:89]
   wire [4:0] _T_2 = requestIn_branch_mask & branchOps_branchMask; // @[utils.scala 98:27]
   wire  _T_3 = |_T_2; // @[utils.scala 98:51]
   wire [4:0] _inorderQueue_write_data_branch_mask_T = requestIn_branch_mask ^ branchOps_branchMask; // @[utils.scala 99:42]
@@ -36470,10 +36470,9 @@ module arbiter(
   wire  operationWires_rAtomics = operationBuffer_core_instruction[6:0] == 7'h2f; // @[arbiter.scala 96:68]
   wire  operationWires_isLR = operationBuffer_core_instruction[31:27] == 5'h2 & operationWires_rAtomics; // @[arbiter.scala 97:81]
   wire  operationWires_isSC = operationBuffer_core_instruction[31:27] == 5'h3 & operationWires_rAtomics; // @[arbiter.scala 98:81]
-  wire  _operationWires_isPeriRead_T_6 = operationBuffer_address >= 32'h10000000 & operationBuffer_address <= 32'h19000000
-    ; // @[utils.scala 45:25]
-  wire  _operationWires_isPeriRead_T_7 = ~_operationWires_isPeriRead_T_6; // @[arbiter.scala 99:90]
-  wire  operationWires_isPeriRead = operationWires_isRead & ~_operationWires_isPeriRead_T_6; // @[arbiter.scala 99:87]
+  wire  _operationWires_isPeriRead_T_2 = operationBuffer_address >= 32'h80000000; // @[utils.scala 45:10]
+  wire  _operationWires_isPeriRead_T_7 = ~_operationWires_isPeriRead_T_2; // @[arbiter.scala 99:90]
+  wire  operationWires_isPeriRead = operationWires_isRead & ~_operationWires_isPeriRead_T_2; // @[arbiter.scala 99:87]
   wire  operationWires_isPeriWrite = operationWires_isWrite & _operationWires_isPeriRead_T_7; // @[arbiter.scala 100:88]
   wire  _GEN_48 = operationWires_isLR | operationWires_isSC | operationWires_rAtomics ? operationBuffer_valid :
     inorderBuffer_valid; // @[arbiter.scala 113:91 115:25 58:30]
@@ -58808,7 +58807,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc11(
+module soc12(
   input         clock,
   input         reset,
   output        L2_AWVALID,
