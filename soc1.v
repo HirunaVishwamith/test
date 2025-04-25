@@ -41378,9 +41378,9 @@ module peripheralUnit(
   wire [31:0] _GEN_105 = writeCounter_count ? writeChunks_1 : writeChunks_0; // @[peripheralUnit.scala 150:{17,17}]
   wire  _writeRequestBuffer_valid_T_1 = bus_BVALID & bus_BID == 2'h0; // @[peripheralUnit.scala 155:48]
   wire  _writeRequestBuffer_valid_T_2 = bus_BRESP == 2'h0; // @[peripheralUnit.scala 155:81]
+  wire  _writeRequestBuffer_valid_T_3 = bus_BVALID & bus_BID == 2'h0 & bus_BRESP == 2'h0; // @[peripheralUnit.scala 155:68]
   wire [1:0] _writeAXIState_T_7 = _writeRequestBuffer_valid_T_2 ? 2'h0 : 2'h1; // @[peripheralUnit.scala 158:28]
   wire [1:0] _writeAXIState_T_8 = _writeRequestBuffer_valid_T_1 ? _writeAXIState_T_7 : 2'h2; // @[peripheralUnit.scala 157:27]
-  wire  _GEN_108 = 2'h2 == writeAXIState | _GEN_0; // @[peripheralUnit.scala 120:25 156:36]
   wire  _GEN_110 = 2'h1 == writeAXIState & ~writeCounter_count; // @[peripheralUnit.scala 120:25 126:19 46:15]
   wire [31:0] _GEN_112 = 2'h1 == writeAXIState ? writeRequestBuffer_address : 32'h0; // @[peripheralUnit.scala 120:25 128:18 38:14]
   wire [7:0] _GEN_113 = 2'h1 == writeAXIState ? numOfBeats : 8'h0; // @[peripheralUnit.scala 120:25 129:17 39:13]
@@ -41778,8 +41778,10 @@ module peripheralUnit(
       writeCommitInstructionBuffer <= _GEN_0;
     end else if (2'h1 == writeAXIState) begin // @[peripheralUnit.scala 120:25]
       writeCommitInstructionBuffer <= _GEN_0;
+    end else if (2'h2 == writeAXIState) begin // @[peripheralUnit.scala 120:25]
+      writeCommitInstructionBuffer <= _writeRequestBuffer_valid_T_3; // @[peripheralUnit.scala 156:36]
     end else begin
-      writeCommitInstructionBuffer <= _GEN_108;
+      writeCommitInstructionBuffer <= _GEN_0;
     end
     if (reset) begin // @[peripheralUnit.scala 113:30]
       writeAXIState <= 2'h0; // @[peripheralUnit.scala 113:30]
@@ -50562,7 +50564,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc14(
+module soc15(
   input         clock,
   input         reset,
   output        L2_AWVALID,
