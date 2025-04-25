@@ -41247,7 +41247,8 @@ module peripheralUnit(
   output [63:0] readRequestBuff_data,
   output [63:0] readResponseBuff_info,
   output [63:0] readResponseBuff_data,
-  output [63:0] responseData
+  output [63:0] responseData,
+  output [63:0] readyStateWire
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -41465,11 +41466,14 @@ module peripheralUnit(
   wire [63:0] _readRequestBuff_info_T = {requestBuffer_address,requestBuffer_core_instruction}; // @[Cat.scala 33:92]
   wire [16:0] _readRequestBuff_data_T = {readAXIRequestState,2'h0,requestBuffer_core_prfDest,4'h0,
     requestBuffer_core_robAddr}; // @[Cat.scala 33:92]
-  wire [16:0] _GEN_249 = requestBuffer_valid ? _readRequestBuff_data_T : 17'h0; // @[peripheralUnit.scala 271:28 273:26 276:26]
+  wire [16:0] _GEN_249 = requestBuffer_valid ? _readRequestBuff_data_T : 17'h0; // @[peripheralUnit.scala 272:28 274:26 277:26]
   wire [63:0] _readResponseBuff_info_T = {responseOutBuffer_address,responseOutBuffer_core_instruction}; // @[Cat.scala 33:92]
   wire [17:0] _readResponseBuff_data_T = {readAXIResponseState,2'h0,responseOutBuffer_core_prfDest,4'h0,
     responseOutBuffer_core_robAddr}; // @[Cat.scala 33:92]
-  wire [17:0] _GEN_251 = readAXIResponseState != 2'h0 ? _readResponseBuff_data_T : 18'h0; // @[peripheralUnit.scala 278:49 280:27 284:27]
+  wire [17:0] _GEN_251 = readAXIResponseState != 2'h0 ? _readResponseBuff_data_T : 18'h0; // @[peripheralUnit.scala 279:49 281:27 285:27]
+  wire [8:0] readyStateWire_lo = {writeInstructionCommit_ready,3'h0,writeCommitInstructionBuffer,3'h0,request_ready}; // @[Cat.scala 33:92]
+  wire [20:0] _readyStateWire_T = {requestBuffer_valid,3'h0,requestBuffer_branch_valid,3'h0,writeInstructionCommit_fired
+    ,3'h0,readyStateWire_lo}; // @[Cat.scala 33:92]
   fifoBaseModule peripheralMSHR ( // @[peripheralUnit.scala 82:30]
     .clock(peripheralMSHR_clock),
     .reset(peripheralMSHR_reset),
@@ -41528,11 +41532,12 @@ module peripheralUnit(
   assign bus_ARVALID = ~readAXIRequestState ? 1'h0 : readAXIRequestState; // @[peripheralUnit.scala 166:31 64:15]
   assign bus_RREADY = 2'h0 == readAXIResponseState ? 1'h0 : 2'h1 == readAXIResponseState; // @[peripheralUnit.scala 202:31 66:14]
   assign writeInstructionCommit_ready = writeCommitInstructionBuffer; // @[peripheralUnit.scala 77:32]
-  assign readRequestBuff_info = requestBuffer_valid ? _readRequestBuff_info_T : 64'h0; // @[peripheralUnit.scala 271:28 272:26 275:26]
+  assign readRequestBuff_info = requestBuffer_valid ? _readRequestBuff_info_T : 64'h0; // @[peripheralUnit.scala 272:28 273:26 276:26]
   assign readRequestBuff_data = {{47'd0}, _GEN_249};
-  assign readResponseBuff_info = readAXIResponseState != 2'h0 ? _readResponseBuff_info_T : 64'h0; // @[peripheralUnit.scala 278:49 279:27 283:27]
+  assign readResponseBuff_info = readAXIResponseState != 2'h0 ? _readResponseBuff_info_T : 64'h0; // @[peripheralUnit.scala 279:49 280:27 284:27]
   assign readResponseBuff_data = {{46'd0}, _GEN_251};
-  assign responseData = readAXIResponseState != 2'h0 ? responseOutBuffer_writeData_data : 64'h0; // @[peripheralUnit.scala 278:49 281:18 285:18]
+  assign responseData = readAXIResponseState != 2'h0 ? responseOutBuffer_writeData_data : 64'h0; // @[peripheralUnit.scala 279:49 282:18 286:18]
+  assign readyStateWire = {{43'd0}, _readyStateWire_T}; // @[peripheralUnit.scala 288:18]
   assign peripheralMSHR_clock = clock;
   assign peripheralMSHR_reset = reset;
   assign peripheralMSHR_write_data_valid = ~readAXIRequestState ? 1'h0 : readAXIRequestState & _GEN_152; // @[peripheralUnit.scala 166:31 utils.scala 54:41]
@@ -43182,7 +43187,8 @@ module core_Anon_1(
   output [63:0] memAccessDebug_responseOut_data,
   output [63:0] memAccessDebug_arbiterStatesWire,
   output [63:0] memAccessDebug_arbiterInorderBuffer_info,
-  output [63:0] memAccessDebug_arbiterInorderBuffer_data
+  output [63:0] memAccessDebug_arbiterInorderBuffer_data,
+  output [63:0] memAccessDebug_peripheralReadyStatesWire
 );
 `ifdef RANDOMIZE_REG_INIT
   reg [31:0] _RAND_0;
@@ -43452,6 +43458,7 @@ module core_Anon_1(
   wire [63:0] peripheralUnit_readResponseBuff_info; // @[cacheModule.scala 51:30]
   wire [63:0] peripheralUnit_readResponseBuff_data; // @[cacheModule.scala 51:30]
   wire [63:0] peripheralUnit_responseData; // @[cacheModule.scala 51:30]
+  wire [63:0] peripheralUnit_readyStateWire; // @[cacheModule.scala 51:30]
   wire  aceUnit_clock; // @[cacheModule.scala 58:23]
   wire  aceUnit_reset; // @[cacheModule.scala 58:23]
   wire  aceUnit_readRequest_ready; // @[cacheModule.scala 58:23]
@@ -43534,7 +43541,7 @@ module core_Anon_1(
   wire  subModulesReady = _subModulesReady_T_2 & subModulesReady_REG_1; // @[cacheModule.scala 184:24]
   wire [45:0] _memAccessDebug_responseOut_info_T = {responseOut_prfDest,4'h0,responseOut_robAddr,responseOut_instruction
     }; // @[Cat.scala 33:92]
-  wire [45:0] _GEN_38 = responseOut_valid ? _memAccessDebug_responseOut_info_T : 46'h0; // @[cacheModule.scala 244:26 245:37 248:37]
+  wire [45:0] _GEN_38 = responseOut_valid ? _memAccessDebug_responseOut_info_T : 46'h0; // @[cacheModule.scala 246:26 247:37 250:37]
   requestScheduler requestScheduler ( // @[cacheModule.scala 47:32]
     .clock(requestScheduler_clock),
     .reset(requestScheduler_reset),
@@ -43805,7 +43812,8 @@ module core_Anon_1(
     .readRequestBuff_data(peripheralUnit_readRequestBuff_data),
     .readResponseBuff_info(peripheralUnit_readResponseBuff_info),
     .readResponseBuff_data(peripheralUnit_readResponseBuff_data),
-    .responseData(peripheralUnit_responseData)
+    .responseData(peripheralUnit_responseData),
+    .readyStateWire(peripheralUnit_readyStateWire)
   );
   ACEUnit aceUnit ( // @[cacheModule.scala 58:23]
     .clock(aceUnit_clock),
@@ -43931,22 +43939,23 @@ module core_Anon_1(
   assign writeCommit_ready = arbiter_writeCommit_ready; // @[cacheModule.scala 90:23]
   assign writeInstructionCommit_ready = cacheLookup_writeInstructionCommit_ready ?
     cacheLookup_writeInstructionCommit_ready : peripheralUnit_writeInstructionCommit_ready; // @[cacheModule.scala 139:49 140:40 142:43]
-  assign memAccessDebug_schedulerReqIn_info = requestScheduler_reqIn_info; // @[cacheModule.scala 228:33]
-  assign memAccessDebug_schedulerReqIn_data = requestScheduler_reqIn_data; // @[cacheModule.scala 228:33]
-  assign memAccessDebug_schedulerReqOut_info = requestScheduler_reqOut_info; // @[cacheModule.scala 229:34]
-  assign memAccessDebug_schedulerReqOut_data = requestScheduler_reqOut_data; // @[cacheModule.scala 229:34]
-  assign memAccessDebug_arbiterOperBuffer_info = arbiter_operBuf_info; // @[cacheModule.scala 231:36]
-  assign memAccessDebug_arbiterOperBuffer_data = arbiter_operBuf_data; // @[cacheModule.scala 231:36]
-  assign memAccessDebug_peripheralUnitReqBuff_info = peripheralUnit_readRequestBuff_info; // @[cacheModule.scala 241:40]
-  assign memAccessDebug_peripheralUnitReqBuff_data = peripheralUnit_readRequestBuff_data; // @[cacheModule.scala 241:40]
-  assign memAccessDebug_peripheralUnitRespBuff_info = peripheralUnit_readResponseBuff_info; // @[cacheModule.scala 242:41]
-  assign memAccessDebug_peripheralUnitRespBuff_data = peripheralUnit_readResponseBuff_data; // @[cacheModule.scala 242:41]
-  assign memAccessDebug_peripheralUnitReadData = peripheralUnit_responseData; // @[cacheModule.scala 243:41]
+  assign memAccessDebug_schedulerReqIn_info = requestScheduler_reqIn_info; // @[cacheModule.scala 229:33]
+  assign memAccessDebug_schedulerReqIn_data = requestScheduler_reqIn_data; // @[cacheModule.scala 229:33]
+  assign memAccessDebug_schedulerReqOut_info = requestScheduler_reqOut_info; // @[cacheModule.scala 230:34]
+  assign memAccessDebug_schedulerReqOut_data = requestScheduler_reqOut_data; // @[cacheModule.scala 230:34]
+  assign memAccessDebug_arbiterOperBuffer_info = arbiter_operBuf_info; // @[cacheModule.scala 232:36]
+  assign memAccessDebug_arbiterOperBuffer_data = arbiter_operBuf_data; // @[cacheModule.scala 232:36]
+  assign memAccessDebug_peripheralUnitReqBuff_info = peripheralUnit_readRequestBuff_info; // @[cacheModule.scala 242:40]
+  assign memAccessDebug_peripheralUnitReqBuff_data = peripheralUnit_readRequestBuff_data; // @[cacheModule.scala 242:40]
+  assign memAccessDebug_peripheralUnitRespBuff_info = peripheralUnit_readResponseBuff_info; // @[cacheModule.scala 243:41]
+  assign memAccessDebug_peripheralUnitRespBuff_data = peripheralUnit_readResponseBuff_data; // @[cacheModule.scala 243:41]
+  assign memAccessDebug_peripheralUnitReadData = peripheralUnit_responseData; // @[cacheModule.scala 244:41]
   assign memAccessDebug_responseOut_info = {{18'd0}, _GEN_38};
-  assign memAccessDebug_responseOut_data = responseOut_valid ? responseOut_result : 64'h0; // @[cacheModule.scala 244:26 246:37 249:37]
-  assign memAccessDebug_arbiterStatesWire = arbiter_stateWires; // @[cacheModule.scala 232:36]
-  assign memAccessDebug_arbiterInorderBuffer_info = arbiter_inorderBuf_info; // @[cacheModule.scala 233:39]
-  assign memAccessDebug_arbiterInorderBuffer_data = arbiter_inorderBuf_data; // @[cacheModule.scala 233:39]
+  assign memAccessDebug_responseOut_data = responseOut_valid ? responseOut_result : 64'h0; // @[cacheModule.scala 246:26 248:37 251:37]
+  assign memAccessDebug_arbiterStatesWire = arbiter_stateWires; // @[cacheModule.scala 233:36]
+  assign memAccessDebug_arbiterInorderBuffer_info = arbiter_inorderBuf_info; // @[cacheModule.scala 234:39]
+  assign memAccessDebug_arbiterInorderBuffer_data = arbiter_inorderBuf_data; // @[cacheModule.scala 234:39]
+  assign memAccessDebug_peripheralReadyStatesWire = peripheralUnit_readyStateWire; // @[cacheModule.scala 245:44]
   assign requestScheduler_clock = clock;
   assign requestScheduler_reset = reset;
   assign requestScheduler_requestIn_valid = request_valid; // @[cacheModule.scala 74:36]
@@ -46399,6 +46408,7 @@ module soc1_Anon(
   output [63:0] memAccessOut_arbiterStatesWire,
   output [63:0] memAccessOut_arbiterInorderBuffer_info,
   output [63:0] memAccessOut_arbiterInorderBuffer_data,
+  output [63:0] memAccessOut_peripheralReadyStatesWire,
   output        allRobFiresOut
 );
 `ifdef RANDOMIZE_REG_INIT
@@ -46799,6 +46809,7 @@ module soc1_Anon(
   wire [63:0] memAccess_memAccessDebug_arbiterStatesWire; // @[core.scala 65:25]
   wire [63:0] memAccess_memAccessDebug_arbiterInorderBuffer_info; // @[core.scala 65:25]
   wire [63:0] memAccess_memAccessDebug_arbiterInorderBuffer_data; // @[core.scala 65:25]
+  wire [63:0] memAccess_memAccessDebug_peripheralReadyStatesWire; // @[core.scala 65:25]
   wire  prf_clock; // @[core.scala 132:19]
   wire  prf_reset; // @[core.scala 132:19]
   wire [5:0] prf_w1_addr; // @[core.scala 132:19]
@@ -47959,7 +47970,8 @@ module soc1_Anon(
     .memAccessDebug_responseOut_data(memAccess_memAccessDebug_responseOut_data),
     .memAccessDebug_arbiterStatesWire(memAccess_memAccessDebug_arbiterStatesWire),
     .memAccessDebug_arbiterInorderBuffer_info(memAccess_memAccessDebug_arbiterInorderBuffer_info),
-    .memAccessDebug_arbiterInorderBuffer_data(memAccess_memAccessDebug_arbiterInorderBuffer_data)
+    .memAccessDebug_arbiterInorderBuffer_data(memAccess_memAccessDebug_arbiterInorderBuffer_data),
+    .memAccessDebug_peripheralReadyStatesWire(memAccess_memAccessDebug_peripheralReadyStatesWire)
   );
   PRF prf ( // @[core.scala 132:19]
     .clock(prf_clock),
@@ -48128,6 +48140,7 @@ module soc1_Anon(
   assign memAccessOut_arbiterStatesWire = memAccess_memAccessDebug_arbiterStatesWire; // @[soc.scala 117:18]
   assign memAccessOut_arbiterInorderBuffer_info = memAccess_memAccessDebug_arbiterInorderBuffer_info; // @[soc.scala 117:18]
   assign memAccessOut_arbiterInorderBuffer_data = memAccess_memAccessDebug_arbiterInorderBuffer_data; // @[soc.scala 117:18]
+  assign memAccessOut_peripheralReadyStatesWire = memAccess_memAccessDebug_peripheralReadyStatesWire; // @[soc.scala 117:18]
   assign allRobFiresOut = rob_commit_fired; // @[soc.scala 122:20]
   assign icache_clock = clock;
   assign icache_reset = reset;
@@ -50549,7 +50562,7 @@ module Interconnect(
   assign CCU_core1_RREADY = io_acePort1_RREADY; // @[Interconnect.scala 238:20]
   assign CCU_core1_BREADY = 1'h0; // @[Interconnect.scala 246:20]
 endmodule
-module soc13(
+module soc14(
   input         clock,
   input         reset,
   output        L2_AWVALID,
@@ -50648,6 +50661,7 @@ module soc13(
   output [63:0] memAccessOut_arbiterStatesWire,
   output [63:0] memAccessOut_arbiterInorderBuffer_info,
   output [63:0] memAccessOut_arbiterInorderBuffer_data,
+  output [63:0] memAccessOut_peripheralReadyStatesWire,
   output [63:0] r10,
   output [63:0] r13,
   output [63:0] r14,
@@ -50756,6 +50770,7 @@ module soc13(
   wire [63:0] core0_memAccessOut_arbiterStatesWire; // @[soc.scala 96:21]
   wire [63:0] core0_memAccessOut_arbiterInorderBuffer_info; // @[soc.scala 96:21]
   wire [63:0] core0_memAccessOut_arbiterInorderBuffer_data; // @[soc.scala 96:21]
+  wire [63:0] core0_memAccessOut_peripheralReadyStatesWire; // @[soc.scala 96:21]
   wire  core0_allRobFiresOut; // @[soc.scala 96:21]
   wire  interconnect__clock; // @[soc.scala 126:28]
   wire  interconnect__reset; // @[soc.scala 126:28]
@@ -50920,6 +50935,7 @@ module soc13(
     .memAccessOut_arbiterStatesWire(core0_memAccessOut_arbiterStatesWire),
     .memAccessOut_arbiterInorderBuffer_info(core0_memAccessOut_arbiterInorderBuffer_info),
     .memAccessOut_arbiterInorderBuffer_data(core0_memAccessOut_arbiterInorderBuffer_data),
+    .memAccessOut_peripheralReadyStatesWire(core0_memAccessOut_peripheralReadyStatesWire),
     .allRobFiresOut(core0_allRobFiresOut)
   );
   Interconnect interconnect_ ( // @[soc.scala 126:28]
@@ -51058,6 +51074,7 @@ module soc13(
   assign memAccessOut_arbiterStatesWire = core0_memAccessOut_arbiterStatesWire; // @[soc.scala 344:16]
   assign memAccessOut_arbiterInorderBuffer_info = core0_memAccessOut_arbiterInorderBuffer_info; // @[soc.scala 344:16]
   assign memAccessOut_arbiterInorderBuffer_data = core0_memAccessOut_arbiterInorderBuffer_data; // @[soc.scala 344:16]
+  assign memAccessOut_peripheralReadyStatesWire = core0_memAccessOut_peripheralReadyStatesWire; // @[soc.scala 344:16]
   assign r10 = core0_robOut_commitFired & REG ? core0_registersOut_10 : registersOutBuffer_10; // @[soc.scala 337:22]
   assign r13 = core0_robOut_commitFired & REG ? core0_registersOut_13 : registersOutBuffer_13; // @[soc.scala 337:22]
   assign r14 = core0_robOut_commitFired & REG ? core0_registersOut_14 : registersOutBuffer_14; // @[soc.scala 337:22]
