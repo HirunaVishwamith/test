@@ -1,5 +1,5 @@
 $date
-        2025-Apr-18 17:06:29
+        2025-Sep-18 15:51:47
 $end
 $version
         Vivado v2024.2 (64-bit)
@@ -8,58 +8,1372 @@ $timescale
         1ps
 $end
 $scope module dut $end
-$var reg 1 " design_1_i/axi_smc_M02_AXI_WREADY $end
-$var reg 32 # design_1_i/axi_smc_M02_AXI_AWADDR [31:0] $end
-$var reg 2 C design_1_i/axi_smc_M02_AXI_BRESP [1:0] $end
-$var reg 1 E design_1_i/axi_smc_M02_AXI_BVALID $end
-$var reg 1 F design_1_i/axi_smc_M02_AXI_BREADY $end
-$var reg 32 G design_1_i/axi_smc_M02_AXI_ARADDR [31:0] $end
-$var reg 1 g design_1_i/axi_smc_M02_AXI_RREADY $end
-$var reg 1 h design_1_i/axi_smc_M02_AXI_WVALID $end
-$var reg 1 i design_1_i/axi_smc_M02_AXI_ARVALID $end
-$var reg 1 j design_1_i/axi_smc_M02_AXI_ARREADY $end
-$var reg 32 k design_1_i/axi_smc_M02_AXI_RDATA [31:0] $end
-$var reg 1 -" design_1_i/axi_smc_M02_AXI_AWVALID $end
-$var reg 1 ." design_1_i/axi_smc_M02_AXI_AWREADY $end
-$var reg 2 /" design_1_i/axi_smc_M02_AXI_RRESP [1:0] $end
-$var reg 32 1" design_1_i/axi_smc_M02_AXI_WDATA [31:0] $end
-$var reg 4 Q" design_1_i/axi_smc_M02_AXI_WSTRB [3:0] $end
-$var reg 1 U" design_1_i/axi_smc_M02_AXI_RVALID $end
-$var reg 3 V" design_1_i/axi_smc_M02_AXI_ARPROT [2:0] $end
-$var reg 3 Y" design_1_i/axi_smc_M02_AXI_AWPROT [2:0] $end
-$var reg 1 \" design_1_i/<const0>_1 $end
-$var reg 1 ]" design_1_i/axi_smc_M02_AXI_BID $end
-$var reg 8 ^" design_1_i/axi_smc_M02_AXI_AWLEN [7:0] $end
-$var reg 1 f" design_1_i/<const0>_2 $end
-$var reg 3 g" design_1_i/axi_smc_M02_AXI_AWSIZE [2:0] $end
-$var reg 2 j" design_1_i/axi_smc_M02_AXI_AWBURST [1:0] $end
-$var reg 1 l" design_1_i/<const0>_3 $end
-$var reg 1 m" design_1_i/axi_smc_M02_AXI_AWLOCK $end
-$var reg 8 n" design_1_i/axi_smc_M02_AXI_ARLEN [7:0] $end
-$var reg 3 v" design_1_i/axi_smc_M02_AXI_ARSIZE [2:0] $end
-$var reg 2 y" design_1_i/axi_smc_M02_AXI_ARBURST [1:0] $end
-$var reg 1 {" design_1_i/axi_smc_M02_AXI_ARLOCK $end
-$var reg 4 |" design_1_i/axi_smc_M02_AXI_ARCACHE [3:0] $end
-$var reg 4 "# design_1_i/axi_smc_M02_AXI_AWCACHE [3:0] $end
-$var reg 1 &# design_1_i/<const0>_4 $end
-$var reg 1 '# design_1_i/<const0>_5 $end
-$var reg 1 (# design_1_i/<const0>_6 $end
-$var reg 1 )# design_1_i/<const0>_7 $end
-$var reg 4 *# design_1_i/axi_smc_M02_AXI_ARQOS [3:0] $end
-$var reg 1 .# design_1_i/<const0>_8 $end
-$var reg 1 /# design_1_i/<const0>_9 $end
-$var reg 1 0# design_1_i/<const0>_10 $end
-$var reg 1 1# design_1_i/<const0>_11 $end
-$var reg 1 2# design_1_i/<const0>_12 $end
-$var reg 4 3# design_1_i/axi_smc_M02_AXI_AWQOS [3:0] $end
-$var reg 1 7# design_1_i/axi_smc_M02_AXI_RID $end
-$var reg 1 8# design_1_i/<const0>_13 $end
-$var reg 1 9# design_1_i/axi_smc_M02_AXI_RLAST $end
-$var reg 1 :# design_1_i/<const0>_14 $end
-$var reg 1 ;# design_1_i/axi_smc_M02_AXI_WLAST $end
-$var reg 1 <# design_1_i/<const0>_15 $end
-$var reg 1 =# _TRIGGER $end
-$var reg 1 ># _WINDOW $end
-$var reg 1 ?# _GAP $end
+$var reg 21 " \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[4] [20:0] $end
+$var reg 21 7 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[51] [20:0] $end
+$var reg 21 L \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[49] [20:0] $end
+$var reg 21 a \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[53] [20:0] $end
+$var reg 21 v \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[52] [20:0] $end
+$var reg 21 -" \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[45] [20:0] $end
+$var reg 21 B" \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[48] [20:0] $end
+$var reg 21 W" \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[47] [20:0] $end
+$var reg 21 l" \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[46] [20:0] $end
+$var reg 4 ## \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[13] [3:0] $end
+$var reg 21 '# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[54] [20:0] $end
+$var reg 21 <# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[44] [20:0] $end
+$var reg 21 Q# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[61] [20:0] $end
+$var reg 4 f# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[51] [3:0] $end
+$var reg 4 j# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[20] [3:0] $end
+$var reg 4 n# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[46] [3:0] $end
+$var reg 4 r# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[11] [3:0] $end
+$var reg 4 v# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[24] [3:0] $end
+$var reg 21 z# \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[6] [20:0] $end
+$var reg 21 1$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[36] [20:0] $end
+$var reg 4 F$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[44] [3:0] $end
+$var reg 4 J$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[17] [3:0] $end
+$var reg 21 N$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[3] [20:0] $end
+$var reg 4 c$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[32] [3:0] $end
+$var reg 4 g$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[48] [3:0] $end
+$var reg 4 k$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[22] [3:0] $end
+$var reg 21 o$ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[37] [20:0] $end
+$var reg 21 &% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[62] [20:0] $end
+$var reg 21 ;% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[63] [20:0] $end
+$var reg 21 P% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[42] [20:0] $end
+$var reg 4 e% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[43] [3:0] $end
+$var reg 4 i% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[36] [3:0] $end
+$var reg 4 m% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[40] [3:0] $end
+$var reg 21 q% \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[33] [20:0] $end
+$var reg 21 (& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[8] [20:0] $end
+$var reg 4 =& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[15] [3:0] $end
+$var reg 4 A& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[38] [3:0] $end
+$var reg 21 E& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[38] [20:0] $end
+$var reg 4 Z& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[14] [3:0] $end
+$var reg 4 ^& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[10] [3:0] $end
+$var reg 21 b& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[31] [20:0] $end
+$var reg 21 w& \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[43] [20:0] $end
+$var reg 4 .' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[19] [3:0] $end
+$var reg 21 2' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[34] [20:0] $end
+$var reg 4 G' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[53] [3:0] $end
+$var reg 4 K' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[42] [3:0] $end
+$var reg 4 O' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[4] [3:0] $end
+$var reg 4 S' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[3] [3:0] $end
+$var reg 4 W' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[34] [3:0] $end
+$var reg 21 [' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[41] [20:0] $end
+$var reg 4 p' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[41] [3:0] $end
+$var reg 4 t' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[45] [3:0] $end
+$var reg 21 x' \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[35] [20:0] $end
+$var reg 21 /( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[39] [20:0] $end
+$var reg 21 D( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[32] [20:0] $end
+$var reg 4 Y( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[0] [3:0] $end
+$var reg 4 ]( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[7] [3:0] $end
+$var reg 4 a( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[1] [3:0] $end
+$var reg 4 e( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[2] [3:0] $end
+$var reg 4 i( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[33] [3:0] $end
+$var reg 4 m( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[37] [3:0] $end
+$var reg 4 q( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[58] [3:0] $end
+$var reg 4 u( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[30] [3:0] $end
+$var reg 4 y( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[54] [3:0] $end
+$var reg 4 }( \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[27] [3:0] $end
+$var reg 4 #) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[29] [3:0] $end
+$var reg 4 ') \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[60] [3:0] $end
+$var reg 4 +) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[55] [3:0] $end
+$var reg 4 /) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[59] [3:0] $end
+$var reg 4 3) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[21] [3:0] $end
+$var reg 4 7) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[25] [3:0] $end
+$var reg 4 ;) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[35] [3:0] $end
+$var reg 4 ?) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[9] [3:0] $end
+$var reg 4 C) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[61] [3:0] $end
+$var reg 4 G) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[63] [3:0] $end
+$var reg 4 K) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[18] [3:0] $end
+$var reg 4 O) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[23] [3:0] $end
+$var reg 4 S) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[49] [3:0] $end
+$var reg 4 W) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[56] [3:0] $end
+$var reg 4 [) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[47] [3:0] $end
+$var reg 4 _) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[8] [3:0] $end
+$var reg 4 c) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[57] [3:0] $end
+$var reg 4 g) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[52] [3:0] $end
+$var reg 4 k) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[5] [3:0] $end
+$var reg 4 o) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[26] [3:0] $end
+$var reg 4 s) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[62] [3:0] $end
+$var reg 4 w) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[50] [3:0] $end
+$var reg 4 {) \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[6] [3:0] $end
+$var reg 4 !* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[31] [3:0] $end
+$var reg 4 %* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[28] [3:0] $end
+$var reg 4 )* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[39] [3:0] $end
+$var reg 4 -* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[12] [3:0] $end
+$var reg 21 1* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[57] [20:0] $end
+$var reg 21 F* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[7] [20:0] $end
+$var reg 21 [* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[56] [20:0] $end
+$var reg 21 p* \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[59] [20:0] $end
+$var reg 21 '+ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[58] [20:0] $end
+$var reg 21 <+ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[5] [20:0] $end
+$var reg 21 Q+ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[30] [20:0] $end
+$var reg 4 f+ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/quantized_int4[16] [3:0] $end
+$var reg 21 j+ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[50] [20:0] $end
+$var reg 21 !, \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[0] [20:0] $end
+$var reg 21 6, \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[11] [20:0] $end
+$var reg 21 K, \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[14] [20:0] $end
+$var reg 21 `, \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[13] [20:0] $end
+$var reg 21 u, \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[12] [20:0] $end
+$var reg 21 ,- \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[20] [20:0] $end
+$var reg 21 A- \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[15] [20:0] $end
+$var reg 21 V- \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[16] [20:0] $end
+$var reg 21 k- \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[17] [20:0] $end
+$var reg 21 ". \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[18] [20:0] $end
+$var reg 21 7. \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[60] [20:0] $end
+$var reg 21 L. \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[24] [20:0] $end
+$var reg 21 a. \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[1] [20:0] $end
+$var reg 21 v. \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[22] [20:0] $end
+$var reg 21 -/ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[26] [20:0] $end
+$var reg 21 B/ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[21] [20:0] $end
+$var reg 21 W/ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[25] [20:0] $end
+$var reg 21 l/ \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[28] [20:0] $end
+$var reg 21 #0 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[23] [20:0] $end
+$var reg 21 80 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[27] [20:0] $end
+$var reg 21 M0 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[2] [20:0] $end
+$var reg 21 b0 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[55] [20:0] $end
+$var reg 21 w0 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[29] [20:0] $end
+$var reg 21 .1 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[9] [20:0] $end
+$var reg 21 C1 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[19] [20:0] $end
+$var reg 21 X1 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[10] [20:0] $end
+$var reg 21 m1 \andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_unit_inst/mult_results_reg[40] [20:0] $end
+$var reg 512 $2 andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/rd_data0 [511:0] $end
+$var reg 15 N7 andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/wr_addr_bram0 [14:0] $end
+$var reg 15 ]7 andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/wr_addr_bram1 [14:0] $end
+$var reg 512 l7 andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/rd_data1 [511:0] $end
+$var reg 1024 8= andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/bf16_data_2_reg [1023:0] $end
+$var reg 21 .H andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/compute_result [20:0] $end
+$var reg 9 CH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/rows [8:0] $end
+$var reg 12 LH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/uram_z_row_counter [11:0] $end
+$var reg 8 XH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/rope_alu_array_done_counter [7:0] $end
+$var reg 12 `H andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/uram_y_row_counter [11:0] $end
+$var reg 4 lH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/element_counter [3:0] $end
+$var reg 2 pH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dr_mb_wb_mode_y [1:0] $end
+$var reg 256 rH andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/x_input_2 [255:0] $end
+$var reg 256 XK andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/x_input_1 [255:0] $end
+$var reg 5 >N andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/write_index [4:0] $end
+$var reg 32 CN andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/write_transfer_count [31:0] $end
+$var reg 256 cN andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/result_accumulator [255:0] $end
+$var reg 3 IQ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/rd_txn_count [2:0] $end
+$var reg 12 LQ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_waddr_z [11:0] $end
+$var reg 32 XQ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/read_transfer_count [31:0] $end
+$var reg 1024 xQ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_z_trans_bram [1023:0] $end
+$var reg 3 n\ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/queue_state [2:0] $end
+$var reg 4 q\ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/mode_sel [3:0] $end
+$var reg 16 u\ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/compute_result_out [15:0] $end
+$var reg 2 '] andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/data_type [1:0] $end
+$var reg 2 )] andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dma_status [1:0] $end
+$var reg 256 +] andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dma_data_out [255:0] $end
+$var reg 2 o_ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/pack_count_dr [1:0] $end
+$var reg 9 q_ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/M [8:0] $end
+$var reg 12 z_ andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_waddr_y [11:0] $end
+$var reg 1024 (` andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_din_z [1023:0] $end
+$var reg 1024 |j andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_dout_y [1023:0] $end
+$var reg 12 ru andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_raddr_z [11:0] $end
+$var reg 1024 ~u andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_dout_z [1023:0] $end
+$var reg 10 t"" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/trans_bram_rd_addr [9:0] $end
+$var reg 1024 ~"" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_din_y [1023:0] $end
+$var reg 2 t-" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_eltwise_status [1:0] $end
+$var reg 12 v-" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_raddr_y [11:0] $end
+$var reg 9 $." andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/N [8:0] $end
+$var reg 1024 -." andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/alu_out [1023:0] $end
+$var reg 1 #9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/m_axi_rlast_debug $end
+$var reg 1 $9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/second_start_ops $end
+$var reg 1 %9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/trans_bram_rd_en $end
+$var reg 1 &9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/start_dram_uram_memcpy $end
+$var reg 1 '9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/valid_out_bram $end
+$var reg 1 (9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/start_ops $end
+$var reg 1 )9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dma_start_reset_delayed $end
+$var reg 1 *9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dma_start $end
+$var reg 1 +9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/read_data_valid $end
+$var reg 1 ,9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/rope_alu_array_done $end
+$var reg 1 -9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/rope_start $end
+$var reg 1 .9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/qbroadcast_valid $end
+$var reg 1 /9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/compute_done_debug $end
+$var reg 1 09" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/dma_start_reset $end
+$var reg 1 19" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/alu_array_done $end
+$var reg 1 29" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/bf19_adder_valid $end
+$var reg 1 39" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/fifo_rd_en $end
+$var reg 1 49" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_last_data_z $end
+$var reg 1 59" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/lalu_result_valid $end
+$var reg 1 69" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/empty_flag $end
+$var reg 1 79" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/write_flag $end
+$var reg 1 89" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/bram_we_s $end
+$var reg 1 99" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/busy_flag $end
+$var reg 1 :9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/fifo_rd_en $end
+$var reg 1 ;9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_last_data $end
+$var reg 1 <9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_start_ops $end
+$var reg 1 =9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_we_z $end
+$var reg 1 >9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/accelerator_wrapper_inst/valid_out_reg $end
+$var reg 1 ?9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_start $end
+$var reg 1 @9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/rd_rst_busy $end
+$var reg 1 A9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/uram_last_data_y $end
+$var reg 1 B9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/wr_rst_busy $end
+$var reg 1 C9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/trans_bram_wr_en $end
+$var reg 1 D9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/bank_sel $end
+$var reg 1 E9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/uram_last_data_z_reg $end
+$var reg 1 F9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_done $end
+$var reg 1 G9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/wr_en_bram0 $end
+$var reg 1 H9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/matrix_transpose_inst/matrix_transpose_bram_inst/wr_en_bram1 $end
+$var reg 1 I9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/init_read_request $end
+$var reg 1 J9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_we_y $end
+$var reg 1 K9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/read_data_matrix_valid $end
+$var reg 1 L9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/init_done $end
+$var reg 1 M9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/write_valid_debug $end
+$var reg 1 N9" andromeda_i/axi_top_wrapper_0/inst/axi_top_inst/uram_read_ctrl_inst/compute_done_reg $end
+$var reg 1 O9" _TRIGGER $end
+$var reg 1 P9" _WINDOW $end
+$var reg 1 Q9" _GAP $end
 $upscope $end
 $enddefinitions $end
+#0
+$dumpvars
+b111111110000000000 "
+b111111110000000000 7
+b111111110000000000 L
+b111111110000000000 a
+b111111110000000000 v
+b111111110000000000 -"
+b111111110000000000 B"
+b111111110000000000 W"
+b111111110000000000 l"
+b0 ##
+b111111110000000000 '#
+b111111110000000000 <#
+b111111110000000000 Q#
+b0 f#
+b0 j#
+b0 n#
+b0 r#
+b0 v#
+b111111110000000000 z#
+b111111110000000000 1$
+b0 F$
+b0 J$
+b111111110000000000 N$
+b0 c$
+b0 g$
+b0 k$
+b111111110000000000 o$
+b111111110000000000 &%
+b111111110000000000 ;%
+b111111110000000000 P%
+b0 e%
+b0 i%
+b0 m%
+b111111110000000000 q%
+b111111110000000000 (&
+b0 =&
+b0 A&
+b111111110000000000 E&
+b0 Z&
+b0 ^&
+b111111110000000000 b&
+b111111110000000000 w&
+b0 .'
+b111111110000000000 2'
+b0 G'
+b0 K'
+b0 O'
+b0 S'
+b0 W'
+b111111110000000000 ['
+b0 p'
+b0 t'
+b111111110000000000 x'
+b111111110000000000 /(
+b111111110000000000 D(
+b0 Y(
+b0 ](
+b0 a(
+b0 e(
+b0 i(
+b0 m(
+b0 q(
+b0 u(
+b0 y(
+b0 }(
+b0 #)
+b0 ')
+b0 +)
+b0 /)
+b0 3)
+b0 7)
+b0 ;)
+b0 ?)
+b0 C)
+b0 G)
+b0 K)
+b0 O)
+b0 S)
+b0 W)
+b0 [)
+b0 _)
+b0 c)
+b0 g)
+b0 k)
+b0 o)
+b0 s)
+b0 w)
+b0 {)
+b0 !*
+b0 %*
+b0 )*
+b0 -*
+b111111110000000000 1*
+b111111110000000000 F*
+b111111110000000000 [*
+b111111110000000000 p*
+b111111110000000000 '+
+b111111110000000000 <+
+b111111110000000000 Q+
+b0 f+
+b111111110000000000 j+
+b111111110000000000 !,
+b111111110000000000 6,
+b111111110000000000 K,
+b111111110000000000 `,
+b111111110000000000 u,
+b111111110000000000 ,-
+b111111110000000000 A-
+b111111110000000000 V-
+b111111110000000000 k-
+b111111110000000000 ".
+b111111110000000000 7.
+b111111110000000000 L.
+b111111110000000000 a.
+b111111110000000000 v.
+b111111110000000000 -/
+b111111110000000000 B/
+b111111110000000000 W/
+b111111110000000000 l/
+b111111110000000000 #0
+b111111110000000000 80
+b111111110000000000 M0
+b111111110000000000 b0
+b111111110000000000 w0
+b111111110000000000 .1
+b111111110000000000 C1
+b111111110000000000 X1
+b111111110000000000 m1
+b0 $2
+b0 N7
+b0 ]7
+b0 l7
+b0 8=
+b111111110000000000 .H
+b0 CH
+b0 LH
+b0 XH
+b0 `H
+b0 lH
+b0 pH
+b0 rH
+b0 XK
+b0 >N
+b0 CN
+b0 cN
+b0 IQ
+b0 LQ
+b0 XQ
+b0 xQ
+b0 n\
+b0 q\
+b1000000000000000 u\
+b0 ']
+b0 )]
+b0 +]
+b0 o_
+b0 q_
+b0 z_
+b0 (`
+b11111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000 |j
+b0 ru
+b0 ~u
+b0 t""
+b0 ~""
+b0 t-"
+b0 v-"
+b0 $."
+b0 -."
+0#9"
+0$9"
+0%9"
+0&9"
+0'9"
+0(9"
+0)9"
+0*9"
+0+9"
+0,9"
+0-9"
+0.9"
+0/9"
+009"
+019"
+029"
+039"
+049"
+059"
+169"
+079"
+089"
+099"
+0:9"
+0;9"
+0<9"
+0=9"
+0>9"
+0?9"
+0@9"
+0A9"
+0B9"
+0C9"
+0D9"
+0E9"
+1F9"
+0G9"
+0H9"
+0I9"
+0J9"
+0K9"
+1L9"
+0M9"
+0N9"
+0O9"
+1P9"
+0Q9"
+$end
+#383
+b1 n\
+#384
+b10 n\
+139"
+#385
+b11 n\
+039"
+#386
+b1010000 z_
+#387
+1*9"
+#388
+b1 )]
+#389
+b100 n\
+#393
+b11111100000000000 "
+b11111100000000000 7
+b11111100000000000 L
+b11111100000000000 a
+b11111100000000000 v
+b11111100000000000 -"
+b11111100000000000 B"
+b11111100000000000 W"
+b11111100000000000 l"
+b11111100000000000 '#
+b11111100000000000 <#
+b11111100000000000 Q#
+b11111100000000000 z#
+b11111100000000000 1$
+b11111100000000000 N$
+b11111100000000000 o$
+b11111100000000000 &%
+b11111100000000000 ;%
+b11111100000000000 P%
+b11111100000000000 q%
+b11111100000000000 (&
+b11111100000000000 E&
+b11111100000000000 b&
+b11111100000000000 w&
+b11111100000000000 2'
+b11111100000000000 ['
+b11111100000000000 x'
+b11111100000000000 /(
+b11111100000000000 D(
+b11111100000000000 1*
+b11111100000000000 F*
+b11111100000000000 [*
+b11111100000000000 p*
+b11111100000000000 '+
+b11111100000000000 <+
+b11111100000000000 Q+
+b11111100000000000 j+
+b11111100000000000 !,
+b11111100000000000 6,
+b11111100000000000 K,
+b11111100000000000 `,
+b11111100000000000 u,
+b11111100000000000 ,-
+b11111100000000000 A-
+b11111100000000000 V-
+b11111100000000000 k-
+b11111100000000000 ".
+b11111100000000000 7.
+b11111100000000000 L.
+b11111100000000000 a.
+b11111100000000000 v.
+b11111100000000000 -/
+b11111100000000000 B/
+b11111100000000000 W/
+b11111100000000000 l/
+b11111100000000000 #0
+b11111100000000000 80
+b11111100000000000 M0
+b11111100000000000 b0
+b11111100000000000 w0
+b11111100000000000 .1
+b11111100000000000 C1
+b11111100000000000 X1
+b11111100000000000 m1
+#410
+b11111100000000000 .H
+#511
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 +]
+1+9"
+#512
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 XK
+1(9"
+1O9"
+#515
+b0 +]
+0+9"
+#516
+b0 XK
+0(9"
+#518
+b10100000000000000000 "
+b10100000000000000000 7
+b10100000000000000000 L
+b10100000000000000000 a
+b10100000000000000000 v
+b10100000000000000000 -"
+b10100000000000000000 B"
+b10100000000000000000 W"
+b10100000000000000000 l"
+b10100000000000000000 '#
+b10100000000000000000 <#
+b10100000000000000000 Q#
+b10100000000000000000 z#
+b10100000000000000000 1$
+b10100000000000000000 N$
+b10100000000000000000 o$
+b10100000000000000000 &%
+b10100000000000000000 ;%
+b10100000000000000000 P%
+b10100000000000000000 q%
+b10100000000000000000 (&
+b10100000000000000000 E&
+b10100000000000000000 b&
+b10100000000000000000 w&
+b10100000000000000000 2'
+b10100000000000000000 ['
+b10100000000000000000 x'
+b10100000000000000000 /(
+b10100000000000000000 D(
+b10100000000000000000 1*
+b10100000000000000000 F*
+b10100000000000000000 [*
+b10100000000000000000 p*
+b10100000000000000000 '+
+b10100000000000000000 <+
+b10100000000000000000 Q+
+b10100000000000000000 j+
+b10100000000000000000 !,
+b10100000000000000000 6,
+b10100000000000000000 K,
+b10100000000000000000 `,
+b10100000000000000000 u,
+b10100000000000000000 ,-
+b10100000000000000000 A-
+b10100000000000000000 V-
+b10100000000000000000 k-
+b10100000000000000000 ".
+b10100000000000000000 7.
+b10100000000000000000 L.
+b10100000000000000000 a.
+b10100000000000000000 v.
+b10100000000000000000 -/
+b10100000000000000000 B/
+b10100000000000000000 W/
+b10100000000000000000 l/
+b10100000000000000000 #0
+b10100000000000000000 80
+b10100000000000000000 M0
+b10100000000000000000 b0
+b10100000000000000000 w0
+b10100000000000000000 .1
+b10100000000000000000 C1
+b10100000000000000000 X1
+b10100000000000000000 m1
+#519
+b100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000 -."
+#521
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 +]
+1+9"
+#522
+b11111100000000000 "
+b11111100000000000 7
+b11111100000000000 L
+b11111100000000000 a
+b11111100000000000 v
+b11111100000000000 -"
+b11111100000000000 B"
+b11111100000000000 W"
+b11111100000000000 l"
+b11111100000000000 '#
+b11111100000000000 <#
+b11111100000000000 Q#
+b11111100000000000 z#
+b11111100000000000 1$
+b11111100000000000 N$
+b11111100000000000 o$
+b11111100000000000 &%
+b11111100000000000 ;%
+b11111100000000000 P%
+b11111100000000000 q%
+b11111100000000000 (&
+b11111100000000000 E&
+b11111100000000000 b&
+b11111100000000000 w&
+b11111100000000000 2'
+b11111100000000000 ['
+b11111100000000000 x'
+b11111100000000000 /(
+b11111100000000000 D(
+b11111100000000000 1*
+b11111100000000000 F*
+b11111100000000000 [*
+b11111100000000000 p*
+b11111100000000000 '+
+b11111100000000000 <+
+b11111100000000000 Q+
+b11111100000000000 j+
+b11111100000000000 !,
+b11111100000000000 6,
+b11111100000000000 K,
+b11111100000000000 `,
+b11111100000000000 u,
+b11111100000000000 ,-
+b11111100000000000 A-
+b11111100000000000 V-
+b11111100000000000 k-
+b11111100000000000 ".
+b11111100000000000 7.
+b11111100000000000 L.
+b11111100000000000 a.
+b11111100000000000 v.
+b11111100000000000 -/
+b11111100000000000 B/
+b11111100000000000 W/
+b11111100000000000 l/
+b11111100000000000 #0
+b11111100000000000 80
+b11111100000000000 M0
+b11111100000000000 b0
+b11111100000000000 w0
+b11111100000000000 .1
+b11111100000000000 C1
+b11111100000000000 X1
+b11111100000000000 m1
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 XK
+1(9"
+#523
+b0 -."
+#525
+b0 +]
+0+9"
+#526
+b0 XK
+0(9"
+#528
+b10100000000000000000 "
+b10100000000000000000 7
+b10100000000000000000 L
+b10100000000000000000 a
+b10100000000000000000 v
+b10100000000000000000 -"
+b10100000000000000000 B"
+b10100000000000000000 W"
+b10100000000000000000 l"
+b10100000000000000000 '#
+b10100000000000000000 <#
+b10100000000000000000 Q#
+b10100000000000000000 z#
+b10100000000000000000 1$
+b10100000000000000000 N$
+b10100000000000000000 o$
+b10100000000000000000 &%
+b10100000000000000000 ;%
+b10100000000000000000 P%
+b10100000000000000000 q%
+b10100000000000000000 (&
+b10100000000000000000 E&
+b10100000000000000000 b&
+b10100000000000000000 w&
+b10100000000000000000 2'
+b10100000000000000000 ['
+b10100000000000000000 x'
+b10100000000000000000 /(
+b10100000000000000000 D(
+b10100000000000000000 1*
+b10100000000000000000 F*
+b10100000000000000000 [*
+b10100000000000000000 p*
+b10100000000000000000 '+
+b10100000000000000000 <+
+b10100000000000000000 Q+
+b10100000000000000000 j+
+b10100000000000000000 !,
+b10100000000000000000 6,
+b10100000000000000000 K,
+b10100000000000000000 `,
+b10100000000000000000 u,
+b10100000000000000000 ,-
+b10100000000000000000 A-
+b10100000000000000000 V-
+b10100000000000000000 k-
+b10100000000000000000 ".
+b10100000000000000000 7.
+b10100000000000000000 L.
+b10100000000000000000 a.
+b10100000000000000000 v.
+b10100000000000000000 -/
+b10100000000000000000 B/
+b10100000000000000000 W/
+b10100000000000000000 l/
+b10100000000000000000 #0
+b10100000000000000000 80
+b10100000000000000000 M0
+b10100000000000000000 b0
+b10100000000000000000 w0
+b10100000000000000000 .1
+b10100000000000000000 C1
+b10100000000000000000 X1
+b10100000000000000000 m1
+#529
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 +]
+b100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000 -."
+1+9"
+#530
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 XK
+1(9"
+#532
+b11111100000000000 "
+b11111100000000000 7
+b11111100000000000 L
+b11111100000000000 a
+b11111100000000000 v
+b11111100000000000 -"
+b11111100000000000 B"
+b11111100000000000 W"
+b11111100000000000 l"
+b11111100000000000 '#
+b11111100000000000 <#
+b11111100000000000 Q#
+b11111100000000000 z#
+b11111100000000000 1$
+b11111100000000000 N$
+b11111100000000000 o$
+b11111100000000000 &%
+b11111100000000000 ;%
+b11111100000000000 P%
+b11111100000000000 q%
+b11111100000000000 (&
+b11111100000000000 E&
+b11111100000000000 b&
+b11111100000000000 w&
+b11111100000000000 2'
+b11111100000000000 ['
+b11111100000000000 x'
+b11111100000000000 /(
+b11111100000000000 D(
+b11111100000000000 1*
+b11111100000000000 F*
+b11111100000000000 [*
+b11111100000000000 p*
+b11111100000000000 '+
+b11111100000000000 <+
+b11111100000000000 Q+
+b11111100000000000 j+
+b11111100000000000 !,
+b11111100000000000 6,
+b11111100000000000 K,
+b11111100000000000 `,
+b11111100000000000 u,
+b11111100000000000 ,-
+b11111100000000000 A-
+b11111100000000000 V-
+b11111100000000000 k-
+b11111100000000000 ".
+b11111100000000000 7.
+b11111100000000000 L.
+b11111100000000000 a.
+b11111100000000000 v.
+b11111100000000000 -/
+b11111100000000000 B/
+b11111100000000000 W/
+b11111100000000000 l/
+b11111100000000000 #0
+b11111100000000000 80
+b11111100000000000 M0
+b11111100000000000 b0
+b11111100000000000 w0
+b11111100000000000 .1
+b11111100000000000 C1
+b11111100000000000 X1
+b11111100000000000 m1
+#533
+b0 -."
+#534
+1'9"
+#535
+b10100001100000000000 .H
+1>9"
+#536
+b10100000000000000000 "
+b10100000000000000000 7
+b10100000000000000000 L
+b10100000000000000000 a
+b10100000000000000000 v
+b10100000000000000000 -"
+b10100000000000000000 B"
+b10100000000000000000 W"
+b10100000000000000000 l"
+b10100000000000000000 '#
+b10100000000000000000 <#
+b10100000000000000000 Q#
+b10100000000000000000 z#
+b10100000000000000000 1$
+b10100000000000000000 N$
+b10100000000000000000 o$
+b10100000000000000000 &%
+b10100000000000000000 ;%
+b10100000000000000000 P%
+b10100000000000000000 q%
+b10100000000000000000 (&
+b10100000000000000000 E&
+b10100000000000000000 b&
+b10100000000000000000 w&
+b10100000000000000000 2'
+b10100000000000000000 ['
+b10100000000000000000 x'
+b10100000000000000000 /(
+b10100000000000000000 D(
+b10100000000000000000 1*
+b10100000000000000000 F*
+b10100000000000000000 [*
+b10100000000000000000 p*
+b10100000000000000000 '+
+b10100000000000000000 <+
+b10100000000000000000 Q+
+b10100000000000000000 j+
+b10100000000000000000 !,
+b10100000000000000000 6,
+b10100000000000000000 K,
+b10100000000000000000 `,
+b10100000000000000000 u,
+b10100000000000000000 ,-
+b10100000000000000000 A-
+b10100000000000000000 V-
+b10100000000000000000 k-
+b10100000000000000000 ".
+b10100000000000000000 7.
+b10100000000000000000 L.
+b10100000000000000000 a.
+b10100000000000000000 v.
+b10100000000000000000 -/
+b10100000000000000000 B/
+b10100000000000000000 W/
+b10100000000000000000 l/
+b10100000000000000000 #0
+b10100000000000000000 80
+b10100000000000000000 M0
+b10100000000000000000 b0
+b10100000000000000000 w0
+b10100000000000000000 .1
+b10100000000000000000 C1
+b10100000000000000000 X1
+b10100000000000000000 m1
+#537
+b100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000 -."
+#538
+b1100011000111101 u\
+0'9"
+1/9"
+159"
+#539
+b11111100000000000 .H
+b110001100011110100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 cN
+b1100010111011101 u\
+b1100011000111101 ~""
+0>9"
+1N9"
+#540
+b110001011101110100000000000000001100011000111101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 cN
+b100010110001101 u\
+b11000101110111011100011000111101 ~""
+#541
+b10001011000110100000000000000001100010111011101000000000000000011000110001111010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 cN
+b1100011000100101 u\
+b10001011000110111000101110111011100011000111101 ~""
+#542
+b110001100010010100000000000000000100010110001101000000000000000011000101110111010000000000000000110001100011110100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 cN
+b1000000000000000 u\
+b1100011000100101010001011000110111000101110111011100011000111101 ~""
+0/9"
+059"
+#543
+b10 t-"
+0N9"
+#544
+1'9"
+#545
+b10100001100000000000 .H
+1>9"
+#548
+b1100011000111100 u\
+0'9"
+1/9"
+159"
+#549
+b11111100000000000 .H
+b110001100011110000000000000000001100011000100101000000000000000001000101100011010000000000000000110001011101110100000000000000001100011000111101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 cN
+b100001100001001 u\
+b11000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0>9"
+1N9"
+#550
+b10000110000100100000000000000001100011000111100000000000000000011000110001001010000000000000000010001011000110100000000000000001100010111011101000000000000000011000110001111010000000000000000000000000000000000000000000000000000000000000000 cN
+b1001000011000011 u\
+b10000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#551
+b100100001100001100000000000000000100001100001001000000000000000011000110001111000000000000000000110001100010010100000000000000000100010110001101000000000000000011000101110111010000000000000000110001100011110100000000000000000000000000000000 cN
+b100010010001111 u\
+b1001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#552
+b10001001000111100000000000000001001000011000011000000000000000001000011000010010000000000000000110001100011110000000000000000001100011000100101000000000000000001000101100011010000000000000000110001011101110100000000000000001100011000111101 cN
+b0 u\
+b1000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1'9"
+0/9"
+059"
+#553
+b10100001100000000000 .H
+1>9"
+0N9"
+#556
+b100010100001110 u\
+1/9"
+159"
+#557
+b10001010000111000000000000000000100010010001111000000000000000010010000110000110000000000000000010000110000100100000000000000001100011000111100000000000000000011000110001001010000000000000000010001011000110100000000000000001100010111011101 cN
+b1100011001000101 u\
+b10001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1N9"
+#558
+b110001100100010100000000000000000100010100001110000000000000000001000100100011110000000000000000100100001100001100000000000000000100001100001001000000000000000011000110001111000000000000000000110001100010010100000000000000000100010110001101 cN
+b100010110011110 u\
+b1100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#559
+b10001011001111000000000000000001100011001000101000000000000000001000101000011100000000000000000010001001000111100000000000000001001000011000011000000000000000001000011000010010000000000000000110001100011110000000000000000001100011000100101 cN
+b1100011000001001 u\
+b1000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#560
+b110001100000100100000000000000000100010110011110000000000000000011000110010001010000000000000000010001010000111000000000000000000100010010001111000000000000000010010000110000110000000000000000010000110000100100000000000000001100011000111100 cN
+b1100010110000010 u\
+b110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#561
+b110001011000001000000000000000001100011000001001000000000000000001000101100111100000000000000000110001100100010100000000000000000100010100001110000000000000000001000100100011110000000000000000100100001100001100000000000000000100001100001001 cN
+b1001000100000010 u\
+b1100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#562
+b100100010000001000000000000000001100010110000010000000000000000011000110000010010000000000000000010001011001111000000000000000001100011001000101000000000000000001000101000011100000000000000000010001001000111100000000000000001001000011000011 cN
+b100010100100101 u\
+b10010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#563
+b10001010010010100000000000000001001000100000010000000000000000011000101100000100000000000000000110001100000100100000000000000000100010110011110000000000000000011000110010001010000000000000000010001010000111000000000000000000100010010001111 cN
+b100010110110111 u\
+b10001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#564
+b10001011011011100000000000000000100010100100101000000000000000010010001000000100000000000000000110001011000001000000000000000001100011000001001000000000000000001000101100111100000000000000000110001100100010100000000000000000100010100001110 cN
+b100011000111101 u\
+b100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#565
+b10001100011110100000000000000000100010110110111000000000000000001000101001001010000000000000000100100010000001000000000000000001100010110000010000000000000000011000110000010010000000000000000010001011001111000000000000000001100011001000101 cN
+b100010010100110 u\
+b1000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#566
+b10001001010011000000000000000000100011000111101000000000000000001000101101101110000000000000000010001010010010100000000000000001001000100000010000000000000000011000101100000100000000000000000110001100000100100000000000000000100010110011110 cN
+b100010100111101 u\
+b10001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#567
+b10001010011110100000000000000000100010010100110000000000000000001000110001111010000000000000000010001011011011100000000000000000100010100100101000000000000000010010001000000100000000000000000110001011000001000000000000000001100011000001001 cN
+b100010011110111 u\
+b100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#568
+b10001001111011100000000000000000100010100111101000000000000000001000100101001100000000000000000010001100011110100000000000000000100010110110111000000000000000001000101001001010000000000000000100100010000001000000000000000001100010110000010 cN
+b1100011000110101 u\
+b1000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#569
+b110001100011010100000000000000000100010011110111000000000000000001000101001111010000000000000000010001001010011000000000000000000100011000111101000000000000000001000101101101110000000000000000010001010010010100000000000000001001000100000010 cN
+b1100010110101000 u\
+b110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#570
+b110001011010100000000000000000001100011000110101000000000000000001000100111101110000000000000000010001010011110100000000000000000100010010100110000000000000000001000110001111010000000000000000010001011011011100000000000000000100010100100101 cN
+b1001000010101101 u\
+b1100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#571
+b100100001010110100000000000000001100010110101000000000000000000011000110001101010000000000000000010001001111011100000000000000000100010100111101000000000000000001000100101001100000000000000000010001100011110100000000000000000100010110110111 cN
+b1001000010010000 u\
+b10010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#572
+b100100001001000000000000000000001001000010101101000000000000000011000101101010000000000000000000110001100011010100000000000000000100010011110111000000000000000001000101001111010000000000000000010001001010011000000000000000000100011000111101 cN
+b1100010101011000 u\
+b100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#573
+b110001010101100000000000000000001001000010010000000000000000000010010000101011010000000000000000110001011010100000000000000000001100011000110101000000000000000001000100111101110000000000000000010001010011110100000000000000000100010010100110 cN
+b1100010111101000 u\
+b1100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#574
+b110001011110100000000000000000001100010101011000000000000000000010010000100100000000000000000000100100001010110100000000000000001100010110101000000000000000000011000110001101010000000000000000010001001111011100000000000000000100010100111101 cN
+b100011000101110 u\
+b11000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#575
+b10001100010111000000000000000001100010111101000000000000000000011000101010110000000000000000000100100001001000000000000000000001001000010101101000000000000000011000101101010000000000000000000110001100011010100000000000000000100010011110111 cN
+b100010100101110 u\
+b10001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#576
+b10001010010111000000000000000000100011000101110000000000000000011000101111010000000000000000000110001010101100000000000000000001001000010010000000000000000000010010000101011010000000000000000110001011010100000000000000000001100011000110101 cN
+b1000010010100 u\
+b100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#577
+b100001001010000000000000000000100010100101110000000000000000001000110001011100000000000000000110001011110100000000000000000001100010101011000000000000000000010010000100100000000000000000000100100001010110100000000000000001100010110101000 cN
+b1001000000011100 u\
+b10000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#578
+b100100000001110000000000000000000001000010010100000000000000000001000101001011100000000000000000010001100010111000000000000000001100010111101000000000000000000011000101010110000000000000000000100100001001000000000000000000001001000010101101 cN
+b100010101011111 u\
+b100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#579
+b10001010101111100000000000000001001000000011100000000000000000000010000100101000000000000000000010001010010111000000000000000000100011000101110000000000000000011000101111010000000000000000000110001010101100000000000000000001001000010010000 cN
+b100010110010011 u\
+b100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#580
+b10001011001001100000000000000000100010101011111000000000000000010010000000111000000000000000000000100001001010000000000000000000100010100101110000000000000000001000110001011100000000000000000110001011110100000000000000000001100010101011000 cN
+b100010111011100 u\
+b1000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#581
+b10001011101110000000000000000000100010110010011000000000000000001000101010111110000000000000000100100000001110000000000000000000001000010010100000000000000000001000101001011100000000000000000010001100010111000000000000000001100010111101000 cN
+b1100011000111011 u\
+b0 +]
+b10001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0+9"
+#582
+b0 XK
+b110001100011101100000000000000000100010111011100000000000000000001000101100100110000000000000000010001010101111100000000000000001001000000011100000000000000000000010000100101000000000000000000010001010010111000000000000000000100011000101110 cN
+b1100010110111001 u\
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 +]
+b1100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0(9"
+1+9"
+#583
+b10001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010 XK
+b110001011011100100000000000000001100011000111011000000000000000001000101110111000000000000000000010001011001001100000000000000000100010101011111000000000000000010010000000111000000000000000000000100001001010000000000000000000100010100101110 cN
+b100011000110001 u\
+b11000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1(9"
+#584
+b10001100011000100000000000000001100010110111001000000000000000011000110001110110000000000000000010001011101110000000000000000000100010110010011000000000000000001000101010111110000000000000000100100000001110000000000000000000001000010010100 cN
+b1100010110010100 u\
+b10001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1#9"
+#585
+b110001011001010000000000000000000100011000110001000000000000000011000101101110010000000000000000110001100011101100000000000000000100010111011100000000000000000001000101100100110000000000000000010001010101111100000000000000001001000000011100 cN
+b100000000000 XQ
+b1100010100100110 u\
+b1100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0#9"
+#586
+b110001010010011000000000000000001100010110010100000000000000000001000110001100010000000000000000110001011011100100000000000000001100011000111011000000000000000001000101110111000000000000000000010001011001001100000000000000000100010101011111 cN
+b1100010010000011 u\
+b0 +]
+b11000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0+9"
+109"
+#587
+b0 XK
+b110001001000001100000000000000001100010100100110000000000000000011000101100101000000000000000000010001100011000100000000000000001100010110111001000000000000000011000110001110110000000000000000010001011101110000000000000000000100010110010011 cN
+b1100010111001010 u\
+b110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0(9"
+1)9"
+0*9"
+009"
+#588
+b11111100000000000 "
+b11111100000000000 7
+b11111100000000000 L
+b11111100000000000 a
+b11111100000000000 v
+b11111100000000000 -"
+b11111100000000000 B"
+b11111100000000000 W"
+b11111100000000000 l"
+b11111100000000000 '#
+b11111100000000000 <#
+b11111100000000000 Q#
+b11111100000000000 z#
+b11111100000000000 1$
+b11111100000000000 N$
+b11111100000000000 o$
+b11111100000000000 &%
+b11111100000000000 ;%
+b11111100000000000 P%
+b11111100000000000 q%
+b11111100000000000 (&
+b11111100000000000 E&
+b11111100000000000 b&
+b11111100000000000 w&
+b11111100000000000 2'
+b11111100000000000 ['
+b11111100000000000 x'
+b11111100000000000 /(
+b11111100000000000 D(
+b11111100000000000 1*
+b11111100000000000 F*
+b11111100000000000 [*
+b11111100000000000 p*
+b11111100000000000 '+
+b11111100000000000 <+
+b11111100000000000 Q+
+b11111100000000000 j+
+b11111100000000000 !,
+b11111100000000000 6,
+b11111100000000000 K,
+b11111100000000000 `,
+b11111100000000000 u,
+b11111100000000000 ,-
+b11111100000000000 A-
+b11111100000000000 V-
+b11111100000000000 k-
+b11111100000000000 ".
+b11111100000000000 7.
+b11111100000000000 L.
+b11111100000000000 a.
+b11111100000000000 v.
+b11111100000000000 -/
+b11111100000000000 B/
+b11111100000000000 W/
+b11111100000000000 l/
+b11111100000000000 #0
+b11111100000000000 80
+b11111100000000000 M0
+b11111100000000000 b0
+b11111100000000000 w0
+b11111100000000000 .1
+b11111100000000000 C1
+b11111100000000000 X1
+b11111100000000000 m1
+b110001011100101000000000000000001100010010000011000000000000000011000101001001100000000000000000110001011001010000000000000000000100011000110001000000000000000011000101101110010000000000000000110001100011101100000000000000000100010111011100 cN
+b1100010110111101 u\
+b1100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0)9"
+#589
+b10100000000000000000 "
+b10100000000000000000 7
+b10100000000000000000 L
+b10100000000000000000 a
+b10100000000000000000 v
+b10100000000000000000 -"
+b10100000000000000000 B"
+b10100000000000000000 W"
+b10100000000000000000 l"
+b10100000000000000000 '#
+b10100000000000000000 <#
+b10100000000000000000 Q#
+b10100000000000000000 z#
+b10100000000000000000 1$
+b10100000000000000000 N$
+b10100000000000000000 o$
+b10100000000000000000 &%
+b10100000000000000000 ;%
+b10100000000000000000 P%
+b10100000000000000000 q%
+b10100000000000000000 (&
+b10100000000000000000 E&
+b10100000000000000000 b&
+b10100000000000000000 w&
+b10100000000000000000 2'
+b10100000000000000000 ['
+b10100000000000000000 x'
+b10100000000000000000 /(
+b10100000000000000000 D(
+b10100000000000000000 1*
+b10100000000000000000 F*
+b10100000000000000000 [*
+b10100000000000000000 p*
+b10100000000000000000 '+
+b10100000000000000000 <+
+b10100000000000000000 Q+
+b10100000000000000000 j+
+b10100000000000000000 !,
+b10100000000000000000 6,
+b10100000000000000000 K,
+b10100000000000000000 `,
+b10100000000000000000 u,
+b10100000000000000000 ,-
+b10100000000000000000 A-
+b10100000000000000000 V-
+b10100000000000000000 k-
+b10100000000000000000 ".
+b10100000000000000000 7.
+b10100000000000000000 L.
+b10100000000000000000 a.
+b10100000000000000000 v.
+b10100000000000000000 -/
+b10100000000000000000 B/
+b10100000000000000000 W/
+b10100000000000000000 l/
+b10100000000000000000 #0
+b10100000000000000000 80
+b10100000000000000000 M0
+b10100000000000000000 b0
+b10100000000000000000 w0
+b10100000000000000000 .1
+b10100000000000000000 C1
+b10100000000000000000 X1
+b10100000000000000000 m1
+b110001011011110100000000000000001100010111001010000000000000000011000100100000110000000000000000110001010010011000000000000000001100010110010100000000000000000001000110001100010000000000000000110001011011100100000000000000001100011000111011 cN
+b100011000011111 u\
+b11000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+b0 -."
+#590
+b10001100001111100000000000000001100010110111101000000000000000011000101110010100000000000000000110001001000001100000000000000001100010100100110000000000000000011000101100101000000000000000000010001100011000100000000000000001100010110111001 cN
+b1100010111100000 u\
+b10001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+b100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000010000000000000001000000000000000100000000000000 -."
+#591
+b110001011110000000000000000000000100011000011111000000000000000011000101101111010000000000000000110001011100101000000000000000001100010010000011000000000000000011000101001001100000000000000000110001011001010000000000000000000100011000110001 cN
+b100001101110011 u\
+b1100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#592
+b10000110111001100000000000000001100010111100000000000000000000001000110000111110000000000000000110001011011110100000000000000001100010111001010000000000000000011000100100000110000000000000000110001010010011000000000000000001100010110010100 cN
+b1001000100010010 u\
+b1000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#593
+b100100010001001000000000000000000100001101110011000000000000000011000101111000000000000000000000010001100001111100000000000000001100010110111101000000000000000011000101110010100000000000000000110001001000001100000000000000001100010100100110 cN
+b1000000100101 u\
+b100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#594
+b100000010010100000000000000001001000100010010000000000000000001000011011100110000000000000000110001011110000000000000000000000100011000011111000000000000000011000101101111010000000000000000110001011100101000000000000000001100010010000011 cN
+b1100010011111001 u\
+b1000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#595
+b110001001111100100000000000000000001000000100101000000000000000010010001000100100000000000000000010000110111001100000000000000001100010111100000000000000000000001000110000111110000000000000000110001011011110100000000000000001100010111001010 cN
+b1001000000011001 u\
+b11000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#596
+b100100000001100100000000000000001100010011111001000000000000000000010000001001010000000000000000100100010001001000000000000000000100001101110011000000000000000011000101111000000000000000000000010001100001111100000000000000001100010110111101 cN
+b100010000111010 u\
+b100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#597
+b10001000011101000000000000000001001000000011001000000000000000011000100111110010000000000000000000100000010010100000000000000001001000100010010000000000000000001000011011100110000000000000000110001011110000000000000000000000100011000011111 cN
+b100011000010000 u\
+b100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#598
+b10001100001000000000000000000000100010000111010000000000000000010010000000110010000000000000000110001001111100100000000000000000001000000100101000000000000000010010001000100100000000000000000010000110111001100000000000000001100010111100000 cN
+b1000010001111 u\
+b1000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#599
+b100001000111100000000000000000100011000010000000000000000000001000100001110100000000000000000100100000001100100000000000000001100010011111001000000000000000000010000001001010000000000000000100100010001001000000000000000000100001101110011 cN
+b100010001101100 u\
+b100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#600
+b10001000110110000000000000000000001000010001111000000000000000001000110000100000000000000000000010001000011101000000000000000001001000000011001000000000000000011000100111110010000000000000000000100000010010100000000000000001001000100010010 cN
+b100010101100001 u\
+b100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#601
+b10001010110000100000000000000000100010001101100000000000000000000010000100011110000000000000000010001100001000000000000000000000100010000111010000000000000000010010000000110010000000000000000110001001111100100000000000000000001000000100101 cN
+b1000111110101001 u\
+b1000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#602
+b100011111010100100000000000000000100010101100001000000000000000001000100011011000000000000000000000100001000111100000000000000000100011000010000000000000000000001000100001110100000000000000000100100000001100100000000000000001100010011111001 cN
+b100011000110101 u\
+b100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#603
+b10001100011010100000000000000001000111110101001000000000000000001000101011000010000000000000000010001000110110000000000000000000001000010001111000000000000000001000110000100000000000000000000010001000011101000000000000000001001000000011001 cN
+b1100010110111101 u\
+b100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#604
+b110001011011110100000000000000000100011000110101000000000000000010001111101010010000000000000000010001010110000100000000000000000100010001101100000000000000000000010000100011110000000000000000010001100001000000000000000000000100010000111010 cN
+b1100011000000000 u\
+b11000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0'9"
+#605
+b11111100000000000 .H
+b110001100000000000000000000000001100010110111101000000000000000001000110001101010000000000000000100011111010100100000000000000000100010101100001000000000000000001000100011011000000000000000000000100001000111100000000000000000100011000010000 cN
+b100011000010100 u\
+b110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1'9"
+0>9"
+#606
+b10100001100000000000 .H
+b10001100001010000000000000000001100011000000000000000000000000011000101101111010000000000000000010001100011010100000000000000001000111110101001000000000000000001000101011000010000000000000000010001000110110000000000000000000001000010001111 cN
+b100010101011110 u\
+b100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+1>9"
+#607
+b10001010101111000000000000000000100011000010100000000000000000011000110000000000000000000000000110001011011110100000000000000000100011000110101000000000000000010001111101010010000000000000000010001010110000100000000000000000100010001101100 cN
+b1100011000001010 u\
+b1000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#608
+b110001100000101000000000000000000100010101011110000000000000000001000110000101000000000000000000110001100000000000000000000000001100010110111101000000000000000001000110001101010000000000000000100011111010100100000000000000000100010101100001 cN
+b0 u\
+b110001100000101001000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0/9"
+059"
+#609
+b100010001111100 u\
+0'9"
+1/9"
+159"
+0N9"
+#610
+b10001000111110000000000000000001100011000001010000000000000000001000101010111100000000000000000010001100001010000000000000000001100011000000000000000000000000011000101101111010000000000000000010001100011010100000000000000001000111110101001 cN
+b100010001000010 u\
+b100010001111100110001100000101001000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0>9"
+1N9"
+#611
+b10001000100001000000000000000000100010001111100000000000000000011000110000010100000000000000000010001010101111000000000000000000100011000010100000000000000000011000110000000000000000000000000110001011011110100000000000000000100011000110101 cN
+b1001000001100100 u\
+b1000100010000100100010001111100110001100000101001000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#612
+b100100000110010000000000000000000100010001000010000000000000000001000100011111000000000000000000110001100000101000000000000000000100010101011110000000000000000001000110000101000000000000000000110001100000000000000000000000001100010110111101 cN
+b1000100001011 u\
+b100100000110010001000100010000100100010001111100110001100000101001000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+#613
+b100010000101100000000000000001001000001100100000000000000000001000100010000100000000000000000010001000111110000000000000000001100011000001010000000000000000001000101010111100000000000000000010001100001010000000000000000001100011000000000 cN
+b0 u\
+b1000100001011100100000110010001000100010000100100010001111100110001100000101001000101010111100100011000010100110001100000000011000101101111010100011000110101100011111010100101000101011000010100010001101100000100001000111101000110000100000100010000111010100100000001100111000100111110010001000000100101100100010001001001000011011100111100010111100000010001100001111111000101101111011100010111001010110001001000001111000101001001101100010110010100010001100011000111000101101110011100011000111011010001011101110001000101100100110100010101011111100100000001110000010000100101000100010100101110010001100010111011000101111010001100010101011000100100001001000010010000101011011100010110101000110001100011010101000100111101110100010100111101010001001010011001000110001111010100010110110111010001010010010110010001000000101100010110000010110001100000100101000101100111101100011001000101010001010000111001000100100011111001000011000011010000110000100111000110001111001100011000100101010001011000110111000101110111011100011000111101 ~""
+0/9"
+059"
+1J9"
+#614
+b10 )]
+b1010001 z_
+0J9"
+0N9"
+#615
+b0 XQ
+b0 n\
+#619
+b1100011000111101 u\
+#883
+b10 pH
+b0 z_
+b11111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000001111111000000000111111100000000011111110000000 ~""
+#966
+b1010000 LQ
+1=9"
+#967
+0=9"
